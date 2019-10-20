@@ -1,0 +1,24 @@
+
+planet_farmers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+planet_researchers = {
+	icon = "job_researcher"
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+	}
+}

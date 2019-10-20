@@ -1,0 +1,33 @@
+
+
+
+on_game_start_country = {
+	events = {
+		a_o_game_start.overmind
+	}
+}
+
+
+empire_init_capital_planet = {
+	events = {
+
+		
+		#a_o_game_start.2 # starting buildings, districts & pops
+	}
+}
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+	o_game_pop_added.0
+	}
+}
+
+
+on_modification_complete = {
+	events = {
+		o_gene_modded.1
+	}
+}

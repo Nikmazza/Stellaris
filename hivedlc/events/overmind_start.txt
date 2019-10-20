@@ -1,0 +1,118 @@
+namespace = a_o_game_start
+
+
+
+planet_event = {
+	id = a_o_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+					
+		if = { 
+			limit = { owner = { has_valid_civic = civic_hive_overmind } }	
+			
+			last_created_species = {
+			set_species_flag = overminded_flag
+			}
+			
+				while = {
+				count = 32
+				create_pop = {
+					species = last_created_species					
+					ethos = random
+				}
+			}
+			
+			
+			# 3 jobs
+		remove_building = building_maintenance_depot
+
+		# 2 jobs
+		remove_building = building_research_lab_1
+		
+		# 2 jobs
+		remove_building = building_foundry_1
+		
+		# 1 job
+		remove_building = building_spawning_pool
+		
+		# 1 job
+		remove_building = building_hive_warren
+		
+		
+		
+		# 3 jobs
+		add_building = building_maintenance_depot
+
+		# 2 jobs
+		add_building = building_research_lab_1
+		
+		# 2 jobs
+		add_building = building_foundry_1
+		
+		# 1 job
+		add_building = building_spawning_pool
+		
+		# 1 job
+		add_building = building_hive_warren
+
+		
+		}
+		
+		
+		}		
+		}
+
+country_event = {
+	id = a_o_game_start.overmind
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+		
+
+					
+		if = { limit = { owner = { has_valid_civic = civic_hive_overmind } }
+	
+	random_owned_pop = {
+	limit = { species = { has_species_flag = overminded_flag } } 
+					
+			
+			 
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_full
+				}		
+				
+				set_living_standard = {
+					country = root.owner
+					type = living_standard_hive_mind
+				}
+				
+				set_migration_controls = {
+				country = root.owner
+				type = no
+				}
+				set_population_controls = {
+				country = root.owner
+				type = no
+				}
+					
+	 #species = { change_species_characteristics = { portrait  = "mam_rat" pops_can_be_colonizers = no }}
+
+				
+			}
+
+		
+			 
+			 
+			
+			}
+	
+	
+	
+		}
+	}
+

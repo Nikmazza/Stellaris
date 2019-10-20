@@ -1,0 +1,15 @@
+NPop = {
+
+REQUIRED_POP_GROWTH				= 75 # Base growth rate of pops multiplique por 2
+REQUIRED_POP_ASSEMBLY				= 75 # Required assembly to add a pop
+}
+
+NEconomy = {
+		COLONY_MONTHLY_GROWTH				= 4.5		# How much the colonization pop grows every month.
+	
+	}
+
+	NGameplay = {
+		ORBITAL_BOMBARDMENT_COLONY_DMG_SCALE			= 0.05 #multiplique por 5
+		ORBITAL_BOMBARDMENT_PLANET_DMG_SCALE			= 0.01
+}

@@ -1,0 +1,14 @@
+organic_ai = {
+
+}
+
+organic_structures = {
+		
+		## add a queen to every planet
+
+		planet_farmers_food_produces_add = 2
+		planet_miners_minerals_produces_add = -1
+		
+		
+
+}

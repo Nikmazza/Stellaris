@@ -1,0 +1,362 @@
+namespace = infinity_war_events
+
+country_event = {
+    id = infinity_war_events.0
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        every_country = {
+            limit = { is_country_type = default }
+            set_timed_country_flag = { flag = ai_no_wars days = 365 }
+        }
+        random_country = {
+            limit = {
+                has_relic = r_cube
+            }
+            save_event_target_as = gauntlet_holder
+            set_timed_country_flag = { flag = ai_no_wars days = 365 }
+        }
+        # notify
+        every_country = {
+            limit = {
+                is_country_type = default
+                NOT = { has_relic = r_cube }
+            }
+            country_event = { id = infinity_war_events.1 }
+        }
+    }
+}
+
+## notify everybody that  the gauntlet was activated
+country_event = {
+    id = infinity_war_events.1
+    title = infinity_war_events.1.name
+    desc = infinity_war_events.1.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+
+    is_triggered_only = yes
+
+    option = {
+        name = infinity_war_events.1.a
+    }
+}
+
+## end first event
+
+
+# Find a leader for non-aligned league of empires
+country_event = {
+    id = infinity_war_events.12
+    title = OK
+    desc = OK
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    #mean_time_to_happen = {
+    #    months = 2
+    #}
+
+    immediate = {
+        random_country = {
+            limit = {
+                is_subject = no
+                NOT = {
+                        has_relic = r_cube
+                }
+                is_country_type = default
+                NOR = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_machine_terminator
+                }
+				## so.. basically anybody?
+                NOT = { has_country_flag = infinity_war_league_leader }
+            }
+            country_event = { id = infinity_war_events.13 }
+        }
+    }
+}
+
+
+## ask if he wants to be leader
+country_event = {
+    id = infinity_war_events.13
+    title = infinity_war_events.13.name
+    desc = infinity_war_events.13.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+    location = root
+
+    is_triggered_only = yes
+
+	## form alliance
+    option = {
+        name = infinity_war_events.13.a
+        ai_chance = {
+            factor = 100
+            modifier = {
+                factor = 0
+                OR = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_machine_terminator
+                }
+            }
+        }
+        hidden_effect = {
+		## alliance is formed, WAR!
+            country_event = { id = infinity_war_events.50 days = 60 }
+            set_country_flag = infinity_war_league_leader
+            every_country = {
+                limit = {
+                    has_relic = r_cube
+                }
+                add_opinion_modifier = { who = from modifier = opinion_infninity_war_non_aligned_league_fe }
+                from = { add_opinion_modifier = { who = root modifier = opinion_infninity_war_non_aligned_league_fe } }
+            }
+            every_country = {
+                limit = {
+                    is_subject = no
+                    not = { is_same_value = root }
+                    is_country_type = default
+                    NOT = { has_relic = r_cube }
+                }
+                country_event = { id = infinity_war_events.19 }
+            }
+			## event id 22 did not exist, so bye
+           ## every_country = {
+            ##    limit = {
+            ##        is_ai = no
+            ##        is_subject = yes
+            ##        not = { is_same_value = root }
+            ##        is_country_type = default
+            ##        NOT = { has_relic = r_cube }
+            ##    }
+             ##   country_event = { id = infinity_war_events.22 }
+            ##}
+        }
+    }
+
+	## decline alliance
+    option = {
+        name = infinity_war_events.13.b
+        ai_chance = {
+            factor = 1
+        }
+        hidden_effect = {
+            country_event = { id = infinity_war_events.12 }
+        }
+    }
+}
+
+
+## enemy of the gaunlet holder
+country_event = {
+    id = infinity_war_events.19
+    title = infinity_war_events.19.name
+    desc = infinity_war_events.19.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+    location = from
+
+    is_triggered_only = yes
+
+    immediate = { set_country_flag = infinity_war_nonaligned_league_check }
+
+    option = {
+        name = infinity_war_events.19.a
+        hidden_effect = {
+            from = {
+                country_event = { id = infinity_war_events.15 }
+            }
+        }
+    }
+}
+
+
+# AI evaluates joining the League
+#country_event = {
+#    id = infinity_war_events.14
+#
+#    #hide_window = yes
+#
+#    immediate = {
+#        random_list = {
+#            100 = {
+#                modifier = {
+#                    factor = 0
+#                    NOT = { is_country_type = default }
+#                    OR = {
+#                        has_valid_civic = civic_hive_devouring_swarm
+#                        has_valid_civic = civic_fanatic_purifiers
+#                        has_valid_civic = civic_machine_terminator
+#                    }
+#                }
+#                random_country = {
+#                    limit = {
+#                        has_country_flag = infinity_war_league_leader
+#                        is_subject = no
+#                        is_country_type = default
+#                    }
+#                    country_event = { id = infinity_war_events.15 }
+#                }
+#            }
+#            1 = {
+#                # nothing
+#            }
+#        }
+#    }
+#}
+
+
+## modifiers to enemy
+country_event = {
+    id = infinity_war_events.15
+    title = infinity_war_events.15.name
+    desc = infinity_war_events.15.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = infinity_war_events.15.a
+        ai_chance = {
+            factor = 100
+        }
+        hidden_effect = {
+            add_opinion_modifier = { who = from modifier = opinion_infninity_war_non_aligned_league }
+            from = { add_opinion_modifier = { who = root modifier = opinion_infninity_war_non_aligned_league } }
+            every_country = {
+                limit = {
+                    is_in_federation_with = root
+                }
+                add_opinion_modifier = { who = from modifier = opinion_infninity_war_non_aligned_league }
+            }
+            every_country = {
+                limit = {
+                    has_relic = r_cube
+                }
+                add_opinion_modifier = { who = from modifier = opinion_infninity_war_non_aligned_league_fe }
+                from = { add_opinion_modifier = { who = prev modifier = opinion_infninity_war_non_aligned_league_fe } }
+            }
+            from = {
+                if = {
+                    limit = { is_ai = no }
+                }
+                country_event = { id = infinity_war_events.20 }
+            }
+        }
+        if = {
+            limit = { has_federation = no }
+            from = {
+                set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+                join_alliance = {
+                    who = root
+                    name = NAME_Avengers
+                    override_requirements = yes
+                }
+            }
+        }
+        else = {
+            from = {
+                set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+                join_alliance = {
+                    who = root
+                    override_requirements = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = war_in_heaven.15.b
+        ai_chance = {
+            factor = 1
+        }
+        hidden_effect = {
+            from = { add_opinion_modifier = { who = root modifier = opinion_non_aligned_league_declined } }
+            from = {
+                if = {
+                    limit = { is_ai = no }
+                }
+                country_event = { id = war_in_heaven.21 }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = infinity_war_events.20
+    title = infinity_war_events.20.name
+    desc = infinity_war_events.20.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+
+    is_triggered_only = yes
+
+    option = {
+        name = infinity_war_events.20.a
+    }
+}
+
+## to warrr!
+country_event = {
+    id = infinity_war_events.50
+    title = infinity_war_events.50.name
+    desc = infinity_war_events.50.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+    location = from
+
+    is_triggered_only = yes
+
+    #mean_time_to_happen = {
+    #    months = 1
+    #}
+
+    option = {
+        name = infinity_war_events.50.a
+        every_country = {
+            limit = {
+                is_same_value = event_target:gauntlet_holder
+            }
+            root = {
+                declare_war = {
+                    target = event_target:gauntlet_holder
+                    name = "NAME_The_Infinity_War"
+                    attacker_war_goal = "wg_infinity_war"
+                }
+            hidden_effect = {
+                every_subject = {
+                    join_war = prev
+                }
+            }
+        }
+    }
+    hidden_effect = {
+        every_country = {
+            country_event = { id = infinity_war_events.51 }
+        }
+    }
+}
+}
+## notify avengers have assembled
+country_event = {
+    id = infinity_war_events.51
+    title = infinity_war_events.51.name
+    desc = infinity_war_events.51.desc
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_alien_signal
+
+    is_triggered_only = yes
+
+    option = {
+        name = infinity_war_events.51.a
+    }
+}

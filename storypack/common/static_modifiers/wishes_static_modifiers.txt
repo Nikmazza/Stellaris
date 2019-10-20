@@ -1,0 +1,6 @@
+happy_wish = {
+	pop_happiness = 10
+}
+sad_wish = {
+	pop_happiness = -10
+}

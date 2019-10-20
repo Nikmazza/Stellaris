@@ -1,0 +1,144 @@
+### AJ XL
+##
+# COLOR:
+# gfx/particles/fire_dm.dds
+# gfx/models/combat_items/tracer_round_acot_kinetic_artillery_dm
+##
+# Scale:
+# gfx/models/acot_combat_items_weapons_projectiles.asset
+# gfx/particles/acot_weapon_particles_projectile.gfx
+
+##############
+## AJ Speed ##
+##############
+# missile speed at component templates .ods file
+@aj_energy_torpedo_speed = 150.0
+@aj_plasma_speed = 200.0
+@aj_normalprojectile_speed = 300.0
+@aj_artillery_speed = 350.0
+@aj_flak_speed = 360.0
+@aj_arc_tachy_enrg_speed = 400.0
+@aj_laser_speed = 420.0
+
+#@aj_arc_tachy_enrg_speed = 550.0
+#@aj_laser_speed = 600.0
+
+@aj_s_scourge_proj_speed = 90.0
+@aj_crystal_ship_speed = 150.0
+@aj_scourge_proj_speed = 150.0
+@aj_space_amoeba_speed = 200.0
+
+#################
+## AJ Duration ##
+#################
+
+@aj_energy_torpedo_dur = 6.0
+@aj_plasma_dur = 6.0
+@aj_normalprojectile_dur = 6.0
+@aj_artillery_dur = 6.0
+@aj_flak_dur = 4.0
+@aj_arc_tachy_enrg_dur = 4.0
+@aj_laser_dur = 4.0
+
+@aj_other_max_dur = 6.0
+
+#### particle_lance / DM Giga
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "particle_lance"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "aj_tachyon_cannon_hit_entity"
+	shield_hit_entity = "aj_tachyon_cannon_shield_hit_entity"
+	muzzle_flash_entity = "aj_tachyon_cannon_muzzle_entity"
+	windup_entity = "aj_tachyon_cannon_windup_entity"
+	
+	#hit_entity = "focused_arc_emitter_hit_entity"
+	#shield_hit_entity = "focused_arc_emitter_shield_hit_entity"
+	#muzzle_flash_entity = "focused_arc_emitter_muzzle_entity"
+	#windup_entity = "focused_arc_emitter_windup_entity"
+	
+	#ballistic specific
+	entity = "aj_tachyon_cannon_entity"
+	speed = @aj_arc_tachy_enrg_speed			#preferred speed of the projectile
+	max_duration = @aj_arc_tachy_enrg_dur		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#### tachyon_lance / DM Giga
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tachyon_lance"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "aj_tachyon_cannon_hit_entity"
+	shield_hit_entity = "aj_tachyon_cannon_shield_hit_entity"
+	muzzle_flash_entity = "aj_tachyon_cannon_muzzle_entity"
+	windup_entity = "aj_tachyon_cannon_windup_entity"
+	
+	#hit_entity = "focused_arc_emitter_hit_entity"
+	#shield_hit_entity = "focused_arc_emitter_shield_hit_entity"
+	#muzzle_flash_entity = "focused_arc_emitter_muzzle_entity"
+	#windup_entity = "focused_arc_emitter_windup_entity"
+	
+	#ballistic specific
+	entity = "aj_tachyon_cannon_entity"
+	speed = @aj_arc_tachy_enrg_speed			#preferred speed of the projectile
+	max_duration = @aj_arc_tachy_enrg_dur		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+
+#### ENERGY CANNON / DM Giga red
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "focused_arc_emitter2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "aj_energy_cannon_hit_entity"
+	shield_hit_entity = "aj_energy_cannon_shield_hit_entity"
+	muzzle_flash_entity = "aj_energy_cannon_muzzle_entity"
+	windup_entity = "aj_energy_cannon_windup_entity"
+	
+	#ballistic specific
+	entity = "aj_energy_cannon_entity"
+	speed = @aj_arc_tachy_enrg_speed			#preferred speed of the projectile
+	max_duration = @aj_arc_tachy_enrg_dur		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "arc_emitter2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "aj_energy_cannon_hit_entity"
+	shield_hit_entity = "aj_energy_cannon_shield_hit_entity"
+	muzzle_flash_entity = "aj_energy_cannon_muzzle_entity"
+	windup_entity = "aj_energy_cannon_windup_entity"
+	
+	#ballistic specific
+	entity = "aj_energy_cannon_entity"
+	speed = @aj_arc_tachy_enrg_speed			#preferred speed of the projectile
+	max_duration = @aj_arc_tachy_enrg_dur		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+
+
+

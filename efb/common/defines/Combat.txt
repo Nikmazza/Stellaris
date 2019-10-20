@@ -1,0 +1,17 @@
+
+NCombat = {	
+	COMBAT_SHIP_DISTANCE_TARGETING_WEIGHT = 0.001					# vanilla 0.002 und kaityo 0.001 .. the higher this is the more likely ships fire from distance on other ships, wurde wrsl reduziert um fuer slower movement speed auszugleichen
+				
+	COMBAT_TARGET_STICKYNESS_FACTOR = 1.0						# 1.5 The higher this is, the less likely ships are to switch targets	
+	RANDOM_TARGETING_WEIGHT = 30.0							# 3 The higher this is, the more random ship targeting will be
+	COMBAT_DETECT_RANGE_MULT = 0.95						# (eigener Change von 0.7 wieder auf 1.05) 1.05 Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
+	SHIP_SMOOTH_ROTATION_THRESHOLD = 7.141 						# 3.141 Used to smooth rotation rate of ships. equation is "y = x * ( min ( 1.0 x / SHIP_SMOOTH_ROTATION_THRESHOLD ) )" where x is the wanted delta rotation this tick and y the resulting delta rotation	
+
+	}
+
+NShip = {
+	FLEET_BASE_FORMATION_SCALE = 2						# 1.5 5 vorher ohne Downscaled ships vorher 2.0 	
+	FLEET_BASE_FORMATION_DIV = 10							# 10 (VORHER WARENS 12)
+	FLEET_MOVE_MAX_DIST_SHIPS = 300.0						# 10.0 Max distance that ships are allowed to travel before last ship
+	STRIKE_CRAFT_COMBAT_REGEN = 0.2    #0.2
+}	

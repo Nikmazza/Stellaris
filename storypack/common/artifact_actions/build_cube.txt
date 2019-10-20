@@ -1,0 +1,67 @@
+@minor_artifact_decision_cost = 2
+@minor_artifact_decision_duration = 3600
+
+artifact_build_cube = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 50
+		}
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount < 55 }
+		}
+	}
+
+	potential = {
+		    has_relic = r_damage_rune
+            has_relic = r_haste_rune
+            has_relic = r_illusion_rune
+            has_relic = r_arcane_rune
+            has_relic = r_invisibility_rune
+            has_relic = r_regeneration_rune
+            NOT = { has_relic = r_cube }
+	}
+	
+
+
+	effect = {
+	
+	add_relic = r_cube
+	
+						hidden_effect = { country_event = { id = nyblax_cube.4 }  }
+	}
+}
+
+artifact_build_cube_locked = {
+	potential = {
+		NOT = { 
+		
+		    has_relic = r_damage_rune
+            has_relic = r_haste_rune
+            has_relic = r_illusion_rune
+            has_relic = r_arcane_rune
+            has_relic = r_invisibility_rune
+            has_relic = r_regeneration_rune
+            NOT = { has_relic = r_cube }
+
+			}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "artifact_action_locked_failtext"
+			has_relic = r_damage_rune
+            has_relic = r_haste_rune
+            has_relic = r_illusion_rune
+            has_relic = r_arcane_rune
+            has_relic = r_invisibility_rune
+            has_relic = r_regeneration_rune
+            NOT = { has_relic = r_cube }
+		}
+	}
+}

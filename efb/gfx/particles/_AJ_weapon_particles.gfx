@@ -1,0 +1,94 @@
+objectTypes = {
+
+
+####TACHYON CANNON (Blue) / DM Artillery (Light Blue)
+
+	pdxparticle = {
+		name = "aj_tachyon_cannon_windup_effect"
+		type = "aj_tachyon_cannon_windup_effect"
+		
+		scale = 1.0 # 1.5
+	}
+	
+	pdxparticle = {
+		name = "aj_tachyon_cannon_muzzle_windup_effect"
+		type = "aj_tachyon_cannon_muzzle_windup_effect"
+		
+		scale = 1.0 # 1.5
+	}
+
+	pdxparticle = {
+		name = "aj_tachyon_cannon_muzzle_particle"
+		type = "aj_tachyon_cannon_muzzle_file"
+		
+		scale = 1.3 # 2.0
+	}
+	
+	pdxparticle = {
+		name = "aj_tachyon_cannon_idle_particle"
+		type = "aj_tachyon_cannon_idle"
+		
+		scale = 1.1 # 2.0
+	}
+
+	pdxparticle = {
+		name = "aj_tachyon_cannon_idle_particle_trail"
+		type = "aj_tachyon_cannon_idle_trail"
+		
+		scale = 1.1 # 2.0
+	}
+
+	pdxparticle = {
+		name = "aj_tachyon_cannon_hit_effect"
+		type = "aj_tachyon_cannon_hit_effect"
+		
+		scale = 1.0 # 1.5
+	}
+
+####ENERGY CANNON / DM Artillery (red)
+
+	pdxparticle = {
+		name = "aj_energy_cannon_windup_effect"
+		type = "aj_energy_cannon_windup_effect"
+		
+		scale = 1.0 # 1.5
+	}
+	
+	pdxparticle = {
+		name = "aj_energy_cannon_muzzle_windup_effect"
+		type = "aj_energy_cannon_muzzle_windup_effect"
+		
+		scale = 1.0 # 1.5
+	}
+
+	pdxparticle = {
+		name = "aj_energy_cannon_muzzle_particle"
+		type = "aj_energy_cannon_muzzle_file"
+		
+		scale = 1.3 # 2.0
+	}
+	
+	pdxparticle = {
+		name = "aj_energy_cannon_idle_particle"
+		type = "aj_energy_cannon_idle"
+		
+		scale = 1.1 # 2.0
+	}
+	
+		pdxparticle = {
+		name = "aj_energy_cannon_idle_particle_trail"
+		type = "aj_energy_cannon_idle_trail"
+		
+		scale = 1.1 # 2.0
+	}
+
+	pdxparticle = {
+		name = "aj_energy_cannon_hit_effect"
+		type = "aj_energy_cannon_hit_effect"
+		
+		scale = 1.0 # 1.5
+	}
+
+	
+	
+}

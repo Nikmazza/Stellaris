@@ -1,0 +1,6 @@
+is_organic = {
+	OR = {
+		has_civic = civic_organic
+		
+	}
+}

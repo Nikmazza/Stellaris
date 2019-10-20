@@ -1,0 +1,131 @@
+triggered_opinion_damage_rune = {
+	trigger = {
+
+		FROM = {
+			has_relic = r_damage_rune
+		}
+	}
+
+	opinion = {
+		base = -50
+	}
+}
+
+triggered_opinion_haste_rune = {
+	trigger = {
+
+		FROM = {
+			has_relic = r_haste_rune
+		}
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+triggered_opinion_illusion_rune = {
+	trigger = {
+
+		FROM = {
+			has_relic = r_illusion_rune
+		}
+	}
+
+	opinion = {
+		base = 50
+	}
+}
+
+triggered_opinion_arcane_rune = {
+	trigger = {
+
+		FROM = {
+			has_relic = r_arcane_rune
+		}
+	}
+
+	opinion = {
+		base = -15
+	}
+}
+
+triggered_opinion_invisibility_rune = {
+	trigger = {
+
+		FROM = {
+			has_relic = r_invisibility_rune
+		}
+	}
+
+	opinion = {
+		base = 5
+	}
+}
+
+triggered_opinion_nyblax_cube = {
+	trigger = {
+		FROM = {
+			has_relic = r_cube
+		}
+	}
+
+	opinion = {
+		base = -500
+	}
+}
+
+opinion_happy_wish = {
+	opinion = {
+		base = 10000
+	}
+		accumulative = yes
+	decay = {
+		base = 2
+	}
+}
+opinion_sad_wish = {
+	opinion = {
+		base = -200
+	}
+		accumulative = yes
+	decay = {
+		base = 2
+	}
+}
+
+opinion_infninity_war_non_aligned_league = {
+	opinion = {
+		base = 200
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_infninity_war_non_aligned_league_declined = {
+	opinion = {
+		base = -100
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_infninity_war_non_aligned_league_fe = {
+	opinion = {
+		base = -5000
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}

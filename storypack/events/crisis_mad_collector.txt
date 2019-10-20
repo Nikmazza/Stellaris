@@ -1,0 +1,570 @@
+namespace = complexwar
+##### THE MAD COLLECTOR ######
+
+
+## spawn the mad collector near the selected planet
+planet_event = {
+	id = complexwar.20501
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		# save spawn point
+		
+		save_event_target_as = spawning_gateway
+		
+			every_country = {
+				limit = {
+					has_any_power_runes = yes
+				}
+				event_target:target_collectors = {
+					set_faction_hostility = {
+						target = prev
+						set_hostile = yes
+						set_neutral = no
+						set_friendly = no
+					}
+				}
+					set_faction_hostility = {
+						target = event_target:target_collectors
+						set_hostile = yes
+						set_neutral = no
+						set_friendly = no
+					}		
+			}
+
+			
+		event_target:target_collectors = {
+
+			create_thanos_fleet = yes
+		}
+		
+
+				
+				
+		every_country = {
+			establish_communications_no_message = event_target:target_collectors
+			country_event = {  id = complexwar.5057 }
+			#country_event = { id = collectors.102 days = 2 }
+		}
+		
+	}
+}
+
+# when clear_auto_move_on_arrival is set to no the fleet will return to planet even if its orbit is interrupted until it is given another auto_move order.
+
+# ON arrival to its new target thanos "balances the planet"
+## this is where we need to balance the planet and remove infinity stones from
+country_event = {
+	id = complexwar.5054
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_fleet_flag = thanos_fleet
+		}
+	
+	}
+	immediate = {
+		if = {
+			limit = {
+				from.orbit = {
+					is_colony = yes
+					owner = { is_country_type = default	}
+				}
+			}
+			set_global_flag =  thanos_purging  
+			from.orbit = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = collector_in_orbit
+						}
+					}
+					add_modifier = {
+						modifier = collector_in_orbit
+					}
+				}
+				## rmeoved the annoying notification of thanos
+				##planet_event = { id = complexwar.5057 }
+			}
+		}
+		# Sets new location for cache
+		#country_event = { id = complexwar.5052 days = 360 }
+		#country_event = { id = complexwar.5052 days = 120 }
+	}
+}
+
+
+# Enigmatic Cache moves if it can find a new location
+country_event = {
+	id = complexwar.5052
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+			any_owned_ship = {
+				has_ship_flag = thanos_ship
+		}
+	}
+
+	immediate = {
+	# Runs check to remove enigmatic_cache_in_orbit modifier
+		random_owned_ship = {
+			limit = {
+				has_ship_flag = thanos_ship
+				exists = orbit
+			}
+			orbit = {
+				planet_event = { id = complexwar.5056 days = 2 }
+
+				# sets 'scanned' planet flag on present location
+				if = {
+					limit = {
+						NOT = {
+							has_planet_flag = has_been_balanced
+						}
+					}
+					set_planet_flag = has_been_balanced
+					remove_global_flag = thanos_purging 
+				}
+			}
+			fromfrom = {
+				fleet_event = { id = complexwar.5077 days = 5 }
+			}
+
+			
+			
+		}
+
+	
+	}
+}
+
+
+
+## chase the power runes
+fleet_event = {
+	id = complexwar.5077
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+
+	immediate = {
+
+			if = {
+			limit = {
+			 any_country = {
+				has_any_power_runes = yes
+			 }
+			}			
+			
+			closest_system = {
+				limit = {
+					any_system_planet = {
+						exists = owner
+						owner = { 
+						is_country_type = default 
+						has_any_power_runes = yes
+						}
+						is_colony = yes
+						is_capital = yes
+						##NOT = { has_planet_flag = has_been_balanced }
+					}
+					}
+					save_event_target_as = raid_system
+				}
+				event_target:raid_system = {
+					random_system_planet = {
+						limit = {
+							exists = owner
+							owner = { 
+							is_country_type = default 
+							has_any_power_runes = yes
+							}
+							is_colony = yes
+							is_capital = yes
+							##NOT = { has_planet_flag = has_been_balanced }
+						}
+						save_event_target_as = raid_planet
+						
+									## set hostile, just in case country got a new rune in the meantime
+									event_target:target_collectors = {
+										set_faction_hostility = {
+											target = prev.owner
+											set_hostile = yes
+											set_neutral = no
+											set_friendly = no
+										}
+									}
+									owner = {
+										set_faction_hostility = {
+										target = event_target:target_collectors
+										set_hostile = yes
+										set_neutral = no
+										set_friendly = no
+										}	
+									}
+						
+					}
+				}
+				auto_move_to_planet = {
+					target = event_target:raid_planet
+					clear_auto_move_on_arrival = no
+				}
+			
+			}	
+			}
+			}
+
+# thanos leaves: removes collector_in_orbit modifier and triggers notification
+planet_event = {
+	id = complexwar.5056
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+
+	immediate = {
+
+		remove_modifier = collector_in_orbit
+		every_owned_pop = {
+		##balanced
+		random_list = {
+							25 = { kill_pop = yes }
+							75 = { }
+							
+						}
+		}
+		## remove infinity stones
+		owner =  { country_event = { id = complexwar.5060 days = 1 } }
+		
+		## notify your planet was balanced
+		planet_event = { id = complexwar.5059 days = 1 }
+	}
+}
+
+#remove infinity stones
+country_event = {
+id = complexwar.5060
+hide_window = yes
+	
+	is_triggered_only = yes
+	trigger = { 
+	OR = {
+		 has_relic = r_damage_rune
+		 has_relic = r_haste_rune
+		 has_relic = r_illusion_rune
+		 has_relic = r_arcane_rune
+		 has_relic = r_invisibility_rune
+		 has_relic = r_regeneration_rune	
+	}	
+	}
+	immediate = {
+	
+		give_collector_all_runes = yes
+		
+	
+	
+	}
+	
+}
+
+
+
+# Notification the first time the cache scans one of your planets
+## change this for a notification to alert everybody that thanos has awoken
+country_event = {
+	id = complexwar.5057
+	title = complexwar.5057.name
+	desc = complexwar.5057.desc
+	picture = GFX_evt_collector_show
+	show_sound = event_mystic_reveal
+	
+
+	is_triggered_only = yes
+
+	option = {
+		name = complexwar.5057.a
+	}
+	option = {
+		name = complexwar.5057.b
+	}
+}
+
+
+
+# Notifies planet owner the first time the cache leaves
+## it should trigger everytime a planet is balanced, so yea...
+planet_event = {
+	id = complexwar.5059
+	title = complexwar.5059.name
+	desc =  complexwar.5059.desc
+
+	picture = GFX_evt_collector_planet_wipe
+	show_sound = event_ground_battle
+	location = this
+	
+	is_triggered_only = yes
+
+	option = {
+		name = complexwar.5059.a
+	}
+	option = {
+		name = complexwar.5059.b
+	}
+}
+
+
+
+#mad collector  dies
+#  give back runes to country
+country_event = {
+	id = complexwar.1016
+	title = complexwar.1016.name
+	desc = {
+		text = complexwar.1016.desc
+	}
+	picture = GFX_evt_collector_dead
+	show_sound = event_collapsing_ruins
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		from = { is_country_type = planet_state }
+		fromfromfrom = {
+			has_ship_flag = thanos_ship
+		}
+	}
+
+	immediate = {
+	set_global_flag = mad_collector_died
+
+	
+			## give the stones and the gauntlet
+		if = { limit = {has_global_flag = r_damage_rune} add_relic = r_damage_rune}	
+		if = { limit = {has_global_flag = r_haste_rune} add_relic = r_haste_rune}	
+		if = { limit = {has_global_flag = r_illusion_rune} add_relic = r_illusion_rune}	
+		if = { limit = {has_global_flag = r_arcane_rune} add_relic = r_arcane_rune}	
+		if = { limit = {has_global_flag = r_invisibility_rune} add_relic = r_invisibility_rune}	
+		if = { limit = {has_global_flag = r_regeneration_rune} add_relic = r_regeneration_rune}	
+	
+		remove_all_collector_stones = yes
+			
+			
+		fromfromfrom = {
+			solar_system = {
+				save_event_target_as = slain_thanos
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+		}
+		
+		#removes curator poi, will replace it
+			every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { is_same_value = prev }
+			}
+				#send a notification to everybody else
+				country_event = { id =  complexwar.1017}
+			}
+			}
+	##keep the cube
+	option = {
+		name = complexwar.1016.a
+		add_resource = { minor_artifacts = 20 }
+		#add_relic = r_cube		
+	}
+	## destroy it
+	option = {
+		name = complexwar.1016.b
+		add_resource = { minor_artifacts = 20 }
+		#remove_relic = r_cube 		
+	}
+	option = {
+		name = complexwar.1016.c
+		add_resource = { minor_artifacts = 20 }
+		#remove_relic = r_cube 		
+	}
+
+	
+}
+
+#mad collector  dies to neutrals or non default country
+#  give back runes to country
+country_event = {
+	id = complexwar.1018
+	title = complexwar.1018.name
+	desc = complexwar.1018.desc
+	picture = GFX_evt_collector_dead
+	show_sound = event_collapsing_ruins
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_country_type = default }
+		from = { is_country_type = planet_state }
+		fromfromfrom = {
+			has_ship_flag = thanos_ship
+		}
+	}
+
+	immediate = {
+	set_global_flag = mad_collector_died
+	
+		remove_all_collector_stones = yes
+			
+		fromfromfrom = {
+			solar_system = {
+				save_event_target_as = slain_thanos
+			}
+			create_ambient_object = {
+				type = "large_debris_object"
+				location = this
+			}
+		}
+		
+		#removes curator poi, will replace it
+			every_country = {
+			limit = {
+				is_country_type = default
+			}
+				#send a notification to everybody else
+				country_event = { id =  complexwar.1017}
+			}
+			}
+	
+}
+
+
+#mad collector dies
+# tell everybody
+country_event = {
+	id = complexwar.1017
+	title = complexwar.1016.name
+	desc = {
+		text = complexwar.1016.desc
+	}
+	picture = GFX_evt_collector_dead
+	show_sound = event_collapsing_ruins
+
+	is_triggered_only = yes
+
+	##cool story bro
+	option = {
+		name = complexwar.1016.c	
+	}
+	
+	
+}
+
+
+## if collector wins a battle, get a new target just in case
+country_event = {
+	id = complexwar.5076
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+
+		fromfromfrom = { 
+			has_fleet_flag = thanos_fleet
+		}
+
+	}
+
+	immediate = {
+		fromfromfrom = {
+				fleet_event = { id = complexwar.5077 days = 5 }
+			}
+
+	}
+}
+
+
+##check idle every month and go to stars with ftl
+fleet_event = {
+	id = complexwar.3323
+	hide_window = yes
+	
+	trigger = {
+		has_global_flag = galactic_mid_crisis_happened
+		has_fleet_flag = thanos_fleet		
+		is_fleet_idle = yes	
+		##no esta purgando gente
+		NOT = { 
+		has_global_flag = thanos_purging_countdown
+		}
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+	
+	
+	if = {
+		limit  = { 
+		NOT = { has_global_flag = thanos_hunting }
+		}
+	set_timed_global_flag = { flag = thanos_hunting days = 31 }
+	fleet_event = { id = complexwar.5077 days = 5 }
+	}
+	else_if = {
+		limit  = { 
+		has_global_flag = thanos_purging
+		NOT = { has_global_flag = thanos_purging_countdown }
+		}
+			set_timed_global_flag = { flag = thanos_purging_countdown days = 91 }
+			owner = {
+			country_event = { id = complexwar.5052 days = 90 }
+			}
+	}	
+	else = {	
+		##set_timed_global_flag = { flag = thanos_idle_flag days = 61 }
+		closest_system = {
+			limit = {
+			exists = owner
+			NOT = {has_star_flag = thanos_ftl_flag}
+			owner = {
+				has_technology = tech_ftl_inhibitor
+				is_country_type = default 
+				is_hostile = event_target:target_collectors
+				}
+				exists = starbase 
+				starbase = {
+					has_starbase_size >= starbase_starport
+					}
+				##
+			}
+			set_timed_star_flag  = { flag = thanos_ftl_flag days = 181 }
+			save_event_target_as = destroy_system
+		}
+		event_target:destroy_system = {
+		
+		
+		random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = raid_star
+					}
+				}
+		auto_move_to_planet = {
+					target = event_target:raid_star
+					clear_auto_move_on_arrival = no
+				}
+		
+		}
+		}
+}

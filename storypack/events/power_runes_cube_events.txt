@@ -1,0 +1,344 @@
+namespace = nyblax_cube
+
+## built cube
+event = {
+    id = nyblax_cube.4
+    title = nyblax_cube.4.name
+    desc = nyblax_cube.4.desc
+    picture = GFX_evt_cube_get
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.4.a
+    }
+}
+
+## wishes options
+country_event = {
+    id = nyblax_cube.10
+    title = nyblax_cube.10.name
+    desc = nyblax_cube.10.desc
+    picture = GFX_evt_collector_snap
+    show_sound = event_whispering
+
+    hide_window = no
+    is_triggered_only = yes
+
+#kill them all
+
+    option = {
+		name = nyblax_cube.10.a		
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+	}
+		hidden_effect = {			      
+		death_wish = yes
+		}
+    }
+	## make em happy
+	option = {
+		name = nyblax_cube.10.b
+		hidden_effect = {			      
+		happy_wish = yes
+	}
+	}
+		## make em sad
+	option = {
+		name = nyblax_cube.10.c
+		hidden_effect = {			      
+		sad_wish = yes
+	}
+	}
+			## peace
+	option = {
+	trigger = { NOT = { has_global_flag = nyblax_no_wars } }
+		name = nyblax_cube.10.d
+		hidden_effect = {			      
+		peace_wish = yes
+	}
+	}
+				## un peace
+	option = {
+	trigger = { has_global_flag = nyblax_no_wars }
+		name = nyblax_cube.10.k
+		hidden_effect = {			      
+		un_peace_wish = yes
+	}
+	}
+			## rule them all
+	option = {
+		name = nyblax_cube.10.e
+		hidden_effect = {			      
+		conquer_wish = yes
+	}
+	}
+			## knowledge
+	option = {
+		name = nyblax_cube.10.f
+		hidden_effect = {			      
+		knowledge_wish = yes
+	}
+	}
+			## illuminate
+	option = {
+		name = nyblax_cube.10.g
+		hidden_effect = {			      
+		illuminate_wish = yes
+	}
+	}
+			## xebo
+	option = {
+		name = nyblax_cube.10.h
+		hidden_effect = {			      
+		xeno_wish = yes
+	}
+	}
+			## unite wish
+	option = {
+		name = nyblax_cube.10.i
+		hidden_effect = {			      
+		unite_wish = yes
+	}
+	}
+			## end needs
+	option = {
+		name = nyblax_cube.10.j
+		hidden_effect = {			      
+		need_wish = yes
+	}
+	}
+	
+	## rangom wish
+	option = {
+		name = nyblax_cube.10.z
+		hidden_effect = {			      
+		random_wish = yes
+	}
+	}
+		## freedom wish
+	option = {
+		name = nyblax_cube.10.y
+		hidden_effect = {			      
+		free_wish = yes
+	}
+	}
+	option = {
+        name = nyblax_cube.10.goodbye
+		default_hide_option = yes
+    }
+}
+
+################
+## notifications 
+###############
+ ## collector has killed all, inform everybody
+event = {
+    id = nyblax_cube.100
+    title = nyblax_cube.100.name
+    desc = nyblax_cube.100.desc
+    picture = GFX_evt_collector_snap
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.100.a
+    }
+}
+
+
+## inform everybody death wish
+event = {
+    id = nyblax_cube.101
+    title = nyblax_cube.101.name
+    desc = nyblax_cube.101.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.101.a
+    }
+}
+## inform everybody happy wish
+event = {
+    id = nyblax_cube.102
+    title = nyblax_cube.102.name
+    desc = nyblax_cube.102.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.102.a
+    }
+}
+## inform everybody sad wish
+event = {
+    id = nyblax_cube.103
+    title = nyblax_cube.103.name
+    desc = nyblax_cube.103.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.103.a
+    }
+}
+
+## inform everybody peace wish
+event = {
+    id = nyblax_cube.104
+    title = nyblax_cube.104.name
+    desc = nyblax_cube.104.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.104.a
+    }
+}
+## inform everybody peace wish
+event = {
+    id = nyblax_cube.104b
+    title = nyblax_cube.104b.name
+    desc = nyblax_cube.104b.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.104b.a
+    }
+}
+
+## inform everybody conquer wish
+event = {
+    id = nyblax_cube.105
+    title = nyblax_cube.105.name
+    desc = nyblax_cube.105.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.105.a
+    }
+}
+
+## inform everybody knowledge wish
+event = {
+    id = nyblax_cube.106
+    title = nyblax_cube.106.name
+    desc = nyblax_cube.106.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.106.a
+    }
+}
+
+## inform everybody believe wish
+event = {
+    id = nyblax_cube.107
+    title = nyblax_cube.107.name
+    desc = nyblax_cube.107.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.107.a
+    }
+}
+
+## inform everybody all died xenos
+event = {
+    id = nyblax_cube.108
+    title = nyblax_cube.108.name
+    desc = nyblax_cube.108.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.108.a
+    }
+}
+
+## inform everybody super federation
+event = {
+    id = nyblax_cube.109
+    title = nyblax_cube.109.name
+    desc = nyblax_cube.109.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.109.a
+    }
+}
+
+## inform everybody needs ended
+event = {
+    id = nyblax_cube.110
+    title = nyblax_cube.110.name
+    desc = nyblax_cube.110.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.110.a
+    }
+}
+
+## inform everybody ser free
+event = {
+    id = nyblax_cube.111
+    title = nyblax_cube.111.name
+    desc = nyblax_cube.111.desc
+    picture = GFX_evt_zro_4
+    show_sound = event_air_raid_siren
+
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = nyblax_cube.111.a
+    }
+}

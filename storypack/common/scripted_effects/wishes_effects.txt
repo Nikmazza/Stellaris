@@ -1,0 +1,208 @@
+## empire kills them all
+death_wish = {
+
+## terminator kills organics
+if = {
+limit = { has_valid_civic = civic_machine_terminator }
+        every_pop = {
+			limit = { is_organic_species = yes }
+                kill_pop = yes
+        }
+        every_country = {
+            every_owned_leader = {
+			limit = { is_organic_species = yes }
+				kill_leader = {
+                show_notification = yes
+                }
+                }
+            }
+            country_event = { id = nyblax_cube.101 }
+}
+## purifiers kill all
+else = {
+        xeno_wish = yes
+}
+
+}
+	
+## smile guys
+happy_wish = {
+        every_pop = {
+			limit = {
+			exists = owner
+			owner = { NOT = { is_country = root } }	
+				}
+					add_modifier = { modifier = happy_wish days = -1 }       
+                
+        }
+        every_country = {
+		add_opinion_modifier = { modifier = opinion_happy_wish who = root }
+
+            }
+            country_event = { id = nyblax_cube.102 }
+        }
+		
+## cry guys     
+sad_wish = {
+        every_pop = {
+			limit = {
+			exists = owner
+			owner = { NOT = { is_country = root } }	
+				}
+					add_modifier = { modifier = sad_wish days = -1 }       
+                
+        }
+        every_country = {
+		add_opinion_modifier = { modifier = opinion_sad_wish who = root }
+
+            }
+            country_event = { id = nyblax_cube.103 }
+        }	
+
+## stop it guys
+peace_wish = {
+set_global_flag = nyblax_no_wars
+country_event = { id = nyblax_cube.104 }
+}	
+
+## it was boring guys
+un_peace_wish = {
+remove_global_flag = nyblax_no_wars
+country_event = { id = nyblax_cube.104b }
+}	
+		
+## its mine guys
+conquer_wish = {
+        every_planet = {
+		limit = {exists = owner}
+			conquer = root
+			set_controller = root
+        }
+            country_event = { id = nyblax_cube.105 }
+        }	
+		
+## i know guys     ## not done
+knowledge_wish = {
+        every_planet = {
+		limit = {exists = owner}
+			conquer = root
+			set_controller = root
+        }
+            country_event = { id = nyblax_cube.106 }
+        }
+		
+## its god guys
+illuminate_wish = {
+   every_country = {
+		limit = { 
+		NOR = {
+		has_authority = auth_hive_mind
+		has_authority = auth_machine_intelligence
+		}
+		}
+		shift_ethic = "ethic_fanatic_spiritualist"
+		
+		}
+        every_country = {
+		every_owned_pop = {
+			limit = {
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					has_trait = trait_hive_mind
+					has_living_standard = {
+						country = root.owner
+						type = living_standard_organic_trophy
+					}
+				}
+			}
+			pop_change_ethic = ethic_spiritualist
+		}
+        }
+		
+		every_planet = {
+		add_modifier = {
+			modifier = god_rayed
+			days = 3600
+		}
+		}
+		
+            country_event = { id = nyblax_cube.107 }
+        }
+		
+## guys?
+xeno_wish = {
+       every_pop = {
+			limit = {
+			NOT = { is_same_species = root.owner_species }
+				}
+                kill_pop = yes
+        }
+        every_country = {
+            every_owned_leader = {
+			limit = {
+			NOT = { is_same_species = root.owner_species }
+				}
+				kill_leader = {
+                show_notification = yes
+                }
+                }
+            }
+            country_event = { id = nyblax_cube.108 }
+        }
+		
+## hey guys
+unite_wish = {
+        every_country = {
+		limit = {
+			OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+		}
+                set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+                join_alliance = {
+                    who = root
+                    name = SPACE_FRIENDS
+                    override_requirements = yes
+                }
+            }
+        
+            country_event = { id = nyblax_cube.109 }
+        }
+		
+## its fine guys   ## not done
+need_wish = {
+        every_planet = {
+		limit = {exists = owner}
+			conquer = root
+			set_controller = root
+        }
+            country_event = { id = nyblax_cube.110 }
+        }
+		
+## you are free guys
+free_wish = {
+			destroy_all_runes = yes
+			remove_relic = r_cube 
+            country_event = { id = nyblax_cube.111 }
+        }	
+
+##random
+random_wish = {
+            random_list = {
+
+                10 = {death_wish = yes}
+				10 = {happy_wish = yes}
+				10 = {sad_wish = yes}
+				10 = {peace_wish = yes}
+				10 = {conquer_wish = yes}
+				10 = {knowledge_wish = yes}
+				10 = {illuminate_wish = yes}
+				10 = {xeno_wish = yes}
+				10 = {unite_wish = yes}
+				10 = {need_wish = yes}
+				
+            }
+        }

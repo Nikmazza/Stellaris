@@ -1,0 +1,41 @@
+namespace = multispecies
+
+### Empire init - add ships
+country_event = {
+	id = multispecies.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {	
+				if = {
+			limit = {   is_organic = yes }  
+							set_graphical_culture = "complex_ship_gc"
+							
+							add_resource = { larva = 50	}
+							
+			random_system_within_border = {		
+			limit = { exists = starbase }
+			starbase = { fleet = { destroy_fleet = this } }
+
+			create_starbase = {
+						size = "starbase_starport"
+
+						module = "shipyard"
+						module = "solar_panel_network"
+							
+
+						building = "crew_quarters"
+						
+				owner = root
+			}
+			}				
+		
+
+
+		
+		}
+	}
+}
+
+
+

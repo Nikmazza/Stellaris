@@ -1,0 +1,91 @@
+
+
+# ####################
+#  Arc Emitter
+# ####################
+
+# ## Arc Emitter 1
+weapon_component_template = {
+	key = "ARC_EMITTER_1"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_arc_emitter_1"
+	icon_frame = 1
+	
+	firing_arc = 35.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_arc_emitter_1" }
+	component_set = "ARC_EMITTER_1"
+	projectile_gfx = "arc_emitter2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "ARC_EMITTER_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t5_cost
+			rare_crystals = @xl_t5_rare
+		}		
+		upkeep = {
+			energy = @xl_t5_upkeep_energy
+			alloys = @xl_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+# ## Arc Emitter 2
+weapon_component_template = {
+	key = "ARC_EMITTER_2"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_arc_emitter_2"
+	icon_frame = 1
+	
+	firing_arc = 35.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_arc_emitter_2" }
+	component_set = "ARC_EMITTER_2"
+	projectile_gfx = "focused_arc_emitter2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t6_cost
+			rare_crystals = @xl_t6_rare
+		}		
+		upkeep = {
+			energy = @xl_t6_upkeep_energy
+			alloys = @xl_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
