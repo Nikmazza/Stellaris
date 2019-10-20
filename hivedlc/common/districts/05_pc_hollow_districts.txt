@@ -265,8 +265,10 @@ district_soldier_den = {
 
 district_nursery = {
 	base_buildtime = 600
+	
 	min_for_deposits_on_planet = 3	
 	max_for_deposits_on_planet = 6
+	#is_capped_by_modifier = no
 	
 	show_on_uncolonized = {
 		is_planet_class = pc_hollow
@@ -321,17 +323,4 @@ district_nursery = {
 	}
 
 
-	
-
-	ai_weight = {
-		weight = 1
-
-		# There are already unworked jobs
-		# Blocks districts unworkable by remaining pops (slaves/robots etc)
-		# Will be improved... at some point
-		modifier = {
-			factor = 0
-			free_jobs > 0 
-		}
-	}
 }
