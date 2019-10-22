@@ -32,8 +32,10 @@
 
  r_cube:0 "§RThe Nyblax Cube§!"
  r_cube_desc:0 "A Cube made from various alloys powerfull enough to contain the Power Runes. By placing a Rune in each side of the Cube and activating it, we can summon the spirits of the fallen civilizations to grant us our wishes."
- cube_activated:1 "§RWARNING: WISHES ARE NOT COMPLETE YET. FOR NOW, THE ONLY WISH THAT WILL BE GRANTED IS THE TOTAL ANNIHILATION OF EVERY OTHER POP YOU DO NOT OWN.§!"
-
+ cube_activated:1 "Contact the spirits of fallen civilizations."
+ cube_build:1 "§RDangerous Project:§! §YBuilds The Nyblax Cube§!."
+ NYBLAX_CUBE_PROJECT:0 "Power up The Nyblax Cube"
+ NYBLAX_CUBE_PROJECT_DESC:0 "Our [Root.GetScientistPlural] will start powering up one of the greatest Artifacts the galaxy has ever known, a device capable of great good or mass destruction."
 
 
  # Mighty rune Bombardment
@@ -451,51 +453,102 @@ pr_maintenance.68.a:0 "A weird development."
   
 
  # nyblax cube
+ requires_relic_six_runes:0 "$TRIGGER_FAIL$§RThe Nyblax Cube requies  all six runes to work.§!"
+ powering_cube:0 "$TRIGGER_FAIL$§RThe Nyblax Cube needs to be powered up through a special project.§!"
+ 
+ 
  nyblax_cube.10.name:0 "The Nyblax Cube"
- nyblax_cube.10.desc:0 "Once we placed all the §YPower Runes§! in the §YNyblax Cube§!, a collective voice coordinated in harmony could be heard.\n\n§B'We are the spirits of the fallen, the fading echoes of long dead civilizations.'§!\n\nThe voices belonged to all of those sacrifices made to create the §YPower Runes§!.\n\n§B'We are trapped within the Runes, intertwined with the upper planes.\n\nTell us, material being, why have you contacted us? What do you want?'§!"
+ nyblax_cube.10.desc:0 "Once we placed all the §YPower Runes§! in the §YNyblax Cube§!, a collective voice coordinated in harmony could be heard.\n\n§B'We are the spirits of the fallen, the fading echoes of long dead civilizations.'§!\n\nThe voices are a collective manifestation of all the sacrifices made to create the §YPower Runes§!.\n\n§B'We are trapped within the Runes, intertwined with the upper planes.\n\nTell us, material being, why have you contacted us? What do you want?'§!"
  
  nyblax_cube.10.a:0 "Purge the galaxy!" ## goddess of death
  
- nyblax_cube.10.b:0 "Bring happiness to the Galaxy" ## god of joy egalitarian ?
- nyblax_cube.10.c:0 "Make the galaxy suffer!" ## -happiness to all athoritarian ? xD
+ nyblax_cube.10.b:0 "Bring happiness and equality to the Galaxy" ## god of joy egalitarian ?
+ nyblax_cube.10.c:0 "We want to rule the galaxy!" ## -happiness to all athoritarian ? xD
  
  nyblax_cube.10.d:0 "We want peace" ## no possible wars
- nyblax_cube.10.e:0 "We want to rule the galaxy!" ## militaristic conquest god and authoritarian
+ nyblax_cube.10.da:0 "Break the peace!" ## no possible wars
+ nyblax_cube.10.e:0 "We want to own the galaxy!" ## militaristic
  
- nyblax_cube.10.f:0 "Absolute Knowledge." ## materialistic?
+ nyblax_cube.10.f:0 "Absolute Knowledge." ## materialistic?  ## removed
  nyblax_cube.10.g:0 "Make them to believe!" ## spiritual
  
- nyblax_cube.10.h:0 "We want to be left alone!" ## xenophobe
+ nyblax_cube.10.h:0 "Purge the Xenos!" ## xenophobe
  nyblax_cube.10.i:0 "Unite the Galaxy!" ## xenophile
  
- nyblax_cube.10.j:0 "End our needs" ## give a massive boost to all reosurces
+ nyblax_cube.10.j:0 "Force others to join the collective!" ## assimilate them all
   
+ nyblax_cube.10.k:0 "Others should pay tribute to our empire!" ## make tributary or subsidiartu  ## megacorp enabled also serves as materialistic, maybe ?
   
- nyblax_cube.10.z:0 "Just do something! Summon a god or something!"
+ nyblax_cube.10.z:0 "Just do anything! Summon a god or something!"
  nyblax_cube.10.y:0 "You are trapped? We will set you free!"
  nyblax_cube.10.goodbye:0 "Oh.. nothing."
 
+## notifications
+## robotontos
  nyblax_cube.101.name:0 "The Death Wish"
- nyblax_cube.101.desc:0 "By using the power of the §YPower Runes§!, we summoned the goddess of death.\n\nOnce the summoning was complete, she took a glance at us and knew what she had to do. She channelled her powers and all sentient life in the galaxy faded into the abyss. Everyone dissapeared in this devastating event."
- nyblax_cube.101.a:0 "Astonishing"
+ nyblax_cube.101.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Goddess of Death.\n\nOnce the summoning was complete, she took a glance at §Y[From.GetRulerTitle] [From.GetRulerName]§! and knew what she had to do. After channelling her powers, all biological life in the galaxy faded into the abyss. Everyone dissapeared in this devastating event."
+ nyblax_cube.101.a:0 "Astonishing."
 
  nyblax_cube.102.name:0 "The Happy Wish"
- nyblax_cube.102.desc:0 "By using the power of the §YPower Runes§!, we summoned the god of joy.\n\nHe was laughing, and his laughter was contagious! suddenly all sentient life in the galaxy felt content and with pleasure. It seems our purpose was to bring laughter and joy to the galaxy."
+ nyblax_cube.102.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned the God of Joy.\n\nHe was laughing, and his laughter was contagious! Suddenly all sentient life in the galaxy felt content and with pleasure. It seems the purpose of §Y[From.GetRulerTitle] [From.GetRulerName]§! was to bring laughter and joy to the galaxy."
  nyblax_cube.102.a:0 "Smile and put on a happy face."
 
+ nyblax_cube.103.name:0 "The Great Conqueror"
+ nyblax_cube.103.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Great Conqueror.\n\nShe seemed pissed by the request and made §Y[From.GetRulerTitle] [From.GetRulerName]§! feel honorless. Nevertheless, once the ritual was complete, the galaxy fell under the rule of §Y[From.GetRulerTitle] [From.GetRulerName]§!! The §Y[From.GetAdjective]§! are not sorry, simply better!"
+ nyblax_cube.103.a:0 "All hail [From.GetRulerTitle] [From.GetRulerName]!"
+
+ nyblax_cube.104.name:0 "The Great Conqueror"
+ nyblax_cube.104.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Great Conqueror.\n\nShe seemed pissed by the request and made §Y[From.GetRulerTitle] [From.GetRulerName]§! feel like a coward. Nevertheless, once the ritual was complete, the galaxy started to lose the will to fight. Those wars that were active will remain until there is a victor, but from now on, no other wars will be waged!"
+ nyblax_cube.104.a:0 "Awesome."
+
+ nyblax_cube.104b.name:0 "The Great Conqueror"
+ nyblax_cube.104b.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Great Conqueror.\n\nShe seemed pissed by the request and made §Y[From.GetRulerTitle] [From.GetRulerName]§! feel histerical. Nevertheless, once the ritual was complete, the galaxy regained the will to fight. From now on: WAR!"
+ nyblax_cube.104b.a:0 "Awesome."
+
+ nyblax_cube.105.name:0 "The Great Conqueror"
+ nyblax_cube.105.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Great Conqueror.\n\nShe seemed pissed by the request and made §Y[From.GetRulerTitle] [From.GetRulerName]§! feel honorless. Nevertheless, once the ritual was complete, the galaxy fell under §Y[From.GetAdjective]§! power! The §Y[From.GetAdjective]§! are not sorry, simply better!"
+ nyblax_cube.105.a:0 "All hail [From.GetRulerTitle] [From.GetRulerName]!"
+## 106 is knowledge but we removed it
+ nyblax_cube.107.name:0 "The God of Light"
+ nyblax_cube.107.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The God of Light.\n\nGlorious incandescence, the galaxy was bathe in light and darkness banished. The God of Light revealed himself to the galaxy and shared the truth about the material plane. Thanks to §Y[From.GetRulerTitle] [From.GetRulerName]§!, the galaxy has finally opened their eyes and hearts, turned from darkness to light. And by doing so, the galaxy may receive forgiveness of sins and a place among those who are sanctified by faith."
+ nyblax_cube.107.a:0 "Amen."
+
+ nyblax_cube.108.name:0 "The Death Wish"
+ nyblax_cube.108.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Goddess of Death.\n\nOnce the summoning was complete, she took a glance at §Y[From.GetRulerTitle] [From.GetRulerName]§! and knew what she had to do. After channelling her powers, all sentient life in the galaxy faded into the abyss. Everyone dissapeared in this devastating event."
+ nyblax_cube.108.a:0 "Astonishing."
+
+ nyblax_cube.109.name:0 "The Power of Friendship"
+ nyblax_cube.109.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The God of Love.\n\nHe was delighted and rejoiced by §Y[From.GetRulerTitle] [From.GetRulerName]'s§! presence! A warm hug was felt by everybody in the galaxy, even robots had a subrutine simulating confort and warmth. He summoned every envoy, politician and ruler from every planet accross the galaxy and convinced them into forming an alliance with eachother, unfurtunattely the Blorg were not accepted in such Federation due to their repugnant appearance."
+ nyblax_cube.109.a:0 "Lovely!"
+
+ nyblax_cube.110.name:0 "The God of Creation"
+ nyblax_cube.110.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Goddess of Life and Creation.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! asked that every living soul should be part of the collective, and with discontent, the god did.\n\nThe galaxy was one voice, and those whose voices could not be heard were destroyed in the process."
+ nyblax_cube.110.a:0 "We are one voice."
+
+ nyblax_cube.111.name:0 "The Great Conqueror"
+ nyblax_cube.111.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! summoned The Great Conqueror.\n\nShe seemed pissed by the request and made §Y[From.GetRulerTitle] [From.GetRulerName]§! feel greedy and empty. Nevertheless, once the ritual was complete, the galaxy fell under the rule of the §Y[From.GetAdjective]§! people! Nothing in life is certain except death and taxes."
+ nyblax_cube.111.a:0 "All hail [From.GetRulerTitle] [From.GetRulerName]!"
+
+ nyblax_cube.199.name:0 "The Free Civilizations"
+ nyblax_cube.199.desc:0 "By using the power of the §YPower Runes§!, the §R[From.GetAdjective]§! used its power to destroy the Runes! The §R[From.GetAdjective]§! hope that, by doing so, the souls that were trapped inside the runes got finaly free.\n\nThe Cube was also destroyed in the process and during the aftermath, §Y[From.GetRulerTitle] [From.GetRulerName]§! found a sock that nobody could recognize."
+ nyblax_cube.199.a:0 "Interesting."
+
+
+
+
+
+## notifications
  nyblax_cube.100.name:0 "The Wish"
  nyblax_cube.100.desc:0 "After collecting all the §YPower Runes§!, the Mad Collector placed them in each side of the §YNyblax Cube§!. He summoned the Goddess of death and did exactly what he said he was going to do. He wiped out all sentient creatures in the galaxy but them.\nNow the galaxy has gone silent, waiting for new life to thrive once again."
  nyblax_cube.100.a:0 "He was... inevitable."
 
  nyblax_cube.4.name:0 "The Nyblax Cube"
- nyblax_cube.4.desc:0 "After collecting all the §YPower Runes§! and using some minor artifacts we where able to forge the §YNyblax Cube§!.\n\nPower beyond our wildes dreams await! We just ought to choose its true and final purpose.\n\nWill we use it to bring happiness joy and prosperity to the galaxy? Peace? Or the absolute annihilation of every other empire?"
+ nyblax_cube.4.desc:0 "After collecting all the §YPower Runes§! and using some minor artifacts we where able to forge the §YNyblax Cube§!.\n\nPower beyond our wildest dreams await!\n\nThe §YNyblax Cube§! requires a vast amount of power to be activated. A special project was created to power up the Artifact."
  nyblax_cube.4.a:0 "We are... inevitable."
- 
- 
 
 
  ################### wish extras #############
- 
+
  happy_wish:0 "The Nyblax Happiness"
  opinion_happy_wish:0 "The Nyblax Happiness"
 
@@ -574,56 +627,40 @@ pr_maintenance.68.a:0 "A weird development."
   ###################################################################################################################
 
  ## will reuse later with another wish
- #war_goal_wg_infinity_war:0 "§YInfinity War§"
- #war_goal_wg_infinity_war_desc:0 "The §YInfinity War§! was waged to avenge the decimation of the galactic populous."
+ war_goal_wg_cube_war:0 "§YThe Interdiction§!"
+ war_goal_wg_cube_war_desc:0 "§YThe Interdiction§! was waged to prevent the use of the Nyblax Cube."
  
  
  # INFINITY WAR EVENTS
- infinity_war_events.13.name:0 "The Avengers"
- infinity_war_events.13.desc:0 "The §Y[event_target:gauntlet_holder.GetName]§! has begun construction on an §RInfinity Gauntlet§! to use all of the §YInfinity Stones§! together. The §Y[event_target:gauntlet_holder.GetName]§! has been a menace in the galaxy for far too long and cannot be allowed to finish this gauntlet.\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§! wishes to form a galatic alliance to finally bring an end to the §Y[event_target:gauntlet_holder.GetName]§!."
- infinity_war_events.13.a:0 "We will form this alliance."
- infinity_war_events.13.b:0 "It is too dangerous."
+ cube_war_events.13.name:0 "§YThe Interdiction§!"
+ cube_war_events.13.desc:0 "The §Y[event_target:cube_holder.GetName]§! has constructed §RThe Nyblax Cube§! and started powering it up.\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§! wishes to form a galatic alliance to force the cease of the powering on the Cube and its destruction."
+ cube_war_events.13.a:0 "We will form this alliance."
+ cube_war_events.13.b:0 "It is too dangerous."
 
- infinity_war_events.19.name:0 "The Avengers"
- infinity_war_events.19.desc:0 "The §Y[From.GetName]§! has invited us to an alliance against the §Y[event_target:gauntlet_holder.GetName]§! to stop thier construction of the §RInfinity Gauntlet§!."
- infinity_war_events.19.a:0 "We have no choice."
+ cube_war_events.20.name:0 "§YThe Interdictors§!"
+ cube_war_events.20.desc:0 "The §Y[From.GetName]§! has invited us to an alliance against the §Y[event_target:cube_holder.GetName]§! to stop the powering up and destruction of §RThe Nyblax Cube§!."
+ cube_war_events.20.a:0 "We have no choice."
+ cube_war_events.20.b:0 "It does not concern us."
 
- infinity_war_events.15.name:0 "The Avengers"
- infinity_war_events.15.desc:0 "The §Y[From.GetName]§! has agreed to join our alliance."
- infinity_war_events.15.a:0 "Excellent."
+ cube_war_events.15.name:0 "§YThe Interdictors§!"
+ cube_war_events.15.desc:0 "The §Y[From.GetName]§! has agreed to join our alliance."
+ cube_war_events.15.a:0 "Excellent."
 
- infinity_war_events.20.name:0 "Avengers Accepted"
- infinity_war_events.20.desc:0 "We have been accepted into the §HThe Avengers§! by the §H[From.GetName]§!, and now we will stand together!."
- infinity_war_events.20.a:0 "To victory!"
 
- infinity_war_events.50.name:0 "The Infinity War"
- infinity_war_events.50.desc:0 "It is time to stop the §Y[event_target:gauntlet_holder.GetName]§! once and for all!"
- infinity_war_events.50.a:0 "To war!."
+ cube_war_events.50.name:0 "§YThe Interdiction§!"
+ cube_war_events.50.desc:0 "It is time to stop the §Y[event_target:cube_holder.GetName]§! once and for all!"
+ cube_war_events.50.a:0 "To war!."
 
- infinity_war_events.51.name:0 "The Infinity War"
- infinity_war_events.51.desc:0 "§YThe Avengers§! have gone to war with the §Y[event_target:gauntlet_holder.GetName]§! to avenge the loss of their people after using the §RInfinity Gauntlet§!!"
- infinity_war_events.51.a:0 "The hardest choices require the strongest wills."
+ cube_war_events.51.name:0 "§YThe Interdiction§!"
+ cube_war_events.51.desc:0 "§YThe Interdictors§! have gone to war with the §Y[event_target:cube_holder.GetName]§! to prevent the use of the §RThe Nyblax Cube§!!"
+ cube_war_events.51.a:0 "The hardest choices require the strongest wills."
 
   # unsused, will reuse with another wish
   
- infinity_war_events.1.name:0 "§MThe Infinity War§!"
- infinity_war_events.1.desc:0 "The §H[gauntlet_holder.GetName]§! has come into to possesion of all 6 Infinity Stones and now seeks to use all 6 stones in unison for an unknown purpose. Due to the destructive nature of the stones, the outcome of such an endeavour cannot be taken lightly.\nThere are wispers around the galaxy of forming a united league against the §H[gauntlet_holder.GetName]§! to stop them from finishing the construction of the "§YInfinity Gauntlet§!""
- infinity_war_events.1.a:0 "The §H[gauntlet_holder.GetName]§! must be stopped."
+ cube_war_events.1.name:0 "§MThe Interdiction§!"
+ cube_war_events.1.desc:0 "The §H[cube_holder.GetName]§! has come into to possesion of all 6 Power Runes and now seeks to use them in unison for an unknown purpose. Due to the destructive nature of the rimes, the outcome of such an endeavour cannot be taken lightly.\nThere are wispers around the galaxy of forming a united league against the §H[cube_holder.GetName]§! to stop them from powering up "§YThe Nyblax Cube§!""
+ cube_war_events.1.a:0 "Thanks."
 
- infinity_war_events.100.name:0 "Invasion of §H[From.From.GetName]§!"
- infinity_war_events.100.desc:0 "§YThe Avengers§! have conquered §H[From.From.GetName]§!. After a skirmish outside the capital building, a group of soldiers stormed in and seized the §RInfinity Gauntlet§! and the §YInfinity Stones§!!"
- infinity_war_events.100.a:0 "We have failed..."
 
- infinity_war_events.101.name:0 "§RInfinity Gauntlet§! Destroyed!"
- infinity_war_events.101.desc:0 "After the invasion of §H[From.From.From.GetName]§! and the destruction of the §RInfinity Gauntlet§!, a group of soldiers decided the power of the §YInfinity Stones§! was too much to fall into the alliance's hands. Dubbed the Infinity Watch, the six of them each took a stone and hid in the far reaches of the galaxy. Efforts to find the group are underway, but the galaxy is a vast place."
- infinity_war_events.101.a:0 "And so the Infinity War ends."
-
- infinity_war_events.103.name:0 "Bombardment of §H[From.This.GetName]§!"
- infinity_war_events.103.desc:0 "The bombardment of §H[From.This.GetName]§! by §YThe Avengers§! has resulted in the entire destruction of the planet. We were unable to get the §RInfinity Gauntlet§! and the §YInfinity Stones§! off of the planet during the bombardment."
- infinity_war_events.103.a:0 "We have failed..."
-
- infinity_war_events.104.name:0 "§RInfinity Gauntlet§! Destroyed!"
- infinity_war_events.104.desc:0 "After the bombardment of §H[From.From.This.GetName]§!, the planet exploded after a massive energy surge from the §RInfinity Gauntlet§!. Parties are searching the remains for traces of the the §YInfinity Stones§!, however, it appears they may be lost within the rubble."
- infinity_war_events.104.a:0 "And so the Infinity War ends."
 # END OF WAR EVENTS #
 

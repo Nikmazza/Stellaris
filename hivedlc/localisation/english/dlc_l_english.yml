@@ -17,6 +17,11 @@
  mod_job_cocoon_per_pop:0 "1 Cocoon Caregivers per 10 pops"
  mod_job_cocoon_per_pop_short:0 ""
   
+
+ job_purge_parasitic:0 "Purging"
+ job_purge_parasitic_plural:0 "Purging"
+ job_purge_parasitic_desc:2 "This pop is being purged in accordance with our policies."
+ 
  building_cocoons_plant:0 "Artificial Cocoons"
  building_cocoons_plant_desc:0 "A special building ment to host cocoons."
  building_cocoons_plant_1:0 "Cocoon Cave"

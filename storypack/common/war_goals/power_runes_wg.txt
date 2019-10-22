@@ -111,7 +111,7 @@ wg_power_runes = {
     }
 }
 
-wg_infinity_war = {
+wg_cube_war = {
     casus_belli = cb_event
 
     total_war = yes
@@ -119,7 +119,7 @@ wg_infinity_war = {
     surrender_acceptance = -1000
     war_exhaustion = -2
 
-    set_defender_wargoal = wg_infinity_war
+    set_defender_wargoal = wg_cube_war
 
     potential = {
         always = no # event only

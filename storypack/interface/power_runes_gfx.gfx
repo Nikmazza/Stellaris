@@ -134,9 +134,9 @@ spriteTypes = {
 	}
 
 	
-	# Infinity War goal icon
+	# cube War goal icon
 	spriteType = {
-		name = "GFX_wg_infinity_war"
+		name = "GFX_wg_cube_war"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
 		noOfFrames = 2
 	}
@@ -423,8 +423,42 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-	
-	
+				spriteType = {
+		name = "GFX_evt_wish_happy"
+		texturefile = "gfx/event_pictures/wish_happy.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+				spriteType = {
+		name = "GFX_evt_wish_conqueror"
+		texturefile = "gfx/event_pictures/wish_conqueror.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+				spriteType = {
+		name = "GFX_evt_wish_light"
+		texturefile = "gfx/event_pictures/wish_light.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
+					spriteType = {
+		name = "GFX_evt_wish_friends"
+		texturefile = "gfx/event_pictures/wish_friends.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
+						spriteType = {
+		name = "GFX_evt_wish_assimilate"
+		texturefile = "gfx/event_pictures/wish_assimilate.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
+							spriteType = {
+		name = "GFX_evt_wish_free"
+		texturefile = "gfx/event_pictures/wish_free.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
 		spriteType = {
 		name = "GFX_wg_power_runes"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_seize_power_runes.dds"	

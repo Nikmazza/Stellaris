@@ -41,8 +41,8 @@
   collectors.101.tellmore: "Why do you need the Runes?"
   
   collectors.101b.name: "Unpleasant contact with [target_planet_state.GetName]"
-  collectors.101b.desc: "The Runes have power, yes?\nLots and lots of power!!!\n\nOnce we get the power, we can create more collectable items, see? Many many many relics from §B*Fakes a cough*§! dead §B*Coughs again*§! civilizations!"
-  collectors.101b.tellmore: "Hmm.. How do you plan to create 'Collectable items'?"
+  collectors.101b.desc: "The Runes have power, yes?\nLots and lots of power!!!\n\nOnce we get the power, we can create more collectible items, see? Many many many relics from §B*Fakes a cough*§! dead §B*Coughs again*§! civilizations!"
+  collectors.101b.tellmore: "Hmm... How do you plan to create 'Collectible items'?"
   
   collectors.101c.name: "Unpleasant contact with [target_planet_state.GetName]"
   collectors.101c.desc: "With the Runes of Power and the Nyblax Cube, obviously!...\n\nYou put Runes in each side, then make a wish, yes?\nTHEN, we wish everybody but us is bye bye, kaputt, adios amigo! and the galaxy is suddenly full of ruins and relics ready for the taking!\n\n§RMMMMMWWWWAHAHAHAHAHAHA!!!§!"
@@ -55,7 +55,7 @@
   collectors.101.surrender.reply: "What is it that you say?\n\nAhhh, yes... 'The best possible outcome!'\n\n§B*Winks at you as he grabs the runes*§!"
 
   collectors.101.goodbye: "Ok... Bye now..."
-  collectors.101.goodbye2: "Are Runes are too important. We can not surrender them."  
+  collectors.101.goodbye2: "Runes are too important. We can not surrender them."  
   
 
 
@@ -65,7 +65,7 @@
   
    # collectors.200: collector is dead
   collectors.200.name: "[target_collectors.GetName]"
-  collectors.200a.desc: "Ah, it's the [This.GetName]. We are dreadfully sorry for our past. We regret the actions of my predecessor. We acknowledge an apology won't sufice to make ammends, and for that very reason our troops are in high alert.\n\nNevertheless, as long as your ships stay away from our systems we can trande.\n\nPlease take a look at our wares and get a 50% discount as a token of apology."
+  collectors.200a.desc: "Ah, it's the [This.GetName]. We are dreadfully sorry for our past. We regret the actions of my predecessor. We acknowledge an apology won't suffice to make amends, and for that very reason our troops are in high alert.\n\nNevertheless, as long as your ships stay away from our systems we can trade.\n\nPlease take a look at our wares and get a 50% discount as a token of apology."
   collectors.200.a: "Lets take a look at some Minor Artifacts."
   
   collectors.200.b: "Show us your Precursors Artifacts."
@@ -91,7 +91,7 @@
   
   # collectors.1001: collectorss destroyed (Destroyer)
   collectors.1001.name: "Planet-State Conquered"
-  collectors.1001.desc: "We have successfully conquered [target_collectors_capital.GetName], a formerly an independent planet. The planet, with all of its incredibly advanced infrastructure and riches, will prove to be a boon for our empire.\n\nIts inhabitants, on the other hand, may pose some problems. We'll have to find a way to deal with their fierce sense of independency and suppress any potential revolts."
+  collectors.1001.desc: "We have successfully conquered [target_collectors_capital.GetName], a formerly an independent planet. The planet, with all of its incredibly advanced infrastructure and riches, will prove to be a boon for our empire.\n\nIts inhabitants, on the other hand, may pose some problems. We'll have to find a way to deal with their fierce sense of independence and suppress any potential revolts."
   
   # collectors.1002: collectors Destroyed --------
   collectors.1002.name: "[target_planet_state.GetName] Conquered"
