@@ -25,7 +25,7 @@ country_event = {
 	title = "complexDLC.101.name"
 	desc = "complexDLC.101.desc"
 	picture = GFX_evt_planet_digested
-	show_sound = event_radio_chatter
+	show_sound = event_swarm_started
 	location = ROOT
 	
 	is_triggered_only = yes
