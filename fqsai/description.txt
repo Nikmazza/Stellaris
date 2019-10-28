@@ -1,195 +1,22 @@
-[img]https://i.imgur.com/g7w7vid.png[/img]
-[h1]Hive Civics Hive Rooms Hive Portrait Hive Personalities Hive Love![/h1]
+[h1]About the mod[/h1]
 
-- New Mainscreen
-- 4 New Rooms
-- 8 New Civics
-- 2 New Planet types
-- 4 New Ascension Perks
-- 2 New Personalities
-- 4 New Portraits
-- New Advisor
-- New Sound Effects
-- New jobs
-- New events
-- New districts
-- New desicions
-- New planetary features
-- New unique colossus weapon
-- Lithoids Support!
-- And More!
-
-[h1]Support the Hive by becoming a patreon![/h1]
-
-I really enjoy modding and creating content for the community and id like to keep on working for you guys!
-Please Help me by becoming a patreon or donating, i really need to sustain myself to keep on working, specially under my high standards. Hope you can provide some assistance and enjoy the mod!
-
-[b]Click here to become a patreon:[/b]
-[url=patreon.com/hivemods][img]https://i.imgur.com/diOwYyp.png[/img][/url]
-https://www.patreon.com/hivemods
-
-[h1]About the mod and Credits[/h1]
-
-This mod compiles most of my other mods  into one Unofficial DLC, adding a background I created (with a base from  https://www.deviantart.com/skyrion/art/Hive-709300772), aditional room and portrait from Silfae's and Oskar Potocki ([url=steamcommunity.com/sharedfiles/filedetails/?id=902526212]Link[/url]) and voice advisor from NotSoBraveDave ([url=steamcommunity.com/sharedfiles/filedetails/?id=1328104435]Link[/url])
-
-[h1]Extra Credits[/h1]
-I want to thank my best friend Franz for introducing me to Stellaris and playing with me instead of going after girls and my cat, Nalo, for being with me while I mod.
-Id also like to thank the discord stellaris mod making den for the help and guidance.
-And how to forget about Reddit, best community ever!
-
-
-[img]https://imgur.com/VglDnbK.png[/img]
-
-[h1]Life Assemblers[/h1]
-[i]Requires Cloning[/i]
-Grants Cocoons technology which grants the cocoon building that allows hive minds to build pops of their main species.
-
-[h1]Life Masters[/h1]
-[i]Requires Life Assemblers[/i]
-Cocoons can now assemble pops from other species too
-You can assimilate other species
-Assimilated species within your empire will crossbreed, creating half-breeds
-Species grown in cocoons can now gain an additional otherwise unattainable random trait, the specie type will favor some traits over others.
-
-
-[img]https://imgur.com/w8PPmlG.png[/img]
-
-[h1]Overmind[/h1] [i]starting civic only[/i]
-[i]This hive is ruled by an Overmind and executed by Remote drones.[/i]
-
-Start the game with all Remote drones Pops (secondary species) with Full citizenship, Drone living standard that are Extremely Adaptative
-Only members of the Main species can be Leaders
-Members of the Main species can only be Leaders
-
-+5 Stability
-
-
-[h1]Parasitic Embryos[/h1] [i]starting civic only[/i]
-[i]This hive uses other Organic bodies to boost their Pop growth[/i]
-
-Allows your empire to Process organics, infecting them and giving birth to new pops of your Main species when killed.
-Enables the abduction casius belli, which provides 25% of the enemy pops if won
-
-
-[h1]Biotech integrated[/h1] [i]starting civic only[/i]
-[i]Part of the crew, part of the ship. The hive integrates themselves with their technology, making it impossible for other empires to understand them.[/i]
-
-Daily Hull regen and Daily Armor regen increased by 0.25%
-Your ships do not generate debris, so your tech cannot be stolen
-
-
-[h1]Mycelium connection[/h1]
-[i]The hive has a deep connection with space itself, it is interlinked with the very fabrics of space and can somewhat communicate with it[/i]
-
-+20% anomaly discovery chance
-+1 ship sensor and hyperlane range
-+2 planet sensor and hyperlane range
-
-
-[h1]Natural Attraction[/h1]
-[i]Like bees are attracted to flowers, the hive excels at gathering food from Farms and Livestock[/i]
-
-+1 food from farmers
-+100% food/minerals from livestock
-
-
-[h1]Focused Collective[/h1]
-[i]If there is no struggle, there is no progress. The hive can opt in and out the chaos to favor progress or unite the drones.[/i]
-
-Provides a policy to focus and redirect the collectives priorities between Unity and Research.
-Balanced Synapse
-+1 influence
-
-Unity focus provides
-+5 Stability
-+1 Unity production to researchers
-
-Research focus provides
-+10% Research speed
-+50% Leader exp
-
-
-[h1]Mutualistic Behavior[/h1]
-[i]Mutualism plays a key part in ecology and so has this Hive learned to thrive by cooperating with other species from its home planet, now looking at the stars for new species to cooperate with.[/i]
-
-Administrative Capacity +30
-Stability +5
-Empire Sprawl Penalty +75%
-Can establish Branch Offices without Commercial Pacts
-Must use Defensive Wars Only policy
-Cannot engage in Indiscriminate Orbital Bombardment
-Refugees are always welcome
-Can always Assimilate biological pops
-Can form Migration Pacts
-Can not Purge nor Enslave pops
-
-
-[h1]Organic Structures[/h1] [i]starting civic only[/i]
-[i]This hive creates living structures and space ships by metamorphosing their larva at will.[/i]
-
-Start the game with Organic Ship set (Will override any shipset you select).
-
-Ships, Buildings and Outposts cost Food and Larvae to build in return of reducedAlloys and Minerals.
-A Brood Queen job added in every colony and every 50 pops
-Brood Focus enabled
-Daily Hull regen increased by +1%
-Farmer output: +2
-Miner output: -1
-
-*Lithoids replace [b]Organic Structures[/b] with [b]Living Stuctures[/b] and have the follwing modifiers:
-Daily Hull regen increased by +1%
-Miner output: +2
-Technician output: -1
-
-[h1]Thriving Prey[/h1] [i]starting civic only[/i]
-[i]To say you have no choice is to relieve yourself of responsibility. Tho this hive was in the bottom of the food chain in their home planet, they thrived by burrowing and building cave systems, dodging fights and only taking calculated risks.[/i]
-
-Homeworld is a Hollowed Planet
-Combat Disengagement Chance +25
-Chance to Evade +5
-Outpost Cost +50%
-
-[img]https://imgur.com/f7GCUPZ.png[/img]
-
-[b]List of Modifications:[/b]
-[url=steamcommunity.com/workshop/filedetails/discussion/1715190550/1626286205709295656/]Link[/url]
-
-[b]Common issues:[/b]
-[table]
-    [tr]
-        [th]Error[/th]
-	[th]Cause[/th]
-        [th]Solution[/th]
-    [/tr]
-    [tr]
-        [td]Missing Sprite/ERROR Icon[/td]
-	[td]message_types is being replaced by other mod[/td]
-        [td][url=steamcommunity.com/sharedfiles/filedetails/?id=1822425191]Use Universal Notifications Patch[/url][/td]
-    [/tr]
-    [tr]
-        [td]Cant see larvae[/td]
-	[td]topbar_other_resource_groups is being replaced by other mod[/td]
-        [td][url=steamcommunity.com/sharedfiles/filedetails/?id=1595876588]Use Universal Resource Patch[/url][/td]
-    [/tr]
-    [tr]
-        [td]Cant establish branch office[/td]
-	[td]can_build_branch_offices and/or can_build_branch_office_on_planet are being replaced by another mod[/td]
-        [td]There is no universal branch office mod, so a compatibility patch should be created[/td]
-    [/tr]
-    [tr]
-        [td]Coccons are not working[/td]
-	[td]can_species_be_assembled is being replaced by another mod[/td]
-        [td]There is no universal assembly mod, so a compatibility patch should be created[/td]
-    [/tr]
-        [tr]
-        [td]Problem with districts and hollow/matryoshka planets[/td]
-	[td]urban and/or rural districts are being replaced by another mod[/td]
-        [td][url=steamcommunity.com/sharedfiles/filedetails/?id=1635222296]Use Universal DistrictPatch[/url][/td]
-    [/tr]
-[/table]
-
+This is a Compatibility patch between Forgotten Queens and Starnet AI which is brought to you thanks to the support of my patreons. So thank them for pushing me to higher standards and asking awesome features like this one!
 
 [h1]Support the Hive by becoming a patreon![/h1]
 [b]Click here to become a patreon:[/b]
 [url=patreon.com/hivemods][img]https://i.imgur.com/diOwYyp.png[/img][/url]
 https://www.patreon.com/hivemods
+
+[h1]Mod Details[/h1]
+
+Both base mods replace districts and some citizenship rights.
+Starnet does it to enhance the AI, while Forgotten Queens does it to provide more content and gamerules.
+This mod merges both logics creating a united front to tackle both concepts!
+
+If you like my work and would like to support me you can do it by becoming a patreon at:
+https://www.patreon.com/hivemods
+
+[h1]REMEMBER[/h1]
+
+As for patch 2.4 Lee onwards, mod load order has been changed.
+[h1]This mod should be at the bottom of the list![/h1]
