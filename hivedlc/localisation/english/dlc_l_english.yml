@@ -5,7 +5,7 @@
   ####################################
   
   complexDLC.101.name:0 "Hive DLC News."
-  complexDLC.101.desc:0 "§GForgotten Queens§! has been updated!\nHey guys! So, we are almost there, a new official update on the horizon and we know of two new dlc: Lithoids and Federation so big changes are comming!.\nWe know for a fact that Origins is coming as well, this means some civics might get a rework or be moved as an origin once the patch is pushed. All of this is done thanks to my Patreon supporters, if you want to help please dont hessitate to do so at §Whttps://patreon.com/hivemods§!!\n\n§YForgotten Queens 2.41b: World Eaters§!\n This update includes some of balances and the last mod created: Complex Colossus: §BPlanetary Digester§!\n\nPatch §B2.41b:§!\n- Mycelium connection +1 ship sensor and hyperlane range\n- Thriving Prey now has a minimum of 20% habitability\n- New Colossus weapon: Planetary Digester.\n- Custom events.\n- Custom vfx.\n- Custom mechanics.\n- The colosssus will fire a beam of heat with enzymes and bacteria that will chew everything in the planet. It will leave it barren with nothing but mountains of food/gas/alloy deposists depending on the planets content.\n\n- The more bio pops it has, the more food and gas resources it will have to be harvested.\n- The more machine pops it has, the more alloys it will have to be harvested.\n- Infested worlds provide a fixed amount of food and gas plus the pop modifier.\n- Ai worlds provide a fixed amount of alloys plus the pop modifier\n\nPlease report any bugs and suggestions on Steam, Twitter or Reddit. Enjoy the game and cya next time!"
+  complexDLC.101.desc:0 "§WForgotten Queens§! has been updated!\n 2.50 AND Lithoids are now supported!!.\nOrigins and Federations are nearly here too, which means some civics might get a rework or be moved as an origin once the patch is pushed. All of this is done thanks to my Patreon supporters, if you want to help please dont hessitate to do so at §Whttps://patreon.com/hivemods§!!\n\n§YForgotten Queens 2.50a: The Hive Rocks!§!\n As if you didn't get enough rock puns already hahaha. So, without further ado, the patchnotes:\n\nPatch §B2.50a:§!\n- Reworked Organic Structures to make it compatible with Lithoids: Lithoids now get Living Structures instead, which eat minerals instead of consuming energy credits.\n -Thriving Prey has been slightly reworked to bring compatibility with other mods!\n- Overmind now creates blockers according to the remote drone pop, so if your remote drones are lithoids you will get 4 monoliths.\n- Reworked Natural Attraction: It now provides +100% livestock minerals/food (Acording to species being farmed) instead of +1 food from livestock.\n- Updated gamerules to be consistent with 2.50 vanilla patch.\n- Planetary Digester now creates minerals as well if the pops are Lithoids.\n- Added sound effects to Planetary Digester\n\n\nPlease report any bugs and suggestions on Steam, Twitter or Reddit. Enjoy the game and cya next time!"
   
   ####################################
   # Content
@@ -98,8 +98,12 @@
  
  trait_photosynthetic:0 "Photosynthetic"
  trait_photosynthetic_desc:0 "§LThis species is able to synthesize sunlight.§!\n"
+  
+ trait_encrusted_minerals:0 "Encrusted Minerals"
+ trait_encrusted_minerals_desc:0 "§LThis species has encrusted minerals fused with the rest of their body. At least a percentage of their organic structure is Lithoid biology.§!\n"
  
  larva:0 "Larva"
  larva_desc:0 "A distinct juvenile form that will undergo metamorphosis into adult. What will it metamorphose into?"
  
  
+ mod_planet_livestock_minerals_produces_add: "£minerals£ $minerals$ from £job_livestock£ §Y$job_livestock_plural$§!"

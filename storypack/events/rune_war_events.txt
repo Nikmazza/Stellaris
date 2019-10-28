@@ -9,14 +9,14 @@ country_event = {
     immediate = {
         every_country = {
             limit = { is_country_type = default }
-            set_timed_country_flag = { flag = ai_no_wars days = 365 }
+            set_timed_country_flag = { flag = ai_no_wars days = 360 }
         }
         random_country = {
             limit = {
                 has_relic = r_cube
             }
             save_event_target_as = cube_holder
-            set_timed_country_flag = { flag = ai_no_wars days = 365 }
+            set_timed_country_flag = { flag = ai_no_wars days = 360 }
         }
         # notify
         every_country = {
@@ -29,7 +29,7 @@ country_event = {
     }
 }
 
-## notify everybody that  the gauntlet was activated
+## notify everybody that  the cube was activated
 country_event = {
     id = cube_war_events.1
     title = cube_war_events.1.name
@@ -62,11 +62,13 @@ country_event = {
         random_country = {
             limit = {
                 is_subject = no
-                NOT = {
-                        has_relic = r_cube
-                }
+                NOT = { has_relic = r_cube }
+				OR = {
                 is_country_type = default
+				is_fe_country = yes
+				}
                 NOT = { has_country_flag = cube_war_league_leader }
+				
             }
             country_event = { id = cube_war_events.13 }
         }
@@ -102,7 +104,8 @@ country_event = {
         hidden_effect = {
 		## we have leader, form alliance and go to war!
 		 set_country_flag = cube_war_league_leader
-		#save_event_target_as = interdictor_leader
+
+			set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
 		         join_alliance = {
                     who = root
                     name = "The Interdictors"
@@ -115,14 +118,17 @@ country_event = {
 						NOT = {
 								has_relic = r_cube
 						}
-						is_country_type = default
+						OR = {
+							is_country_type = default
+							is_fe_country = yes
+							}						
 						NOT = { has_country_flag = cube_war_league_leader }
 					}
 				
 					country_event = { id = cube_war_events.20 }
 				}
 		   
-            country_event = { id = cube_war_events.50 days = 60 }
+            country_event = { id = cube_war_events.50 days = 120 }
            
 
 
@@ -161,7 +167,7 @@ country_event = {
             factor = 100
         }
         
-
+		
 		set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
 		join_alliance = {
 			who = from

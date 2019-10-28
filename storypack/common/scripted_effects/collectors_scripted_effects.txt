@@ -10,6 +10,7 @@ create_collectors = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
+		save_global_event_target_as = collector_home_planet
 		set_planet_flag = collectors_planet
 		# Set Planet Size and Class
 		set_name = "The Vault"	
@@ -29,11 +30,11 @@ create_collectors = {
 			}
 		}
 		last_created_species = {
-			save_event_target_as = collectors_main_species
+			save_global_event_target_as = collectors_main_species
 		}
 		create_country = {
 			name = "The Collectors"
-			type = planet_state
+			type = peaceful_planet_state
 			authority = "auth_democratic"
 			civics = {
 				civic = civic_merchant_guilds
@@ -135,3 +136,67 @@ create_collectors = {
 	}
 }
 
+# Create materialistic Planet-State. Called from System scope.
+create_defeated_collectors = {
+# Choose planet
+	event_target:collector_home_planet = {
+
+
+		create_country = {
+			name = "The Collectors"
+			type = peaceful_planet_state
+			authority = "auth_democratic"
+			civics = {
+				civic = civic_merchant_guilds
+				civic = civic_cutthroat_politics
+			}
+			species = event_target:collectors_main_species
+			flag = random
+			ethos = {
+				ethic = ethic_fanatic_materialist
+				ethic = ethic_xenophile
+			}
+			ignore_initial_colony_error = yes
+		}
+
+		# Create Station and Leader
+		last_created_country = {
+			set_country_flag = collectors
+			save_event_target_as = target_collectors
+			save_global_event_target_as = target_collectors
+
+			create_leader = {
+				class = ruler
+				species = event_target:collectors_main_species
+				name = random
+				skill = 5
+			}
+			set_leader = last_created_leader
+		}
+
+		# Set Planet-State as Owner of the planet
+		set_owner = event_target:target_collectors
+		set_controller = event_target:target_collectors
+		set_capital = yes
+
+
+		event_target:target_collectors = {
+			set_policy = {
+				policy = food_policy
+				option = food_policy_generous
+				cooldown = no
+			}
+			set_policy = {
+				policy = purge
+				option = purge_not_allowed
+				cooldown = no
+			}
+			set_policy = {
+				policy = resettlement
+				option = resettlement_not_allowed
+				cooldown = no
+				}
+			}
+		}
+	}
+	

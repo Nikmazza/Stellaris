@@ -13,6 +13,10 @@
  civic_organic_desc: "This hive creates living structures and space ships by metamorphosing their larva at will."
  civic_tooltip_organic_effects:0 "Start the game with §YOrganic§! Ship set (Will override any shipset you select).\n\n§YShips§!, §YBuildings§! and §YOutposts§! cost £food£ §Y$food$§! and £larva£ §YLarvae§! to build in return of reduced £alloys£ §YAlloys§! and £minerals£ §YMinerals§!.\nA £job_larva_queen£ §Y$job_larva_queen$§! job added in every colony and every 50 pops.\n§YBrood Focus§! policy added to focus §Y$job_larva_queen$§! production between £larva£ §YLarvae§! and Pop Growth\n§YDaily Hull regen§! increased by §G+1%§!\nFarmer output: §G+2§!\nMiner output: §R-1§!"
 
+ civic_organic_lithoid:0 "Living Structures"
+ civic_organic_lithoid_desc: "This rocky hive creates living structures and space ships by fusing their bodies with solid mass or aggregate of minerals or mineraloid matter."
+ civic_tooltip_organic_lithoid_effects:0 "Start the game with §YLithoid§! Ship set (Will override any shipset you select).\n\n§YShips§!, §YBuildings§! and §YOutposts§! cost £minerals£ §Y$minerals$§! as upkeep in return of reduced £energy£ §YEnergy§!.\n§YDaily Hull regen§! increased by §G+1%§!\nMiner output: §G+2§!\nTechnician output: §R-1§!"
+
 
  organic_structures_alates_name:0 "Nuptial Flights" 
  organic_structures_normal_name:0 "Balanced Brood" 

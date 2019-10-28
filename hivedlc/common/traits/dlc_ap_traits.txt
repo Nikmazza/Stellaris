@@ -14,7 +14,7 @@ trait_cortex = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_cortex.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -31,7 +31,7 @@ trait_diaphragm = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_diaphragm.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -43,13 +43,13 @@ trait_scales = {
 	modification = no
 	improves_leaders = yes
 	modifier = {
-		planet_pops_organics_food_upkeep_mult = -0.25
+		planet_pops_organics_upkeep_mult = -0.25
 		leader_age = 120
 	}
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_scales.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -66,7 +66,7 @@ trait_wings = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_wings.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -83,7 +83,7 @@ trait_exoskeleton = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_exoskeleton.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -101,7 +101,7 @@ trait_shell = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_shell.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -118,7 +118,7 @@ trait_pheromones = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_pheromones.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
@@ -135,8 +135,23 @@ trait_photosynthetic = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_photosynthetic.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }
 
+trait_encrusted_minerals = {
+	cost = 0
+	sorting_priority = 19
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {
+	planet_livestock_minerals_produces_add = 2
+	pop_environment_tolerance = 0.15
+	}
+	potential_crossbreeding_chance = 1.0
 
+	icon = "gfx/interface/icons/traits/trait_encrusted_minerals.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+}

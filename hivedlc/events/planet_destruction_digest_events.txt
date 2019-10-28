@@ -206,7 +206,7 @@ planet_event = {
 		## add deposits based on pops
 		set_variable = { which = alloycount value = 0 }
 		set_variable = { which = foodcount value = 0 }
-		
+		set_variable = { which = mineralcount value = 0 }
 		
 		if = {
 		limit = {is_planet_class = pc_infested}
@@ -216,13 +216,25 @@ planet_event = {
 		limit = {is_planet_class = pc_ai}
 		change_variable = { which = alloycount value = 20 }
 		}
-		
+		##lithoids are minerals
 		while = {
-			limit = { any_pop = { is_robot_pop = no	} }
+			limit = { any_pop = { is_lithoid = yes	} }
+			change_variable = { which = mineralcount value = 1 }
+			while = {
+			count = 15
+			random_pop = { limit = {  is_lithoid = yes  }
+			kill_pop = yes
+			 }
+			}
+			
+		}
+		##organics are food
+		while = {
+			limit = { any_pop = { is_flesh_species = yes	} }
 			change_variable = { which = foodcount value = 1 }
 			while = {
 			count = 20
-			random_pop = { limit = {  is_robot_pop = no  }
+			random_pop = { limit = {  is_flesh_species = yes  }
 			kill_pop = yes
 			 }
 			}
@@ -307,6 +319,11 @@ planet_event = {
 			limit = { check_variable = { which = alloycount value >= 1 } }
 			add_deposit = d_alloys_1
 			subtract_variable = { which = alloycount value = 1 }
+		}
+	while = {
+			limit = { check_variable = { which = mineralcount value >= 1 } }
+			add_deposit = d_minerals_1
+			subtract_variable = { which = mineralcount value = 1 }
 		}
 
 		

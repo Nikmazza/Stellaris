@@ -1,5 +1,5 @@
 
-######## COLOSSUS TOXIC PLANET #######
+######## COLOSSUS DIGEST PLANET #######
 
 # WINDUP
 
@@ -12,7 +12,7 @@ entity = {
 		name = "attack" looping = no state_time = 0.1
 		event = { trigger_once = yes sound = { soundeffect = "neutron_windup_layer_1" } }
 		event = { trigger_once = yes sound = { soundeffect = "neutron_windup_layer_2" } }
-		
+		event = { trigger_once = yes sound = { soundeffect = "event_swarm_started" stop_on_state_change = yes } }
 		event = { time = 0.0 particle = "digest_planet_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
 	}
 }
@@ -25,7 +25,7 @@ entity = {
 	
 	default_state = "idle"
 	state = { name = "idle" state_time = 7.0 looping = no
-		event = { time = 0 particle = "toxic_planet_laser_muzzle_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 particle = "digest_planet_laser_muzzle_effect" keep_particle = yes trigger_once = yes }
 		
 		event = { trigger_once = yes sound = { soundeffect = "neutron_fire_layer_1" } }
 		event = { trigger_once = yes sound = { soundeffect = "neutron_fire_layer_2" } }
@@ -35,7 +35,7 @@ entity = {
 		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_fire_layer_2" } }
 		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_fire_layer_3" } }
 
-		event = { trigger_once = yes sound = { soundeffect = "colossus_toxic_beam" stop_on_state_change = yes } }
+		event = { trigger_once = yes sound = { soundeffect = "event_swarm_started" stop_on_state_change = yes } }
 	}
 }
 
@@ -53,7 +53,7 @@ entity = {
 
 		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_1" } }
 		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_2" } }
-
+	event = { trigger_once = yes sound = { soundeffect = "event_swarm_started" stop_on_state_change = yes } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
 	

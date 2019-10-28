@@ -16,27 +16,23 @@ planet_event = {
 			every_country = {
 				limit = {
 					has_any_power_runes = yes
+					is_mad_collector_country = no
 				}
 				event_target:target_collectors = {
 					set_faction_hostility = {
 						target = prev
 						set_hostile = yes
-						set_neutral = no
-						set_friendly = no
 					}
 				}
 					set_faction_hostility = {
 						target = event_target:target_collectors
 						set_hostile = yes
-						set_neutral = no
-						set_friendly = no
 					}		
 			}
 
 			
 		event_target:target_collectors = {
-
-			create_thanos_fleet = yes
+			initiate_mad_collectors = yes
 		}
 		
 
@@ -67,6 +63,7 @@ country_event = {
 	
 	}
 	immediate = {
+	## arrived to a targeted planet
 		if = {
 			limit = {
 				from.orbit = {
@@ -86,16 +83,22 @@ country_event = {
 						modifier = collector_in_orbit
 					}
 				}
-				## rmeoved the annoying notification of thanos
-				##planet_event = { id = complexwar.5057 }
 			}
 		}
-		# Sets new location for cache
-		#country_event = { id = complexwar.5052 days = 360 }
-		#country_event = { id = complexwar.5052 days = 120 }
+	## arrived home
+	else_if = {
+	limit = {
+				from.orbit = {
+					is_colony = yes
+					owner = { is_mad_collector_country = yes }
+				}
+				has_global_flag = thanos_going_home
+			}
+		collectors_start_building_cube = yes
+	}
+	
 	}
 }
-
 
 # Enigmatic Cache moves if it can find a new location
 country_event = {
@@ -132,7 +135,7 @@ country_event = {
 				}
 			}
 			fromfrom = {
-				fleet_event = { id = complexwar.5077 days = 5 }
+				chase_power_runes = yes
 			}
 
 			
@@ -155,68 +158,7 @@ fleet_event = {
 
 	immediate = {
 
-			if = {
-			limit = {
-			 any_country = {
-				has_any_power_runes = yes
-			 }
-			}			
-			
-			closest_system = {
-				limit = {
-					any_system_planet = {
-						exists = owner
-						owner = { 
-						is_country_type = default 
-						has_any_power_runes = yes
-						}
-						is_colony = yes
-						is_capital = yes
-						##NOT = { has_planet_flag = has_been_balanced }
-					}
-					}
-					save_event_target_as = raid_system
-				}
-				event_target:raid_system = {
-					random_system_planet = {
-						limit = {
-							exists = owner
-							owner = { 
-							is_country_type = default 
-							has_any_power_runes = yes
-							}
-							is_colony = yes
-							is_capital = yes
-							##NOT = { has_planet_flag = has_been_balanced }
-						}
-						save_event_target_as = raid_planet
-						
-									## set hostile, just in case country got a new rune in the meantime
-									event_target:target_collectors = {
-										set_faction_hostility = {
-											target = prev.owner
-											set_hostile = yes
-											set_neutral = no
-											set_friendly = no
-										}
-									}
-									owner = {
-										set_faction_hostility = {
-										target = event_target:target_collectors
-										set_hostile = yes
-										set_neutral = no
-										set_friendly = no
-										}	
-									}
-						
-					}
-				}
-				auto_move_to_planet = {
-					target = event_target:raid_planet
-					clear_auto_move_on_arrival = no
-				}
-			
-			}	
+			chase_power_runes = yes
 			}
 			}
 
@@ -240,38 +182,13 @@ planet_event = {
 						}
 		}
 		## remove infinity stones
-		owner =  { country_event = { id = complexwar.5060 days = 1 } }
+		owner =  { give_collector_all_runes = yes }
 		
 		## notify your planet was balanced
 		planet_event = { id = complexwar.5059 days = 1 }
 	}
 }
 
-#remove infinity stones
-country_event = {
-id = complexwar.5060
-hide_window = yes
-	
-	is_triggered_only = yes
-	trigger = { 
-	OR = {
-		 has_relic = r_damage_rune
-		 has_relic = r_haste_rune
-		 has_relic = r_illusion_rune
-		 has_relic = r_arcane_rune
-		 has_relic = r_invisibility_rune
-		 has_relic = r_regeneration_rune	
-	}	
-	}
-	immediate = {
-	
-		give_collector_all_runes = yes
-		
-	
-	
-	}
-	
-}
 
 
 
@@ -320,6 +237,69 @@ planet_event = {
 
 
 
+# Notification collector 5 years remaining to complete cube HIDDEN
+country_event = {
+	id = complexwar.5061
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = {has_global_flag = mad_collector_died} 
+	}
+immediate = {
+
+
+			#notify everybody else
+			every_country = {
+			limit = {
+				  is_country_type = default
+				  NOT = { has_relic = r_cube }
+			}
+				#send a notification to everybody else
+				country_event = { id = complexwar.5062 }
+			}
+		
+	}
+}
+# Notification cube is 50% built
+country_event = {
+	id = complexwar.5062
+	title = complexwar.5062.name
+	desc = complexwar.5062.desc
+	picture = GFX_evt_cube_get
+	show_sound = event_mystic_reveal
+	
+
+	is_triggered_only = yes
+
+	option = {
+		name = complexwar.5062.a
+	}
+	option = {
+		name = complexwar.5062.b
+	}
+}
+
+# collectors completed the cube!
+country_event = {
+	id = complexwar.5063
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = {has_global_flag = mad_collector_died} 
+	}
+	
+	immediate = {
+
+thanos_snap = yes
+}
+
+			
+}
+
+
+
 #mad collector  dies
 #  give back runes to country
 country_event = {
@@ -335,27 +315,18 @@ country_event = {
 
 	trigger = {
 		is_country_type = default
-		from = { is_country_type = planet_state }
+		from = { is_mad_collector_country = yes }
 		fromfromfrom = {
 			has_ship_flag = thanos_ship
 		}
 	}
 
 	immediate = {
-	set_global_flag = mad_collector_died
+	reform_collectors = yes
 
-	
-			## give the stones and the gauntlet
-		if = { limit = {has_global_flag = r_damage_rune} add_relic = r_damage_rune}	
-		if = { limit = {has_global_flag = r_haste_rune} add_relic = r_haste_rune}	
-		if = { limit = {has_global_flag = r_illusion_rune} add_relic = r_illusion_rune}	
-		if = { limit = {has_global_flag = r_arcane_rune} add_relic = r_arcane_rune}	
-		if = { limit = {has_global_flag = r_invisibility_rune} add_relic = r_invisibility_rune}	
-		if = { limit = {has_global_flag = r_regeneration_rune} add_relic = r_regeneration_rune}	
-	
-		remove_all_collector_stones = yes
+	steal_runes_from_collector = yes
 			
-			
+			## add ambient effect
 		fromfromfrom = {
 			solar_system = {
 				save_event_target_as = slain_thanos
@@ -366,7 +337,7 @@ country_event = {
 			}
 		}
 		
-		#removes curator poi, will replace it
+		#notify everybody else
 			every_country = {
 			limit = {
 				is_country_type = default
@@ -401,25 +372,22 @@ country_event = {
 #  give back runes to country
 country_event = {
 	id = complexwar.1018
-	title = complexwar.1018.name
-	desc = complexwar.1018.desc
-	picture = GFX_evt_collector_dead
+	hide_window = yes
 	show_sound = event_collapsing_ruins
 	
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = { is_country_type = default }
-		from = { is_country_type = planet_state }
+		from = { is_mad_collector_country = yes }
 		fromfromfrom = {
 			has_ship_flag = thanos_ship
 		}
 	}
 
 	immediate = {
-	set_global_flag = mad_collector_died
-	
-		remove_all_collector_stones = yes
+	reform_collectors = yes
+	remove_all_collector_stones = yes
 			
 		fromfromfrom = {
 			solar_system = {
@@ -444,7 +412,7 @@ country_event = {
 }
 
 
-#mad collector dies
+#mad collector dies notification
 # tell everybody
 country_event = {
 	id = complexwar.1017
@@ -483,7 +451,7 @@ country_event = {
 
 	immediate = {
 		fromfromfrom = {
-				fleet_event = { id = complexwar.5077 days = 5 }
+				chase_power_runes = yes
 			}
 
 	}
@@ -499,11 +467,9 @@ fleet_event = {
 		has_global_flag = galactic_mid_crisis_happened
 		has_fleet_flag = thanos_fleet		
 		is_fleet_idle = yes	
-		##no esta purgando gente
-		NOT = { 
-		has_global_flag = thanos_purging_countdown
-		}
-		
+		##no esta purgando gente ni en su casa
+		NOT = { has_global_flag = thanos_purging_countdown	}
+		NOT = { has_global_flag = thanos_building_cube }
 	}
 	
 	mean_time_to_happen = {
@@ -516,10 +482,12 @@ fleet_event = {
 	if = {
 		limit  = { 
 		NOT = { has_global_flag = thanos_hunting }
+		NOT = { has_global_flag = thanos_going_home }
 		}
 	set_timed_global_flag = { flag = thanos_hunting days = 31 }
-	fleet_event = { id = complexwar.5077 days = 5 }
+	chase_power_runes = yes
 	}
+	##find new planet to purge
 	else_if = {
 		limit  = { 
 		has_global_flag = thanos_purging
@@ -530,41 +498,16 @@ fleet_event = {
 			country_event = { id = complexwar.5052 days = 90 }
 			}
 	}	
-	else = {	
-		##set_timed_global_flag = { flag = thanos_idle_flag days = 61 }
-		closest_system = {
-			limit = {
-			exists = owner
-			NOT = {has_star_flag = thanos_ftl_flag}
-			owner = {
-				has_technology = tech_ftl_inhibitor
-				is_country_type = default 
-				is_hostile = event_target:target_collectors
-				}
-				exists = starbase 
-				starbase = {
-					has_starbase_size >= starbase_starport
-					}
-				##
+	##go home
+	else_if = {
+		limit  = { 
+			has_global_flag = thanos_going_home
 			}
-			set_timed_star_flag  = { flag = thanos_ftl_flag days = 181 }
-			save_event_target_as = destroy_system
+		thanos_go_home = yes
+	}
+	
+	else = {	
+		  destroy_ftl_system = yes
 		}
-		event_target:destroy_system = {
-		
-		
-		random_system_planet = {
-						limit = {
-							is_star = yes
-						}
-						save_event_target_as = raid_star
-					}
-				}
-		auto_move_to_planet = {
-					target = event_target:raid_star
-					clear_auto_move_on_arrival = no
-				}
-		
-		}
-		}
+	}
 }

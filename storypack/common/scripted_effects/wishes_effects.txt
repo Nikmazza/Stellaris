@@ -100,7 +100,7 @@ set_global_flag = nyblax_no_wars
 ## it was boring guys   ## testt
 un_peace_wish = {
 every_playable_country = {
-				 country_event = { id = nyblax_cube.104b }
+				 country_event = { id = nyblax_cube.1042 }
 			}
 remove_global_flag = nyblax_no_wars
 }	
@@ -124,7 +124,7 @@ knowledge_wish = {
 			conquer = root
 			set_controller = root
         }
-            country_event = { id = nyblax_cube.106 }
+            #country_event = { id = nyblax_cube.106 }
         }
 		
 ## its god guys
@@ -337,7 +337,7 @@ else = {
 ## you are free guys
 free_wish = {
             every_playable_country = {
-				 country_event = { id = nyblax_cube.112 }
+				 country_event = { id = nyblax_cube.199 }
 			}
 			destroy_all_runes = yes
 			remove_relic = r_cube 

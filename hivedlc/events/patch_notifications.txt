@@ -24,7 +24,7 @@ country_event = {
 	id = complexDLC.110
 	title = "complexDLC.101.name"
 	desc = "complexDLC.101.desc"
-	picture = GFX_evt_planet_digested
+	picture = GFX_evt_dlc_updated
 	show_sound = event_swarm_started
 	location = ROOT
 	

@@ -57,7 +57,7 @@ fleet_event = {
 			any_system_planet = {
 				exists = owner
 				owner = {
-					is_country_type = planet_state
+					is_mad_collector_country = yes
 					NOT = { has_communications = root.owner }
 				}
 			}
@@ -69,7 +69,7 @@ fleet_event = {
 			random_system_planet = {
 				limit = {
 					exists = owner
-					owner = { is_country_type = planet_state }
+					owner = { is_mad_collector_country = yes }
 				}
 				owner = {
 					save_event_target_as = target_collectors
@@ -199,7 +199,7 @@ country_event = {
 
 	trigger = {
 		from = {
-			is_country_type = planet_state
+			is_mad_collector_country = yes
 			has_country_flag = collectors
 		}
 		NOT = { has_country_flag = collectors_diplomacy_engaged }
@@ -598,8 +598,9 @@ country_event = {
 	}
 
 	trigger = {
+	NOT = { collector_has_all_runes = yes }
 		from = {
-			is_country_type = planet_state
+			is_mad_collector_country = yes
 			has_country_flag = collectors
 		}
 		NOT = { has_country_flag = collectors_diplomacy_engaged }
@@ -639,15 +640,11 @@ country_event = {
 								set_faction_hostility = {
 									target = prev
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}
 							}
 								set_faction_hostility = {
 									target = event_target:target_collectors
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}	
 			
 			
@@ -750,15 +747,11 @@ country_event = {
 								set_faction_hostility = {
 									target = prev
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}
 							}
 								set_faction_hostility = {
 									target = event_target:target_collectors
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}	
 			
 			
@@ -864,15 +857,11 @@ country_event = {
 								set_faction_hostility = {
 									target = prev
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}
 							}
 								set_faction_hostility = {
 									target = event_target:target_collectors
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}	
 			
 			
@@ -970,15 +959,11 @@ country_event = {
 								set_faction_hostility = {
 									target = prev
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}
 							}
 								set_faction_hostility = {
 									target = event_target:target_collectors
 									set_hostile = no
-									set_neutral = yes
-									set_friendly = no
 								}	
 			
 			
@@ -1029,9 +1014,232 @@ country_event = {
 	}
 }
 
+# collectors.106: collectors go bananas and have all the runes
+country_event = {
+	id = collectors.106
+	title = collectors.106.name
+	desc = collectors.106.desc
+	location = From
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:target_collectors
+		planet_background = event_target:target_collectors
+		graphical_culture = event_target:target_collectors
+		city_level = event_target:target_collectors
+		room = personality_federation_builders_room
+	}
+
+	trigger = {
+	collector_has_all_runes = yes
+		from = {
+			is_mad_collector_country = yes
+			has_country_flag = collectors
+		}
+		NOT = { has_country_flag = collectors_diplomacy_engaged }
+		has_global_flag = galactic_mid_crisis_happened	
+		NOT = {  has_global_flag = mad_collector_died }
+	}
+
+	immediate = {
+		set_country_flag = collectors_diplomacy_engaged
+		From = { save_event_target_as = target_collectors }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	# sure thing bro
+	option = {
+	response_text = collectors.106.reply
+		name = collectors.106.a	
+		}
+		# sure thing bro
+	option = {
+	response_text = collectors.106.reply
+		name = collectors.106.b	
+		}
+	# sure thing bro
+	option = {
+	response_text = collectors.106.reply
+		name = collectors.106.c
+		}
+		# sure thing bro
+	option = {
+	response_text = collectors.106.reply
+		name = collectors.106.d	
+		}	
+
+
+	# Goodbye
+	option = {
+		name = collectors.101.goodbye
+		default_hide_option = yes
+		trigger = { is_homicidal = no }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+}
+
+
+# Fleet 1 - Entering Borders being maaad, collectors.1010
+fleet_event = {
+	# on_crossing_border
+	# Scope = Fleet
+	# From = Origin System
+	# FromFrom = Destination System
+	id = collectors.1010
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:thanos
+		is_same_value = event_target:thanos		
+		
+		
+		fromfrom = {
+			exists = space_owner
+			space_owner = { is_country_type = default }
+			space_owner = { NOT = { has_country_flag = collector_intimidated} }
+			space_owner = { has_any_power_runes = yes }	
+			space_owner = { is_hostile = event_target:target_collectors }	
+				
+		}		
+	}
+
+	immediate = {
+
+		# First Contact message		
+		fromfrom.space_owner = {	
+			set_country_flag = collector_intimidated		
+			country_event = { id = collectors.1020 days = 5 }
+		}
+		
+		
+	}
+}
+
+# collectors.1020: collectors is bananas and goes to empire, ask nicely for the runes
+country_event = {
+	id = collectors.1020
+	title = collectors.1020.name
+	desc = collectors.1020.desc
+	location = From
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+
+	picture_event_data = {
+		portrait = event_target:target_collectors
+		planet_background = event_target:target_collectors
+		graphical_culture = event_target:target_collectors
+		city_level = event_target:target_collectors
+		room = personality_federation_builders_room
+	}
+
+	immediate = {
+		set_country_flag = collectors_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+
+		# give runes
+	option = {
+		name = collectors.101.surrender
+		response_text = collectors.101.surrender.reply
+		trigger = { has_any_power_runes = yes }
+		hidden_effect = {
+			give_collector_all_runes = yes
+			
+						##lets be friends
+						event_target:target_collectors = {
+								set_faction_hostility = {
+									target = prev
+									set_hostile = no
+								}
+							}
+								set_faction_hostility = {
+									target = event_target:target_collectors
+									set_hostile = no
+								}	
+			
+			
+			remove_country_flag = collectors_diplomacy_engaged
+		}		
+		}
 
 
 
+	option = {
+		name = SCUM
+		response_text = collectors.101.nosurrender.reply
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	option = {
+		name = TASTY
+		response_text = collectors.101.nosurrender.reply
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+	option = {
+		name = EXTERMINATE
+		response_text = collectors.101.nosurrender.reply
+		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}	
+	# Goodbye2
+	option = {
+		name = collectors.101.goodbye2
+		response_text = collectors.101.nosurrender.reply
+		default_hide_option = yes
+		trigger = { 
+			has_any_power_runes = yes
+		}
+		hidden_effect = {
+			remove_country_flag = collectors_diplomacy_engaged
+		}
+	}
+}
 
 
 # collectors.200: mad collector is dead
@@ -1055,7 +1263,7 @@ country_event = {
 
 	trigger = {
 		from = {
-			is_country_type = planet_state
+			is_mad_collector_country = yes
 			has_country_flag = collectors
 		}
 		NOT = { has_country_flag = collectors_diplomacy_engaged }
@@ -1447,7 +1655,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		From = { is_country_type = planet_state }
+		From = { is_mad_collector_country = yes }
 		is_country_type = default
 		
 	}
@@ -1592,7 +1800,7 @@ country_event = {
 
 	trigger = {
 		From = {
-			is_country_type = planet_state
+			is_mad_collector_country = yes
 			has_country_flag = collectors
 		}
 		has_country_flag = attacked_collectors
@@ -1653,7 +1861,7 @@ country_event = {
 
 	trigger = {
 		From = {
-			is_country_type = planet_state
+			is_mad_collector_country = yes
 			has_country_flag = collectors
 		}
 		has_country_flag = attacked_collectors

@@ -1,3 +1,8 @@
+is_flesh_species = {
+	is_organic_species = yes
+	is_lithoid = no
+}
+
 
 
 can_destroy_planet_with_PLANET_KILLER_DIGEST = {

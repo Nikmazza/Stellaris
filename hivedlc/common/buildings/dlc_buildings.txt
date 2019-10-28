@@ -21,7 +21,17 @@ building_cocoons_plant = {
 			minerals = 200
 		}
 		upkeep = {
+			trigger = {
+				owner = { is_lithoid = no }
+			}
 			food = 10
+		}
+
+		upkeep = {
+			trigger = {
+				owner = { is_lithoid = yes }
+			}
+			minerals = 10
 		}
 	}
 

@@ -99,7 +99,7 @@ id = dlc_pop_grown.3
 		
 		
 			immediate = {	
-			if = {
+				 if = { #arthropohods
 				limit = { root = { is_species_class = ART } }
 					random_list = {
 						80 = {
@@ -135,7 +135,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}
-			else_if = {
+			else_if = { #mammals
 				limit = { root = { is_species_class = MAM } }
 					random_list = {
 						80 = {
@@ -169,7 +169,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}
-			else_if = {
+			else_if = { #fungoid
 				limit = { root = { is_species_class = FUN } }
 					random_list = {
 						80 = {
@@ -203,7 +203,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}
-			else_if = {
+			else_if = { #humanoid
 				limit = { root = { is_species_class = HUM } }
 					random_list = {
 
@@ -238,7 +238,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}	
-			else_if = {
+			else_if = { #molusc
 				limit = { root = { is_species_class = MOL } }
 					random_list = {
 						80 = {
@@ -272,7 +272,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}
-			else_if = {
+			else_if = { #plantoid
 				limit = { root = { is_species_class = PLANT } }
 					random_list = {
 						80 = {
@@ -305,7 +305,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}	
-			else_if = {
+			else_if = { #reptilian
 				limit = { root = { is_species_class = REP } }
 					random_list = {
 						80 = {
@@ -340,7 +340,7 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}	
-			else_if = {
+			else_if = { #avian
 				limit = { root = { is_species_class = AVI } }
 					random_list = {
 						80 = {
@@ -374,6 +374,41 @@ id = dlc_pop_grown.3
 						}
 					}			
 			}			
+			else_if = { #lithoid
+				limit = { root = { is_species_class = LITHOID } }
+					random_list = {
+						80 = {
+						if = {
+							limit = { NOT = { pop_has_trait = trait_encrusted_minerals } }
+							# did not have trait
+							create_message = {
+									type = MESSAGE_TYPE_TRAIT_GAINED
+									localization = MESSAGE_TRAIT_GAINED
+									days = 30
+									target = event_target:assembling_planet
+										variable = {
+											type = name
+											localization = PLANET
+											scope = event_target:assembling_planet
+										}	
+								}
+							}
+						species = { save_event_target_as = assembled_species }
+						modify_species = {
+							species = event_target:assembled_species
+							add_trait = trait_encrusted_minerals 
+							change_scoped_species = yes
+							# change only this pop's species
+						}
+							change_species = last_created	
+							
+						}
+						20 = {
+						pop_event = { id = dlc_pop_grown.4 }	
+						}
+					}			
+			}			
+		
 			else = {
 			random_list = {
 						50 = {
@@ -393,7 +428,7 @@ id = dlc_pop_grown.4
 		
 			immediate = {	
 					random_list = {
-						9 = {
+							11 = { #cortex
 						
 							if = {
 							limit = { NOT = { pop_has_trait = trait_cortex } }
@@ -421,7 +456,7 @@ id = dlc_pop_grown.4
 						}
 							change_species = last_created
 						}
-							13 = {
+							11 = { #diafragm
 							
 								if = {
 							limit = { NOT = { pop_has_trait = trait_diaphragm } }
@@ -450,7 +485,7 @@ id = dlc_pop_grown.4
 	
 						
 						}
-							13 = {
+							11 = { #slow metabolism
 							if = {
 							limit = { NOT = { pop_has_trait = trait_scales } }
 							# did not have trait
@@ -478,7 +513,7 @@ id = dlc_pop_grown.4
 							
 						
 						}
-							13 = {
+							11 = { #wings
 							
 							if = {
 							limit = { NOT = { pop_has_trait = trait_wings } }
@@ -508,7 +543,7 @@ id = dlc_pop_grown.4
 							
 						
 						}
-							13 = {
+							11 = { #exosqueleton
 							
 							if = {
 							limit = { NOT = { pop_has_trait = trait_exoskeleton } }
@@ -538,7 +573,7 @@ id = dlc_pop_grown.4
 			
 						
 						}
-							13 = {
+							12 = { #shell
 							
 							if = {
 							limit = { NOT = { pop_has_trait = trait_shell } }
@@ -568,7 +603,7 @@ id = dlc_pop_grown.4
 												
 						
 						}
-							13 = {
+							11 = { #pheromones
 							if = {
 							limit = { NOT = { pop_has_trait = trait_pheromones } }
 							# did not have trait
@@ -598,7 +633,7 @@ id = dlc_pop_grown.4
 							
 						
 						}
-							13 = {
+							11 = { #photosynthetic
 							
 							if = {
 							limit = { NOT = { pop_has_trait = trait_photosynthetic } }
@@ -628,13 +663,38 @@ id = dlc_pop_grown.4
 							
 						
 						}
-				
-			}
-			
-			
-					
+							11 = { #encrusted minerals
 							
-				}
-				
-		}
+							if = {
+							limit = { NOT = { pop_has_trait = trait_encrusted_minerals } }
+							# did not have trait
+							create_message = {
+									type = MESSAGE_TYPE_TRAIT_GAINED
+									localization = MESSAGE_TRAIT_GAINED
+									days = 30
+									target = event_target:assembling_planet
+										variable = {
+											type = name
+											localization = PLANET
+											scope = event_target:assembling_planet
+										}	
+								}
+							}
+							
+							
+						species = { save_event_target_as = assembled_species }
+						modify_species = {
+							species = event_target:assembled_species
+							add_trait = trait_encrusted_minerals 
+							change_scoped_species = yes
+							# change only this pop's species
+						}
+							change_species = last_created
+							
+						
+						}
+	
+			}
+	}			
+}
 		

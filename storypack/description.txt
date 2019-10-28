@@ -1,0 +1,80 @@
+[img]https://i.imgur.com/tUsp6jp.png[/img]
+[h1]Storypack! Digsites! Relics! Midgame Crisis[/h1]
+
+- 2 New Midgame Crisis:
+The [REDACTED] and [REDACTED]
+- Lots of custom new events
+- 6 New original digsites
+- 7 New relics
+- Custom initializing empire to interact with
+- Unique mechanics for relics
+- Vanilla friendly
+
+
+[h1]About the mod and Credits[/h1]
+
+This mod was created thanks to the support of my patreons. I cant thank them enough for their contribution they make. They help a lot by providing feedback, ideas, requesting features and guiding the development to reach high standards.
+[url=patreon.com/hivemods][b]If you want to support me by becoming a Patreon click here:[/b][/url]
+https://www.patreon.com/hivemods
+
+
+[b]Click here to become a patreon:[/b]
+[url=patreon.com/hivemods][img]https://i.imgur.com/diOwYyp.png[/img][/url]
+https://www.patreon.com/hivemods
+
+Some images and inspiration were taken from era7's deviantart page: [url=www.deviantart.com/era7]Link[/url]
+Some inspiration came from Dota2 lore and background, other from dragon ball, other from curatos, other from planet states, other star wars, avengers, other space, etc etc (?) Truth being told, one can not simply imagine a new color hahaha.
+
+[img]https://i.imgur.com/zjUv7n4.png[/img]
+
+[spoiler]WARNING! SPOILERS AHEAD![/spoiler]
+
+[spoiler]Ok, so, you have been warned. I guess I should not feel bad about this section anymore.[/spoiler]
+
+[spoiler]The mod adds 6 digsites were you and your team can find the Power Runes. Runes created by ancient and long dead civilizations by command/request/favour to/of the Nyblax. A spacebourne creature that roamed the galaxy trying to find a mate. Unable to do so, with the help of a scientist, the Nyblax started creating the Power Runes, which would grant it its wish. With the help of different cultures, the 6 power runes were created but the Nyblax never got them. Nobody knows were the Nyblax is now.[/spoiler]
+[spoiler]There is also another custom system which adds a planet state called the Vault. This planet is ruled by The Collectors. They are a materialist civilization that collects relics and artifacs. You can trade with them![/spoiler]
+[spoiler]During the game, at midgame, the mad collector will awaken. He wants the Runes! He belives that when civilizations perish, their inventions and creations become relics. In his greed, he will seek the power runes to kill every single sentient being but them. His idea is that once he wipes the galaxy clean, there will be tons of ruins to scavenge and artifacs to collect and sell to civilizations to come.[/spoiler]
+
+[spoiler]You better either have and defend a power rune or hunt the collector down! once he gets all the runes you will lose![/spoiler]
+
+[spoiler]Once you have all the runes, you can forge the Nyblax Cube.[/spoiler]
+
+
+[spoiler]Alternative midgame crisis: Space Rifts. Space-time is collapsing and being rip apart, space rifts will start appearing. This game crisis will create an interconnected network of wormholes accross the galaxy every certain amount of years. This will create lots of new interactions with non-neighbours, either allowing new peacefull ones (because of less distance) or agressive ones.[/spoiler]
+
+[spoiler]Please visit the wish suggestions! The idea is that the wish should be a winnig condition, and if its related to some sort of ethic, better![/spoiler]
+
+[img]https://i.imgur.com/iiaJ0Zy.png[/img]
+
+A lot of events were created and more are to come. If you read the spoiler section or fully played the mod, you know that! I always appreciate feedback and suggestions, so please do not hesitate to go to the suggestions discussions and add your input!
+
+Thanks for subscribing and I hope you enjoy the mod!
+
+[img]https://i.imgur.com/78xrnWp.png[/img]
+
+It should be compatible with everything, no files were harmed in the making of this mod
+Not save compatible: systems are initialized when galaxy is created
+
+[h1]Support new stories by becoming a patreon![/h1]
+[b]Click here to become a patreon:[/b]
+[url=patreon.com/hivemods][img]https://i.imgur.com/diOwYyp.png[/img][/url]
+https://www.patreon.com/hivemods
+
+[img]https://i.imgur.com/sr2VYzF.png[/img]
+
+Thanks to the support patreons provide, I will continue to develop on this mod. Hopefully I will get enough support to add all the features I would like, which include:
+
+[strike]- Different power for the mid game crisis according to the game settings[/strike]
+[strike]- Different and new mid game crisis related to the stories: the idea is that only one crisis will happen each game, so you cannot predict what will happen or how to counter it[/strike]
+- New digsites and events. I loved creating stories, i hope you guys enjoyes them
+[strike]- New wishis: this one is a must imho, will do it regardless of patreon support. I feel the mod needs it[/strike] Done
+- Bug and localization fixing: the mod was just released and i know there are some issues that will get fixed over time, with our feedback!
+[strike]- Better rewards, for now, chapters provide some random unrelated rewards, ill try to have this done by the end of the week[/strike] Done
+[strike]- Forging the nyblax cube will cause all empires to attack you[/strike] Done
+[strike]- Once you build the nyblax cube, there will be a grace period before you can use it[/strike] Done
+- Expand on spacerifts. possible idea: [spoiler]add an isolated system at the end of crisis chain. the system is governed by an empire that went to war with the nyblax, and in its impossibility to defeat them, it destroyed the hyperlanes, isolating them forever. They continued to grow as tall as possible, so you will find a fallen militaristic empire guarded by an AI with a ruined dyson sphere, sentry array,  strategic coordinator, a citadel,and relic world[/spoiler]
+
+[h1]If you want to help me, you can do so by becoming a Patreon![/h1]
+[b]Patreons help me a lot by encouraging, providing feedback and raising the mods to higher standards[/b]
+[url=patreon.com/hivemods][img]https://i.imgur.com/diOwYyp.png[/img][/url]
+https://www.patreon.com/hivemods

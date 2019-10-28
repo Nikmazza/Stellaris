@@ -251,7 +251,7 @@ event = {
 }
 ## inform everybody un peace wish
 event = {
-    id = nyblax_cube.104b
+    id = nyblax_cube.1042
     title = nyblax_cube.104b.name
     desc = nyblax_cube.104b.desc
     picture = GFX_evt_wish_conqueror
@@ -282,20 +282,20 @@ event = {
 }
 
 ## inform everybody knowledge wish
-event = {
-    id = nyblax_cube.106
-    title = nyblax_cube.106.name
-    desc = nyblax_cube.106.desc
-    picture = GFX_evt_zro_4
-    show_sound = event_air_raid_siren
-
-    hide_window = no
-    is_triggered_only = yes
-
-    option = {
-        name = nyblax_cube.106.a
-    }
-}
+#event = {
+#    id = nyblax_cube.106
+#    title = nyblax_cube.106.name
+#
+#    picture = GFX_evt_zro_4
+#    show_sound = event_air_raid_siren
+#
+#    hide_window = no
+#    is_triggered_only = yes
+#
+#    option = {
+#        name = nyblax_cube.106.a
+#    }
+#}
 
 ## inform everybody believe wish
 event = {

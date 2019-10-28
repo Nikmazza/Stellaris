@@ -18,7 +18,7 @@
  illusion_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y360§!"
  
  r_arcane_rune:0 "The Arcane Rune"
- r_arcane_rune_desc:0 "The First Rune, also known as The Arcane Rune, was created by Vorta, a Shakzem scientist. He dranied the living energy out of his people to harvest the required power to forge the Rune. In the end, the power of one Rune was not enough to create another Nyblax."
+ r_arcane_rune_desc:0 "The First Rune, also known as The Arcane Rune, was created by Vorta, a Shakzem scientist. He drained the living energy out of his people to harvest the required power to forge the Rune. In the end, the power of one Rune was not enough to create another Nyblax."
  arcane_rune_activated:1 "Creates a §YGovernor§!, §YScientist§!, §YAdmiral§! or §YGeneral§! from the souls of the harvested Shakzem people."
  arcane_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y1800§!"
 
@@ -31,7 +31,7 @@
 
 
  r_cube:0 "§RThe Nyblax Cube§!"
- r_cube_desc:0 "A Cube made from various alloys powerfull enough to contain the Power Runes. By placing a Rune in each side of the Cube and activating it, we can summon the spirits of the fallen civilizations to grant us our wishes."
+ r_cube_desc:0 "A Cube made from various alloys powerful enough to contain the Power Runes. By placing a Rune in each side of the Cube and activating it, we can summon the spirits of the fallen civilizations to grant us our wishes."
  cube_activated:1 "Contact the spirits of fallen civilizations."
  cube_build:1 "§RDangerous Project:§! §YBuilds The Nyblax Cube§!."
  NYBLAX_CUBE_PROJECT:0 "Power up The Nyblax Cube"
@@ -658,9 +658,12 @@ pr_maintenance.68.a:0 "A weird development."
   # unsused, will reuse with another wish
   
  cube_war_events.1.name:0 "§MThe Interdiction§!"
- cube_war_events.1.desc:0 "The §H[cube_holder.GetName]§! has come into to possesion of all 6 Power Runes and now seeks to use them in unison for an unknown purpose. Due to the destructive nature of the rimes, the outcome of such an endeavour cannot be taken lightly.\nThere are wispers around the galaxy of forming a united league against the §H[cube_holder.GetName]§! to stop them from powering up "§YThe Nyblax Cube§!""
- cube_war_events.1.a:0 "Thanks."
+ cube_war_events.1.desc:0 "The §H[cube_holder.GetName]§! has come into to possesion of all 6 Power Runes and now seeks to use them in unison for an unknown purpose. Due to the destructive nature of the rimes, the outcome of such an endeavour cannot be taken lightly.\nThere are wispers around the galaxy of forming a united league against the §H[cube_holder.GetName]§! to stop them from powering up §YThe Nyblax Cube§!."
+ cube_war_events.1.a:0 "Understood."
 
-
+ complexwar.5062.name:0 "§MThe Interdiction§!"
+ complexwar.5062.desc:0 "The §H[cube_holder.GetName]§! is halfway through powering the §YThe Nyblax Cube§!. Citizens all across the galaxy are concerned with what might happen once the cube is powered up. There are numerous episodes of civil unrest, riots and protests asking governments to do something about it!\n\nWhatever the galaxy council is doing is certainly not enough and the people are worried. Anti-cube movements are spreading in hope the galactic powers can revert this crisis."
+ complexwar.5062.a:0 "Our people should not worry!"
+ complexwar.5062.b:0 "We have other matters to attend to."
 # END OF WAR EVENTS #
 

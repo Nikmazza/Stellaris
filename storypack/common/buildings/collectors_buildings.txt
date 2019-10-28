@@ -7,7 +7,7 @@ building_collectors_vault = {
 	potential = {
 		custom_tooltip = {
 			exists = owner
-			owner = { is_country_type = planet_state }
+			owner = { is_mad_collector_country = yes }
 		}
 	}
 

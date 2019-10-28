@@ -52,20 +52,32 @@
   collectors.101d.desc: "Don't you know nothing of this galaxy?! Dumb dumb dumb duuuuuumb!!\n\nThe Nyblax created the Runes, yes? They have many many powers, get all the Runes and you can forge the Nyblax Cube.\n\nThen you activate the Cube and §RBOOOM!§! you get a wish!\n\nSpeaking of which, we wish you GONE now!\n\nGET OUT!!\n§RGEEEEEET OOOOOOOOOUT!!!!!§!"
 
   collectors.101.surrender: "Here are our runes. Please stop!"
-  collectors.101.surrender.reply: "What is it that you say?\n\nAhhh, yes... 'The best possible outcome!'\n\n§B*Winks at you as he grabs the runes*§!"
+  collectors.101.surrender.reply: "What is it that you say?\n\nAhhh, yes... 'The best possible outcome!' §RHAHAHAHAHAHAHAHAHA§!\n\n§B*Winks at you as he grabs the runes*§!\n\n§RMUAAAHAHAHAHAHAHAHAHAHA§!"
 
   collectors.101.goodbye: "Ok... Bye now..."
   collectors.101.goodbye2: "Runes are too important. We can not surrender them."  
   
 
-
+  # collectors.106: collectors go bananas and has all the runes in his power
+  collectors.106.name: "Unpleasant contact with [target_planet_state.GetName]"
+  collectors.106.desc: "§RMUAHAHAHAHAHAHA!! THE RUNES ARE MIIIIIIIINE MIIIIIIIIIINE!!!§!\n\nSoon the galaxy will be cleansed! History will remember me as the greatest collector of all time! They shall call me: §STHE ULTIMATE COLLECTOR!§!Yesss yesss I love the sound of that!\n\nOnce we are done powering the Nyblax Cube I shall make the wish and we shall venture into the galaxy and raid every crumbling city, gather your most precious possessions and save them in our vaults. Rest assured they will be taken good care of, yes? You can trust us in that.\n\nOhhh yesss! YEEEEESSS! Can you feel it? The soft kiss of an incoming demise, the gentle touch of absolute power!\n\nWe are so close I can feel the power of the Nyblax flowing through meeeeee! THROUUUGH MEEEE!"
+  collectors.106.a: "History wont remember you at all, we will make sure of that."
+  collectors.106.b: "You have a big mouth. We are comming for you!"
+  collectors.106.c: "We will see about that!"
+  collectors.106.d: "Please stop! Our pleople are afraid!"
   
+  collectors.106.reply: "§RThere is no stoping meee!!§!\n\nBid farewell to your beloved ones and take one last good look at the sunset. The dawn of your existance is here, it has a face and its looking at you!\nResistance is futile, you will ALL be cleansed and in the end, your most valuable assets will be ours FOR ALL ETERNITY!!"
+  
+## the mad collectr visits an empire being hostile
+  collectors.1020.name: "Intimidating Transmition"
+  collectors.1020.desc: "§RLaaaaaaaaaaaaaadies aaaaaand geeeeeeentlemen!§!\n\nOpen up your ears or whatever your despicable species use to hear my wonderful voice and pay a very close attention to what we have to say!\n\n§RWe have come to collect!§!\nWe know for a fact that there is a itsy bitsy tiny little rune arround this so called 'Empire' and we would like to have it. Give all the Runes you posses and we shall be on our way, yes?\n\n...\n\n...\n\n§ROR EEEEELSE!§!"
+  collectors.101.nosurrender.reply: "§RGAAAAAAAAAAAAAAAAAA!!§!\n\nYou will regret this!!! You will dream about it!!! You will have nightmares and you will be remembered as he who brought ruin and decimation to their entire civilization!!\n\n§RNOW FALL TO THE MIGHT OF THE HOARDER V! FALL!! FAAAAAALL!! FAAAAAAAAAAAAAAAALL!!\n\nGAAAAAAAAAAAAAAAAAAAAAAAAAAA!!§!"
   ## to do: have collectors avoid your planets if you give them the runes and change hostility  
   
   
    # collectors.200: collector is dead
   collectors.200.name: "[target_collectors.GetName]"
-  collectors.200a.desc: "Ah, it's the [This.GetName]. We are dreadfully sorry for our past. We regret the actions of my predecessor. We acknowledge an apology won't suffice to make amends, and for that very reason our troops are in high alert.\n\nNevertheless, as long as your ships stay away from our systems we can trade.\n\nPlease take a look at our wares and get a 50% discount as a token of apology."
+  collectors.200a.desc: "Ah, it's the [This.GetName]. We are dreadfully sorry for our past. We regret the actions of my predecessor. We acknowledge an apology won't suffice to make amends, but, we hope that in time we will regain your trust.\n\nPlease take a look at our wares and get a 50% discount as a token of apology."
   collectors.200.a: "Lets take a look at some Minor Artifacts."
   
   collectors.200.b: "Show us your Precursors Artifacts."

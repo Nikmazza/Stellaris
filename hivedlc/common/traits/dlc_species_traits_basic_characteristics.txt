@@ -16,12 +16,12 @@ trait_hive_mind_overlord = {
 	randomized = no
 	modification = no
 
-	opposites = { "trait_agrarian" "trait_ingenious" "trait_industrious" "trait_intelligent" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_extremely_adaptive" "trait_adaptive" "trait_nonadaptive" "trait_rapid_breeders" "trait_slow_breeders" "trait_traditional" "trait_quarrelsome" "trait_very_strong" "trait_strong" "trait_weak" "trait_nomadic" "trait_sedentary" "trait_communal" "trait_solitary" "trait_charismatic" "trait_repugnant" "trait_resilient" }
+	opposites = { "trait_agrarian" "trait_ingenious" "trait_industrious" "trait_intelligent" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_extremely_adaptive" "trait_adaptive" "trait_nonadaptive" "trait_rapid_breeders" "trait_slow_breeders" "trait_traditional" "trait_quarrelsome" "trait_very_strong" "trait_strong" "trait_weak" "trait_nomadic" "trait_sedentary" "trait_communal" "trait_solitary" "trait_charismatic" "trait_repugnant" "trait_resilient" "trait_lithoid_volatile_excretions" "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating"}
 		
 		
 	modifier = {}
 		
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 	ai_weight = {
 		weight = 0
 	}
@@ -39,7 +39,7 @@ trait_hive_mind_remote_drone = {
 	modification = no
 
 	icon = "gfx/interface/icons/traits/trait_primitive.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 	
 	opposites = { "trait_extremely_adaptive" "trait_adaptive" "trait_nonadaptive" "trait_fleeting" "trait_slow_learners" "trait_quick_learners" "trait_venerable" "trait_enduring" "trait_talented"}
 	

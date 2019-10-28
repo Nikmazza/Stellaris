@@ -20,6 +20,18 @@ AND = {
 		}
 }
 
-
+is_mad_collector_country = {
+OR = {
+		is_country_type = consolidated_planet_state
+		is_country_type = peaceful_planet_state
+		is_country_type = hostile_planet_state
+		has_country_flag = collectors
+}
+}
 	
-
+is_fe_country = {
+OR = {
+	is_country_type = fallen_empire
+	is_country_type = awakened_fallen_empire
+	}
+}

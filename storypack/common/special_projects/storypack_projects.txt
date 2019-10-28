@@ -14,6 +14,15 @@ special_project = {
 	}
 
 	on_progress_50 = {
+				#notify everybody else
+			every_country = {
+			limit = {
+				  is_country_type = default
+				  NOT = { has_relic = r_cube }
+			}
+				#send a notification to everybody else
+				country_event = { id = complexwar.5062 }
+			}
 
 	}
 	
