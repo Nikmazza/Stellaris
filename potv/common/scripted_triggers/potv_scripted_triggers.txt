@@ -1,0 +1,57 @@
+pop_is_heretic = {
+OR = {
+	AND = {
+		owner = {has_ethic = ethic_atheism }
+		NOT = { has_ethic = ethic_atheism }
+		}
+	AND = {
+		owner = {has_ethic = ethic_agnosticism }
+		NOT = { has_ethic = ethic_agnosticism }
+		}
+	AND = {
+		owner = {has_ethic = ethic_deism }
+		NOT = { has_ethic = ethic_deism }
+		}
+	AND = {
+		owner = {has_ethic = ethic_polytheism }
+		NOT = { has_ethic = ethic_polytheism }
+		}
+	AND = {
+		owner = {has_ethic = ethic_animatism }
+		NOT = { has_ethic = ethic_animatism }
+		}
+	AND = {
+		owner = {has_ethic = ethic_animism }
+		NOT = { has_ethic = ethic_animism }
+		}	
+	}
+}
+
+pop_has_empty_religion = {
+	NOR = {
+		has_ethic = ethic_no_religion
+		has_ethic = ethic_atheism
+		has_ethic = ethic_agnosticism
+		has_ethic = ethic_deism
+		has_ethic = ethic_polytheism
+		has_ethic = ethic_animatism
+		has_ethic = ethic_animism
+		has_ethic = ethic_any_religion
+	}
+}
+
+planet_allows_heretic = {
+ set_variable = { which = heretics_needed value = 0 }
+ while = {
+				count = 5
+				limit = {
+
+				}
+				
+}
+ 
+ 
+			#is_pop_category = heretic
+			#pop_is_heretic = yes				
+						
+}

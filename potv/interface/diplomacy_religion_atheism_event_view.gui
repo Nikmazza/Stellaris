@@ -1,0 +1,686 @@
+
+
+@entries_row1_y = 320
+@entries_column1 = 11
+@entries_column2 = 315
+@entries_column3 = 620
+
+@entry_h = 260
+@entry_w = 290
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "rel_influence"
+		position = { x=0 y=0 }
+		size = { width = 100 height = 30 }
+		moveable = no
+		
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_invisible"
+			position = { x=25 y=-60 }
+			size = { x = 150 y = 30 }
+			font = "cg_16b"
+			text = "RI_CURRENT"
+			format = left	
+			alwaysTransparent = yes	
+		}
+	
+	}
+	### ENCLAVE TRADER EVENT OPTION ###
+
+	containerWindowType = {
+		name = "religion_atheism_option"
+		position = { x=0 y=0 }
+		size = { width = 50 height = 35 }
+		moveable = no
+		
+		buttonType = {		
+			name = "option_button"
+			size = { x = 320 y = 30 }
+			format = center
+			quadTextureSprite = "GFX_button_light" 
+			position = { x=5 y=8 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	### ENCLAVE TRADER EVENT WINDOW ###
+
+	containerWindowType = {
+		name = "religion_atheism_window"
+		orientation = upper_left
+		moveable = yes
+		origo = center
+		size = { width = 1272 height = 600 } 
+
+		position = { x = 970 y = 535 }
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg_trader"
+			position = { x = -10 y = -14 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long_trader"
+			position = { x = 6 y = 22 }
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "focus_button"
+			position = { x = -80 y = 12 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -45 y = 16 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}	
+
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			position = { x = 20 y = 5 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "alien_message_background"
+			size = { x = 900 y = 285 }
+			position = { x = 11 y = 295 }
+			spriteType = "GFX_artifacts_panel_bg"
+			alwaysTransparent = yes
+		}		
+		
+		
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 320 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -175 y = 564  }
+			Orientation = "UPPER_RIGHT"
+			font = "cg_16b"
+			text = "MESSAGE_OK"
+			clicksound = "confirmation"
+		}
+
+		### PORTRAIT ###
+
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 17 y = 45 }
+			size = { width = 900 height = 200 }
+			clipping = yes
+			
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -6 y = -5 }
+			}
+			
+			iconType = {
+				name = "portrait"
+				position = { x = 150 y = 0 }
+				spriteType = "GFX_portrait_character"
+			}	
+		}
+		
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 11 y = 50 }
+			size = { width = 900 height = 200 }
+			clipping = yes
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_religion_atheist_background"
+				position = { x = -6 y = -5 }
+				
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "portrait"
+				position = { x = 50 y = 20 }
+				scale = 0.50
+				spriteType = "GFX_portrait_character"
+				alwaysTransparent = yes
+			}
+					
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = -4 y = -5}
+				alwaysTransparent = yes
+			}
+			
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				alwaysTransparent = yes
+			}
+				
+			
+		}
+
+		### EMPIRE INFO ###
+		
+		iconType = {
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 33 y = 69 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 45 y = 75 }
+			maxWidth = 450
+			maxHeight = 16
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+
+		instantTextBoxType={
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 45 y = 100	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+			text_color_code = "Y"
+		}
+		
+		instantTextBoxType={
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 45 y = 117	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "empire_ethics_icons"
+			position = { x = 45 y = 143 }
+			size = { x = 240 y = 30 }
+			spacing = 2.0
+			format = left
+		}
+
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128_trader"
+			position = { x = 25 y = 240 }
+			orientation = UPPER_LEFT
+		}
+		
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = 25 y = 75 }
+			
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 0 y = -5 }
+				size = { width = 210 height = 75 }
+
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 214 y = 37 }
+				font = "cg_16b"
+				maxWidth = 230
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+		
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 215 y = 55 }
+				size = { x = 125 y = 330 }
+			}
+	
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 10 y = 0 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+	
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 10 y = 18 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+
+		### OPINION
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = 27 y = 110 }
+			size = { width = 94 height = 30 }
+			
+			# Use this for tooltip area, picture comes from somewhere else
+			background = {
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 7 y = 4 }
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 40 y = 7 }
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}	
+		
+		### EVENT DIPLO ###
+		
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 400 }
+			size = { width=563 height=280 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 20 y = -140 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			
+		
+		
+			buttonType = {
+				name = "option_list_bg"
+				size = { x = 330 y = 520 }
+				position = { x = 920 y = -340 }
+				spriteType = "GFX_relics_panel_bg"
+				alwaysTransparent = yes
+			}
+		
+
+		
+		instantTextBoxType={
+			name = "religious_influence2"
+			font = "malgun_goth_24"
+			text = "Religious Actions"
+			position = { x = 1030 y = -320 }
+			maxWidth = 450
+			maxHeight = 16
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+		
+		
+			listboxType = {
+				name = "option_list"
+				position = { x = 920 y = -265 }
+				backGround=""
+				size = { x = 330 y = 520 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	
+	
+			################################################################
+			# TRADITION CATEGORY regional
+			################################################################
+
+			containerWindowType = {
+				name = "regional_religion"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column1 y = @entries_row1_y }
+
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_green"
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_green"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "regional_religion"
+				}
+
+
+			effectButtonType = {
+					name = "regional_tradition_1"
+					position = { x = 95 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "regional_tradition_1"
+				}							
+				
+				effectButtonType = {
+					name = "regional_tradition_2"
+					position = { x = 60 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "regional_tradition_2"
+				}				
+				
+				effectButtonType = {
+					name = "regional_tradition_3"
+					position = { x = 130 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "regional_tradition_3"
+				}				
+				
+				effectButtonType = {
+					name = "regional_tradition_4"
+					position = { x = 200 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "regional_tradition_4"
+				}
+				
+				effectButtonType = {
+					name = "regional_tradition_5"
+					position = { x = 200 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "regional_tradition_5"
+				}
+				
+	
+				containerWindowType = {
+					name = "tree"
+
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_double"
+						position = { x = 76 y = 100 }
+					}
+					
+					iconType = {
+						name = "arrow_2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 217 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY empire
+			################################################################
+
+			containerWindowType = {
+				name = "empire_religion"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column2 y = @entries_row1_y }
+				
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_orange"
+					alwaysTransparent = yes
+				}
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_orange"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "empire_religion"
+				}
+
+				effectButtonType = {
+					name = "empire_tradition_1"
+					position = { x = 60 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "empire_tradition_1"
+				}				
+				
+				effectButtonType = {
+					name = "empire_tradition_2"
+					position = { x = 130 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "empire_tradition_2"
+				}								
+				
+				effectButtonType = {
+					name = "empire_tradition_3"
+					position = { x = 95 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "empire_tradition_3"
+				}	
+				
+				effectButtonType = {
+					name = "empire_tradition_4"
+					position = { x = 200 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "empire_tradition_4"
+				}				
+				
+				effectButtonType = {
+					name = "empire_tradition_5"
+					position = { x = 200 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "empire_tradition_5"
+				}
+
+				containerWindowType = {
+					name = "tree"
+
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge"
+						position = { x = 82 y = 100 }
+					}
+
+					iconType = {
+						name = "arrow_2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 217 y = 100 }
+					}
+				}
+			}
+
+			################################################################
+			# TRADITION CATEGORY galactiv
+			################################################################
+
+			containerWindowType = {
+				name = "galactic_religion"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column3 y = @entries_row1_y }
+			
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_yellow"
+					alwaysTransparent = yes
+				}
+				
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_yellow"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				
+				instantTextBoxType={
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "galactic_religion"
+				}
+				
+				
+				
+				effectButtonType = {
+					name = "galactic_tradition_1"
+					position = { x = 95 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "galactic_tradition_1"
+				}				
+				
+				effectButtonType = {
+					name = "galactic_tradition_2"
+					position = { x = 95 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "galactic_tradition_2"
+				}				
+				
+				effectButtonType = {
+					name = "galactic_tradition_3"
+					position = { x = 165 y = 55 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "galactic_tradition_3"
+				}				
+				
+				effectButtonType = {
+					name = "galactic_tradition_4"
+					position = { x = 165 y = 120 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "galactic_tradition_4"
+				}				
+				
+				effectButtonType = {
+					name = "galactic_tradition_5"
+					position = { x = 165 y = 190 }
+					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					orientation = left
+					effect = "galactic_tradition_5"
+				}
+				
+
+				containerWindowType = {
+					name = "tree"
+
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_single"
+						position = { x = 112 y = 100 }
+					}
+
+					iconType = {
+						name = "arrow_2"
+						spriteType = "GFX_arrow_single"
+						position = { x = 182 y = 100 }
+					}
+
+					iconType = {
+						name = "arrow_3"
+						spriteType = "GFX_arrow_single"
+						position = { x = 182 y = 170 }
+					}
+				}
+			}
+	
+	
+	}
+}

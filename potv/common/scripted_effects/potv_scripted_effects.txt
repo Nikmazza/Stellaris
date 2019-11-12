@@ -1,0 +1,36 @@
+pop_add_country_religion = {		
+	if = {limit = {owner = {has_ethic = ethic_no_religion }}
+	pop_set_random_religion = yes
+	}
+	if = {limit = {owner = {has_ethic = ethic_atheism }}
+	pop_force_add_ethic = ethic_atheism
+	}	
+	if = {limit = {owner = {has_ethic = ethic_agnosticism }}
+	pop_force_add_ethic = ethic_agnosticism
+	}	
+	if = {limit = {owner = {has_ethic = ethic_deism }}
+	pop_force_add_ethic = ethic_deism
+	}	
+	if = {limit = {owner = {has_ethic = ethic_polytheism }}
+	pop_force_add_ethic = ethic_polytheism
+	}	
+	if = {limit = {owner = {has_ethic = ethic_animatism }}
+	pop_force_add_ethic = ethic_animatism
+	}	
+	if = {limit = {owner = {has_ethic = ethic_animism }}
+	pop_force_add_ethic = ethic_animism
+	}	
+}
+
+pop_set_random_religion = {
+	random_list = {
+						10 = { pop_force_add_ethic = ethic_no_religion }
+						10 = { pop_force_add_ethic = ethic_atheism }
+						10 = { pop_force_add_ethic = ethic_agnosticism }
+						10 = { pop_force_add_ethic = ethic_deism }
+						10 = { pop_force_add_ethic = ethic_polytheism }
+						10 = { pop_force_add_ethic = ethic_animatism }
+						10 = { pop_force_add_ethic = ethic_animism }
+					}	
+}
+

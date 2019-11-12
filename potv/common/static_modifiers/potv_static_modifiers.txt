@@ -1,0 +1,22 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+##########################################################################
+# Empire Base Modifiers
+##########################################################################
+religious_country = {
+	
+	country_base_religious_influence_produces_add  = 1
+	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
+	icon_frame = 2
+}
+galactic_modifier_1 = {
+	pop_ethic_atheism_attraction_mult = 0.50
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
+	icon_frame = 2
+}
+

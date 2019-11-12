@@ -1,0 +1,401 @@
+# Bad Opinion of religions
+trigger_opinion_of_religions = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -20
+			has_modifier = "em_atheism"
+			FROM = { 
+				OR = {
+					has_modifier = "em_animism"
+					has_modifier = "em_monotheism"
+					has_modifier = "em_god_emperor"
+					has_modifier = "em_polytheism"
+					has_modifier = "em_pantheism"
+				}
+			}
+		}
+		modifier = {
+			add = -40
+			has_modifier = "em_materialism"
+			FROM = { 
+				OR = {
+					has_modifier = "em_animism"
+					has_modifier = "em_monotheism"
+					has_modifier = "em_god_emperor"
+					has_modifier = "em_polytheism"
+					has_modifier = "em_pantheism"
+				}
+			}
+		}
+	}
+}
+
+# Good Opinion of religions
+trigger_opinion_of_religions_pos = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				AND = {
+					OR = {
+						has_modifier = "em_monotheism"
+						has_modifier = "em_polytheism"
+					}
+					FROM = { 
+						OR = {
+							has_modifier = "em_monotheism"
+							has_modifier = "em_polytheism"
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_modifier = "em_animism"
+						has_modifier = "em_pantheism"
+					}
+					FROM = { 
+						OR = {
+							has_modifier = "em_animism"
+							has_modifier = "em_pantheism"
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_animism"
+			FROM = { 
+				has_modifier = "em_animism"
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_monotheism"
+			FROM = { 
+				has_modifier = "em_monotheism"
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_polytheism"
+			FROM = { 
+				has_modifier = "em_polytheism"
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_pantheism"
+			FROM = { 
+				has_modifier = "em_pantheism"
+			}
+		}
+	}
+}
+
+# Bad Opinion of nonreligions
+trigger_opinion_of_nonreligions = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -20
+			OR = {
+				has_modifier = "em_animism"
+				has_modifier = "em_monotheism"
+				has_modifier = "em_god_emperor"
+				has_modifier = "em_polytheism"
+				has_modifier = "em_pantheism"
+			}
+			FROM = { 
+				has_modifier = "em_atheism"
+			}
+		}
+		modifier = {
+			add = -40
+			OR = {
+				has_modifier = "em_animism"
+				has_modifier = "em_monotheism"
+				has_modifier = "em_god_emperor"
+				has_modifier = "em_polytheism"
+				has_modifier = "em_pantheism"
+			}
+			FROM = { 
+				has_modifier = "em_materialism"
+			}
+		}
+	}
+}
+
+# Good Opinion of nonreligions
+trigger_opinion_of_nonreligions_pos = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				has_modifier = "em_atheism"
+				has_modifier = "em_materialism"
+			}
+			FROM = { 
+				OR = {
+					has_modifier = "em_atheism"
+					has_modifier = "em_materialism"
+				}
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_atheism"
+			FROM = { 
+				has_modifier = "em_atheism"
+			}
+		}
+		modifier = {
+			add = 30
+			has_modifier = "em_materialism"
+			FROM = { 
+				has_modifier = "em_materialism"
+			}
+		}
+	}
+}
+
+# Bad opinion of pagans
+trigger_opinion_of_pagans = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			OR = {
+				AND = {
+					OR = {
+						has_modifier = "em_animism"
+						has_modifier = "em_pantheism"
+					}
+					FROM = { 
+						OR = {
+							has_modifier = "em_monotheism"
+							has_modifier = "em_god_emperor"
+							has_modifier = "em_polytheism"
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_modifier = "em_monotheism"
+						has_modifier = "em_polytheism"
+					}
+					FROM = { 
+						OR = {
+							has_modifier = "em_animism"
+							has_modifier = "em_pantheism"
+						}
+					}
+				}
+				AND = {
+					has_modifier = "em_god_emperor"
+					FROM = { 
+						OR = {
+							has_modifier = "em_animism"
+							has_modifier = "em_pantheism"
+							has_modifier = "em_polytheism"
+						}
+					}
+				}
+				AND = {
+					has_modifier = "em_polytheism"
+					FROM = { 
+						has_modifier = "em_god_emperor"
+					}
+				}
+			}
+		}
+		modifier = {
+			add = -40
+			OR = {
+				AND = {
+					has_modifier = "em_monotheism"
+					FROM = { has_modifier = "em_god_emperor" }
+				}
+				AND = {
+					has_modifier = "em_god_emperor"
+					FROM = { has_modifier = "em_monotheism" }
+				}
+			}
+			
+		}
+	}
+}
+
+# There can't be two gods
+trigger_opinion_of_god_emperor = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -1000
+			has_modifier = "em_god_emperor"
+			FROM = { has_modifier = "em_god_emperor" }
+		}
+	}
+}
+
+# Religion spread
+trigger_opinion_of_religion_spread = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_modifier = "em_secularism" }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 100
+			FROM = { has_policy_flag = religion_spread }
+			OR = {
+				AND = {
+					has_modifier = "em_animism"
+					FROM = { has_modifier = "em_animism" }
+				}
+				AND = {
+					has_modifier = "em_monotheism"
+					FROM = { has_modifier = "em_monotheism" }
+				}
+				AND = {
+					has_modifier = "em_polytheism"
+					FROM = { has_modifier = "em_polytheism" }
+				}
+				AND = {
+					has_modifier = "em_pantheism"
+					FROM = { has_modifier = "em_pantheism" }
+				}
+				AND = {
+					has_modifier = "em_atheism"
+					FROM = { has_modifier = "em_atheism" }
+				}
+				AND = {
+					has_modifier = "em_materialism"
+					FROM = { has_modifier = "em_materialism" }
+				}
+			}
+		}
+		modifier = {
+			add = -100
+			FROM = { has_policy_flag = religion_spread }
+			OR = {
+				AND = {
+					NOT = { has_modifier = "em_animism" }
+					FROM = { has_modifier = "em_animism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_monotheism" }
+					FROM = { has_modifier = "em_monotheism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_polytheism" }
+					FROM = { has_modifier = "em_polytheism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_pantheism" }
+					FROM = { has_modifier = "em_pantheism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_atheism" }
+					FROM = { has_modifier = "em_atheism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_materialism" }
+					FROM = { has_modifier = "em_materialism" }
+				}
+				AND = {
+					NOT = { has_modifier = "em_god_emperor" }
+					FROM = { has_modifier = "em_god_emperor" }
+				}
+			}
+		}
+	}
+}
+
+# Religion conversion
+trigger_opinion_of_subject_religion_conversion = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		has_country_flag = religion_converted
+	}
+	opinion = {
+		base = -100
+	}
+}
+
+# Converted God-Emperor believers
+god_emperors_converted = {
+	opinion = {
+		base = -30
+	}
+	unique = yes
+	decay = {
+		base = 3
+		modifier = {
+			add = -2
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+# Killed God-Emperor believers
+god_emperors_killed = {
+	opinion = {
+		base = -60
+	}
+	unique = yes
+	decay = {
+		base = 3
+		modifier = {
+			add = -2
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}

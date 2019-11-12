@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_religion_atheist_background"
+		textureFile = "gfx/interface/religion/religion_atheist_background.dds"
+	}		
+}

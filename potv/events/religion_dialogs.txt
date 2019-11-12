@@ -1,0 +1,50 @@
+namespace = potv_religion_dialog
+
+# potv_religion_dialog
+country_event = {
+	id = potv_religion_dialog.1
+	title = "Atheism"
+	custom_gui = "religion_atheism_window"
+
+
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = root.owner.leader
+	}
+
+	option = {
+		custom_gui = "rel_influence"
+		name = "RI_CURRENT"
+	
+	}
+	
+	
+	option = {
+		custom_gui = "religion_atheism_option"
+		name = "Religious Action"
+	
+	}
+		option = {
+		custom_gui = "religion_atheism_option"
+		name = "Religious Action"
+	
+	}
+		option = {
+		custom_gui = "religion_atheism_option"
+		name = "Religious Action"
+	
+	}
+		option = {
+		custom_gui = "religion_atheism_option"
+		name = "Religious Action"
+	
+	}
+		option = {
+		custom_gui = "religion_atheism_option"
+		name = "Religious Action"
+	
+	}
+
+}

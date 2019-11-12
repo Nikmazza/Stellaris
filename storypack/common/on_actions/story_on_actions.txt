@@ -24,17 +24,18 @@ on_entering_system = {
 }
 
 
-
+# Removed since we bring them back monthly and this breaks the wargoal
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
-		pr_maintenance.1	# damage rune Maintenance
-		pr_maintenance.4	# haste rune Maintenance
-		pr_maintenance.7	# illusion rune Maintenance
-		pr_maintenance.10	# arcane rune Maintenance
-		pr_maintenance.13	# invisibility Maintenance
-		pr_maintenance.16	# regeneration rune Maintenance
+		##pr_maintenance.2 ## test
+		##pr_maintenance.1	# damage rune Maintenance
+		##pr_maintenance.4	# haste rune Maintenance
+		##pr_maintenance.7	# illusion rune Maintenance
+		##pr_maintenance.10	# arcane rune Maintenance
+		##pr_maintenance.13	# invisibility Maintenance
+		##pr_maintenance.16	# regeneration rune Maintenance
 	}
 }
 

@@ -11,7 +11,7 @@
  GetPurgeProcessingResource_life:0 "new life forms, creating §HPops§! upon death and reducing food"
  GetPurgeProcessingResource_all:1 "resource"
  civic_hive_parasitic:0 "Parasitic Embryos"
- civic_hive_parasitic_desc:0 "This hive uses other §YOrganics§! lo lay embryos in their bodies to increase §YPop numbers§!."
+ civic_hive_parasitic_desc:0 "This hive uses other §YOrganics§! to lay embryos in their bodies to increase §YPop numbers§!."
  civic_tooltip_parasitic_effects:0 "Allows your empire to §YProcess§! organics, infecting them and giving birth to new pops of your §YMain species§! when purged."
  civic_hive_parasitic_lithoid:0 "Crystalline Spores"
  civic_hive_parasitic_lithoid_desc:0 "This hive uses crystalline spores to infect other §YOrganic§! species to increase their §YPop numbers§!."

@@ -1,0 +1,113 @@
+
+###################################################################################################
+### BUTTONS 																						
+###################################################################################################
+
+### SYSTEM TYPES
+
+###################################################################################################
+### start good path 																						
+###################################################################################################
+regional_tradition_1 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = regional_tradition_1}
+	}
+	effect = { 
+	set_country_flag = regional_tradition_1
+	add_resource = { religious_influence = -10 }
+	}
+}
+regional_tradition_2 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = regional_tradition_2}
+		has_country_flag = regional_tradition_1
+	}
+	effect = { 
+	set_country_flag = regional_tradition_2
+	add_resource = { religious_influence = -10 }
+	}
+}
+regional_tradition_3 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = regional_tradition_3}
+		has_country_flag = regional_tradition_1
+	}
+	effect = { 
+	set_country_flag = regional_tradition_3
+	add_resource = { religious_influence = -10 }
+	}
+}
+empire_tradition_1 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = empire_tradition_1}
+		has_country_flag = regional_tradition_2
+	}
+	effect = { 
+	set_country_flag = empire_tradition_1
+	add_resource = { religious_influence = -10 }
+	}
+}
+empire_tradition_2 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = empire_tradition_2}
+		has_country_flag = regional_tradition_3
+	}
+	effect = { 
+	set_country_flag = empire_tradition_2
+	add_resource = { religious_influence = -10 }
+	}
+}
+empire_tradition_3 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = empire_tradition_3}
+		has_country_flag = empire_tradition_1
+		has_country_flag = empire_tradition_2
+	}
+	effect = { 
+	set_country_flag = empire_tradition_3
+	add_resource = { religious_influence = -10 }
+	}
+}
+# opens system sector relation settings
+galactic_tradition_1 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = galactic_tradition_1}
+		has_country_flag =empire_tradition_3
+	}
+	effect = { 
+	set_country_flag = galactic_tradition_1
+
+	add_resource = { religious_influence = -10 }
+	}
+}
+galactic_tradition_2 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		NOT = { has_country_flag = galactic_tradition_2}
+		has_country_flag = galactic_tradition_1
+	}
+	effect = { 
+	set_country_flag = galactic_tradition_2
+
+	add_resource = { religious_influence = -10 }
+	}
+}
+
+###################################################################################################
+### start bad path 																						
+###################################################################################################

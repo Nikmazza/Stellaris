@@ -3,8 +3,8 @@ wg_power_runes = {
     casus_belli = cb_power_runes
     hide_if_no_cb = yes
     release_occupied_systems_on_status_quo = no
-    surrender_acceptance = -40
-	
+    surrender_acceptance = -10
+	cede_claims = no
     #potential = {
     #    has_total_war_cb = no
     #}
@@ -24,73 +24,87 @@ wg_power_runes = {
         }
 		
 		
-		
-        from = {
-            add_modifier = { modifier = humiliated days = 3600 }           
-        }
-        
-		
-		
 			if = {
 			limit = { from = { has_relic = r_damage_rune } }
-		from = { 
-		 remove_relic = r_damage_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.2 } }
-		}
 		 add_relic = r_damage_rune
 		 hidden_effect = { country_event = { id = power_runes_war.1 } }
 		}
 		
 			if = {
 			limit = { from = { has_relic = r_haste_rune } }
-		from = { 
-		 remove_relic = r_haste_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.4 } }
-		}
 		 add_relic = r_haste_rune
 		 hidden_effect = { country_event = { id = power_runes_war.3 } }
 		}
 		
 			if = {
 			limit = { from = { has_relic = r_illusion_rune } }
-		from = { 
-		  remove_relic = r_illusion_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.6 } }
-		}
 		 add_relic = r_illusion_rune
 		 hidden_effect = { country_event = { id = power_runes_war.5 } }
 		}
 		
 			if = {
 			limit = { from = { has_relic = r_arcane_rune } }
-		from = { 
-		 remove_relic = r_arcane_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.8 } }
-		}
 		 add_relic = r_arcane_rune
 		 hidden_effect = { country_event = { id = power_runes_war.7 } }
 		}
 		
 			if = {
 			limit = { from = { has_relic = r_invisibility_rune } }
-		from = { 
-		 remove_relic = r_invisibility_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.10 } }
-		}
 		 add_relic = r_invisibility_rune
 		 hidden_effect = { country_event = { id = power_runes_war.9 } }
 		}
 		
 		if = {
 			limit = { from = { has_relic = r_regeneration_rune } }
-		from = { 
-		 remove_relic = r_regeneration_rune 
-		 hidden_effect = { country_event = { id = power_runes_war.12 } }
-		}
 		 add_relic = r_regeneration_rune
 		 hidden_effect = { country_event = { id = power_runes_war.11 } }
 		}
 		
+		## humillar y quitar todo
+		
+        from = {
+            add_modifier = { modifier = humiliated days = 3600 }  
+			
+		if = {
+			limit = {  has_relic = r_damage_rune } 
+		 remove_relic = r_damage_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.2 } }
+		}
+		
+			if = {
+			limit = { has_relic = r_haste_rune } 
+		 remove_relic = r_haste_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.4 } }
+		}
+		
+			if = {
+			limit = {  has_relic = r_illusion_rune } 
+		  remove_relic = r_illusion_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.6 } }
+		}
+		
+			if = {
+			limit = { has_relic = r_arcane_rune } 
+		 remove_relic = r_arcane_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.8 } }
+		}
+		
+			if = {
+			limit = { has_relic = r_invisibility_rune }
+		 remove_relic = r_invisibility_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.10 } }
+		}
+		
+		if = {
+			limit = {has_relic = r_regeneration_rune } 
+		 remove_relic = r_regeneration_rune 
+		 hidden_effect = { country_event = { id = power_runes_war.12 } }
+		}
+			
+        }
+
+
+
     }
 
     on_status_quo = {
@@ -103,10 +117,6 @@ wg_power_runes = {
     }
     ai_weight = {
         weight = 5
-        modifier = {
-            factor = 0
-            has_ethic = ethic_gestalt_consciousness
-        }
     }
 }
 

@@ -1,0 +1,73 @@
+# This = country
+defined_text = {
+	name = GetRIAmount
+	
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 0 }
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 1 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 2 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 3 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 4 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 5 }
+		}
+		localization_key = "5"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 6 }
+		}
+		localization_key = "6"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 7 }
+		}
+		localization_key = "7"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 8 }
+		}
+		localization_key = "8"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 9 }
+		}
+		localization_key = "9"
+	}
+	text = {
+		trigger = {
+			has_country_resource = { type = religious_influence amount = 10 }
+		}
+		localization_key = "10"
+	}
+
+}
+
