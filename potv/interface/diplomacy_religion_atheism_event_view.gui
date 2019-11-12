@@ -18,12 +18,12 @@ guiTypes = {
 		
 		
 		buttonType = {
-			name = "option_button"
+			name = "resource_icon"
 			quadTextureSprite = "GFX_invisible"
 			position = { x=25 y=-60 }
 			size = { x = 150 y = 30 }
 			font = "cg_16b"
-			text = "RI_CURRENT"
+			text = "ICON"
 			format = left	
 			alwaysTransparent = yes	
 		}

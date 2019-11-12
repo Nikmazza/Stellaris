@@ -12,14 +12,7 @@ country_event = {
 
 	picture_event_data = {
 		portrait = root.owner.leader
-	}
-
-	option = {
-		custom_gui = "rel_influence"
-		name = "RI_CURRENT"
-	
-	}
-	
+	}	
 	
 	option = {
 		custom_gui = "religion_atheism_option"

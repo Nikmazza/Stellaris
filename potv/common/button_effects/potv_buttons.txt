@@ -1,113 +1,203 @@
 
 ###################################################################################################
-### BUTTONS 																						
+### BUTTONS COST																						
 ###################################################################################################
 
-### SYSTEM TYPES
+@RPt1Cost = 100
+@RPt2Cost = 250
+@RPt3Cost = 500
 
 ###################################################################################################
 ### start good path 																						
 ###################################################################################################
+
+
 regional_tradition_1 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt1Cost }
 		NOT = { has_country_flag = regional_tradition_1}
 	}
 	effect = { 
 	set_country_flag = regional_tradition_1
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt1Cost }
 	}
 }
 regional_tradition_2 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt1Cost }
 		NOT = { has_country_flag = regional_tradition_2}
 		has_country_flag = regional_tradition_1
 	}
 	effect = { 
 	set_country_flag = regional_tradition_2
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt1Cost }
 	}
 }
 regional_tradition_3 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt1Cost }
 		NOT = { has_country_flag = regional_tradition_3}
 		has_country_flag = regional_tradition_1
 	}
 	effect = { 
 	set_country_flag = regional_tradition_3
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt1Cost }
 	}
 }
 empire_tradition_1 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt2Cost }
 		NOT = { has_country_flag = empire_tradition_1}
 		has_country_flag = regional_tradition_2
 	}
 	effect = { 
 	set_country_flag = empire_tradition_1
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt2Cost }
 	}
 }
 empire_tradition_2 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt2Cost }
 		NOT = { has_country_flag = empire_tradition_2}
 		has_country_flag = regional_tradition_3
 	}
 	effect = { 
 	set_country_flag = empire_tradition_2
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt2Cost }
 	}
 }
 empire_tradition_3 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt2Cost }
 		NOT = { has_country_flag = empire_tradition_3}
 		has_country_flag = empire_tradition_1
 		has_country_flag = empire_tradition_2
 	}
 	effect = { 
 	set_country_flag = empire_tradition_3
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt2Cost }
 	}
 }
-# opens system sector relation settings
 galactic_tradition_1 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt3Cost }
 		NOT = { has_country_flag = galactic_tradition_1}
 		has_country_flag =empire_tradition_3
 	}
 	effect = { 
 	set_country_flag = galactic_tradition_1
 
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt3Cost }
 	}
 }
 galactic_tradition_2 = {
 	potential = { always = yes }
 	allow = {
-		resource_stockpile_compare = { resource = religious_influence value = 10 }
+		resource_stockpile_compare = { resource = influence value >= @RPt3Cost }
 		NOT = { has_country_flag = galactic_tradition_2}
 		has_country_flag = galactic_tradition_1
 	}
 	effect = { 
 	set_country_flag = galactic_tradition_2
 
-	add_resource = { religious_influence = -10 }
+	add_resource = { influence = -@RPt3Cost }
 	}
 }
 
 ###################################################################################################
 ### start bad path 																						
 ###################################################################################################
+
+regional_tradition_4 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt1Cost }
+		NOT = { has_country_flag = regional_tradition_4}
+	}
+	effect = { 
+	set_country_flag = regional_tradition_4
+	add_resource = { influence = -@RPt1Cost }
+	}
+}
+regional_tradition_5 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt1Cost }
+		NOT = { has_country_flag = regional_tradition_5}
+		has_country_flag = regional_tradition_4
+	}
+	effect = { 
+	set_country_flag = regional_tradition_5
+	add_resource = { influence = -@RPt1Cost }
+	}
+}
+empire_tradition_4 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt2Cost }
+		NOT = { has_country_flag = empire_tradition_5}
+		has_country_flag = regional_tradition_5
+	}
+	effect = { 
+	set_country_flag = empire_tradition_5
+	add_resource = { influence = -@RPt2Cost }
+	}
+}
+empire_tradition_5 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt2Cost }
+		NOT = { has_country_flag = empire_tradition_5}
+		has_country_flag = empire_tradition_4
+	}
+	effect = { 
+	set_country_flag = empire_tradition_5
+	add_resource = { influence = -@RPt2Cost }
+	}
+}
+galactic_tradition_3 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt3Cost }
+		NOT = { has_country_flag = galactic_tradition_3}
+		has_country_flag =empire_tradition_5
+	}
+	effect = { 
+	set_country_flag = galactic_tradition_3
+
+	add_resource = { influence = -@RPt3Cost }
+	}
+}
+galactic_tradition_4 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt3Cost }
+		NOT = { has_country_flag = galactic_tradition_4}
+		has_country_flag = galactic_tradition_3
+	}
+	effect = { 
+	set_country_flag = galactic_tradition_4
+
+	add_resource = { influence = -@RPt3Cost }
+	}
+}
+galactic_tradition_5 = {
+	potential = { always = yes }
+	allow = {
+		resource_stockpile_compare = { resource = influence value >= @RPt3Cost }
+		NOT = { has_country_flag = galactic_tradition_5}
+		has_country_flag = galactic_tradition_4
+	}
+	effect = { 
+	set_country_flag = galactic_tradition_5
+
+	add_resource = { influence = -@RPt3Cost }
+	}
+}
