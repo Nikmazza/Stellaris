@@ -32,4 +32,6 @@ rune_lost = {
 	pop_happiness = -0.05
 }
 
-relic_cube_activation_cooldown = {}
+relic_cube_activation_cooldown = {
+icon = "gfx/interface/icons/modifiers/mod_relic_cube_activation_cooldown.dds"
+}

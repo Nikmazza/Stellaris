@@ -59,13 +59,15 @@ country_event = {
 
 
     immediate = {
+	awaken_paranoid_fe = yes
+	
         random_country = {
             limit = {
                 is_subject = no
                 NOT = { has_relic = r_cube }
 				OR = {
                 is_country_type = default
-				is_fe_country = yes
+				is_country_type = awakened_fallen_empire
 				}
                 NOT = { has_country_flag = cube_war_league_leader }
 				
@@ -105,7 +107,8 @@ country_event = {
 		## we have leader, form alliance and go to war!
 		 set_country_flag = cube_war_league_leader
 
-			set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+			set_timed_country_flag = { flag = ai_no_leave_fed days = 5400 }
+			set_timed_country_flag = { flag = interdictors_member days = 5400 }
 		         join_alliance = {
                     who = root
                     name = "The Interdictors"
@@ -167,8 +170,8 @@ country_event = {
             factor = 100
         }
         
-		
-		set_timed_country_flag = { flag = ai_no_leave_fed days = 7200 }
+		set_timed_country_flag = { flag = interdictors_member days = 5400 }
+		set_timed_country_flag = { flag = ai_no_leave_fed days = 5400 }
 		join_alliance = {
 			who = from
 			override_requirements = yes

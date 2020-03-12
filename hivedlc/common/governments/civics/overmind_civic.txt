@@ -15,7 +15,7 @@ civic_hive_overmind = {
 	modification = no
 
 	modifier = {	
-		planet_stability_add = 5	
+		#planet_stability_add = 5	
 	}
 
 	random_weight = {
@@ -30,6 +30,8 @@ civic_hive_overmind = {
 		
 		traits = {
 			trait = trait_hive_mind_overlord
+			#trait = trait_erudite
+			#trait = trait_psionic
 		}
 		
 

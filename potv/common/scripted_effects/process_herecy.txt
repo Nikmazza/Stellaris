@@ -174,15 +174,15 @@ process_herecy  = {
 			
 			if = {
 			limit = {
-			count_pops = { limit = { pop_is_heretic = yes } count < 10 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 5 }
 			}		
 			set_0_herecy_preacher = yes				
 			}
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 9 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 20 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 4 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 10 }
 			}
 			}			
 			set_1_herecy_preacher = yes				
@@ -190,8 +190,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 19 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 30 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 9 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 15 }
 			}
 			}			
 			set_2_herecy_preacher = yes				
@@ -199,8 +199,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 29 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 40 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 14 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 20 }
 			}
 			}			
 			set_3_herecy_preacher = yes				
@@ -208,8 +208,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 39 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 50 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 19 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 25 }
 			}
 			}			
 			set_4_herecy_preacher = yes				
@@ -217,8 +217,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 49 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 60 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 24 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 30 }
 			}
 			}			
 			set_5_herecy_preacher = yes				
@@ -226,8 +226,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 59 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 70 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 29 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 35 }
 			}
 			}			
 			set_6_herecy_preacher = yes				
@@ -235,8 +235,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 69 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 80 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 34 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 40 }
 			}
 			}			
 			set_7_herecy_preacher = yes				
@@ -244,8 +244,8 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 79 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 90 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 39 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 45 }
 			}
 			}			
 			set_8_herecy_preacher = yes				
@@ -253,15 +253,15 @@ process_herecy  = {
 			else_if = {
 			limit = {
 			AND = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 89 }
-			count_pops = { limit = { pop_is_heretic = yes } count < 100 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 46 }
+			count_pops = { limit = { pop_is_heretic = yes } count < 50 }
 			}
 			}			
 			set_9_herecy_preacher = yes				
 			}			
 			else_if = {
 			limit = {
-			count_pops = { limit = { pop_is_heretic = yes } count > 100 }
+			count_pops = { limit = { pop_is_heretic = yes } count > 50 }
 			}			
 			set_10_herecy_preacher = yes				
 			}

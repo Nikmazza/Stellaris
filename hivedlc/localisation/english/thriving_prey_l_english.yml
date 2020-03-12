@@ -1,10 +1,10 @@
 ﻿l_english:
  civic_hive_thriving_prey:0 "Thriving Prey"
- civic_hive_thriving_prey_desc:0 "To say you have no choice is to relieve yourself of responsibility. Tho this hive was in the bottom of the food chain in their home planet, they thrived by burrowing and building cave systems, dodging fights and only taking calculated risks."
+ civic_hive_thriving_prey_desc:0 "To say you have no choice is to relieve yourself of responsibility. Even though this hive was in the bottom of the food chain in their home planet, they thrived by burrowing and building cave systems, dodging fights and only taking calculated risks."
  civic_tooltip_thriving_effects:0 "Homeworld is a §YHollowed Planet§!\nCombat Disengagement Chance §G+25%§!\nChance to Evade §G+5§!\nOutpost Cost §R+50%§!"
  mod_job_larva_queen_add:0 "Brood Queen Jobs"
  job_larva_queen_effect_desc:0 "Brood Queens increase §HPop Growth§! but destabilize the planet."
- mod_district_nursery_max:0 "Max Subterranean Resource Networks"
+ mod_district_subterranean_network_max:0 "Max Subterranean Resource Networks"
  
  
  

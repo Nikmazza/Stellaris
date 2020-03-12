@@ -16,8 +16,8 @@ larva_queen = {
 		}
 		modifier = {
 		pop_growth_speed = 0.025
-		planet_stability_add = -1
-		planet_amenities_no_happiness_add = -2
+		#planet_stability_add = -1
+		#planet_amenities_no_happiness_add = -2
 		}
 	}
 	triggered_planet_modifier = {
@@ -27,8 +27,8 @@ larva_queen = {
 		}
 		modifier = {
 		pop_growth_speed = 0.05
-		planet_stability_add = -1
-		planet_amenities_no_happiness_add = -2
+		#planet_stability_add = -1
+		#planet_amenities_no_happiness_add = -2
 		}
 	}	
 
@@ -40,8 +40,8 @@ larva_queen = {
 		}
 		modifier = {
 		pop_growth_speed = 0.05
-		planet_stability_add = -1
-		planet_amenities_no_happiness_add = -2
+		#planet_stability_add = -1
+		#planet_amenities_no_happiness_add = -2
 			}
 	}	
 

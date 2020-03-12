@@ -25,7 +25,6 @@ trait_diaphragm = {
 	randomized = no
 	modification = no
 	modifier = {
-
 		planet_jobs_worker_produces_mult = 0.05
 	}
 	potential_crossbreeding_chance = 1.0
@@ -152,6 +151,24 @@ trait_encrusted_minerals = {
 	potential_crossbreeding_chance = 1.0
 
 	icon = "gfx/interface/icons/traits/trait_encrusted_minerals.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+}
+
+
+trait_metal_blood = {
+	cost = 0
+	sorting_priority = 19
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {
+	planet_livestock_sr_living_metal_produces_add = 0.1
+	army_health = 0.5
+	}
+	potential_crossbreeding_chance = 1.0
+
+	icon = "gfx/interface/icons/traits/trait_metal_blood.dds"
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 }

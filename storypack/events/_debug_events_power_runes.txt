@@ -81,6 +81,35 @@ namespace = pr_debug
         name = pr_debug.3.b
     }
  }
+## give thanos all the stones
+ country_event = {
+    id = pr_debug.31
+    title =  pr_debug.3.name
+    desc = pr_debug.3.desc
+    picture = GFX_evt_physics_research
+    hide_window = no
+    is_triggered_only = yes
+
+    option = {
+        name = pr_debug.0.a
+        set_global_flag = r_damage_rune
+        set_global_flag = r_haste_rune
+        set_global_flag = r_illusion_rune
+        set_global_flag = r_arcane_rune
+        set_global_flag = r_invisibility_rune
+        set_global_flag = r_regeneration_rune
+		set_global_flag = r_damage_rune_collected	
+		set_global_flag = r_haste_rune_collected	
+		set_global_flag = r_illusion_rune_collected	
+		set_global_flag = r_arcane_rune_collected	
+		set_global_flag = r_invisibility_rune_collected	
+		set_global_flag = r_regeneration_rune_collected	
+    }
+
+    option = {
+        name = pr_debug.3.b
+    }
+ }
   
    # Give 3 stones
  country_event = {

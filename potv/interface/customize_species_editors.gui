@@ -2160,43 +2160,43 @@ guiTypes = {
 			
 			buttonType = { ### atheist  ###
 				name = "ethic_atheism"
-				spriteType = "GFX_ethics_socialism"
+				spriteType = "GFX_ethic_atheism"
 				position = { x = 280 y = 90 }
 				clicksound = interface
 			}
 			
 			buttonType = { ### agnostic  ###
 				name = "ethic_agnosticism"
-				spriteType = "GFX_ethics_socialism"
+				spriteType = "GFX_ethic_agnosticism"
 				position = { x = 280 y = 122 }
 				clicksound = interface
 			}
 			
 			buttonType = { ### Deism  ###
 				name = "ethic_deism"
-				spriteType = "GFX_ethics_socialism"
+				spriteType = "GFX_ethic_deism"
 				position = { x = 280 y = 154 }
 				clicksound = interface
 			}
 			
 			buttonType = { ### politheist  ###
 				name = "ethic_polytheism"
-				spriteType = "GFX_ethics_socialism"
+				spriteType = "GFX_ethic_polytheism"
 				position = { x = 280 y = 186 }
-				clicksound = interface
-			}
-			
-			buttonType = { ### Animatism  ###
-				name = "ethic_animatism"
-				spriteType = "GFX_ethics_socialism"
-				position = { x = 280 y = 218 }
 				clicksound = interface
 			}			
 			
 			buttonType = { ### Animism  ###
 				name = "ethic_animism"
-				spriteType = "GFX_ethics_capitalism"
+				spriteType = "GFX_ethic_animism"
 				position = { x = 280 y = 250 }
+				clicksound = interface
+			}
+			
+			buttonType = { ### Animatism  ###
+				name = "ethic_animatism"
+				spriteType = "GFX_ethic_animatism"
+				position = { x = 280 y = 218 }
 				clicksound = interface
 			}
 			

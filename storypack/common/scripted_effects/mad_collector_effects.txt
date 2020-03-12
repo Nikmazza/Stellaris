@@ -1,3 +1,32 @@
+awaken_paranoid_fe = {
+
+
+			every_country = {
+				limit = {
+					is_country_type = fallen_empire	
+					NOT = {has_authority = auth_machine_intelligence}
+				}
+				set_country_type = awakened_fallen_empire
+				
+		change_government = {
+			civics = {
+				civic = civic_revanchist_fervor
+				civic = civic_ancient_caches_of_technology
+			}
+		}
+		# Changing country type resets resources, so give them full stores
+		add_resource = {
+			minerals = 20000
+			energy = 5000
+			influence = 1000
+		}
+				
+			}
+		
+	
+}
+
+
 initiate_mad_collectors = {
 		set_country_type = consolidated_planet_state
 		

@@ -1,9 +1,10 @@
 name="Storypack: The Nyblax and the Collector"
-path="mod/storypack"
 tags={
 	"Gameplay"
 	"Graphics"
 }
-picture="thumbnail.jpg"
-remote_file_id="1878601358"
+picture="thumbnail.png"
+version="1.7"
 supported_version="2.5.*"
+path="C:/Users/Complex/Documents/Paradox Interactive/Stellaris/mod/storypack"
+remote_file_id="1878601358"

@@ -84,6 +84,7 @@ citizenship_assimilation = {
 					from = {
 						has_authority = auth_hive_mind
 							OR = {
+						has_valid_civic = civic_hive_overmind
 						has_valid_civic = civic_mutualistic_behavior
 						has_ascension_perk = ap_life_masters
 						has_ascension_perk = ap_evolutionary_mastery

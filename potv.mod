@@ -4,5 +4,8 @@ tags={
 	"Diplomacy"
 	"Events"
 }
-name="Unnoficial DLC: Pantheon of the Void"
+picture="thumbnail.png"
+name="Unofficial DLC: Pantheon of the Void"
+supported_version="2.5.*"
 path="C:/Users/Complex/Documents/Paradox Interactive/Stellaris/mod/potv"
+remote_file_id="1913588422"

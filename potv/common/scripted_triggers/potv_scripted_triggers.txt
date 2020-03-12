@@ -1,4 +1,6 @@
 pop_is_heretic = {
+AND = {
+NOT = { has_empty_religion = yes }
 OR = {
 	AND = {
 		owner = {has_ethic = ethic_atheism }
@@ -26,8 +28,9 @@ OR = {
 		}	
 	}
 }
+}
 
-pop_has_empty_religion = {
+has_empty_religion = {
 	NOR = {
 		has_ethic = ethic_no_religion
 		has_ethic = ethic_atheism
@@ -54,4 +57,85 @@ planet_allows_heretic = {
 			#is_pop_category = heretic
 			#pop_is_heretic = yes				
 						
+}
+
+has_same_prev_religious_system = {
+	OR = {	
+			AND = {
+			has_ethic = ethic_no_religion
+			prev = {has_ethic = ethic_no_religion}
+			}
+			AND = {
+			has_ethic = ethic_atheism
+			prev = {has_ethic = ethic_atheism}
+			}
+			AND = {
+			has_ethic = ethic_agnosticism
+			prev = {has_ethic = ethic_agnosticism}
+			}
+			AND = {
+			has_ethic = ethic_deism
+			prev = {has_ethic = ethic_deism}
+			}
+			AND = {
+			has_ethic = ethic_polytheism
+			prev = {has_ethic = ethic_polytheism}
+			}
+			AND = {
+			has_ethic = ethic_animatism
+			prev = {has_ethic = ethic_animatism}
+			}
+			AND = {
+			has_ethic = ethic_animism
+			prev = {has_ethic = ethic_animism}
+			}
+			AND = {
+			has_ethic = ethic_any_religion
+			prev = {has_ethic = ethic_any_religion}
+			}
+	}
+}
+
+has_same_religious_system = {
+	OR = {	
+			AND = {
+			has_ethic = ethic_no_religion
+			from = {has_ethic = ethic_no_religion}
+			}
+			AND = {
+			has_ethic = ethic_atheism
+			from = {has_ethic = ethic_atheism}
+			}
+			AND = {
+			has_ethic = ethic_agnosticism
+			from = {has_ethic = ethic_agnosticism}
+			}
+			AND = {
+			has_ethic = ethic_deism
+			from = {has_ethic = ethic_deism}
+			}
+			AND = {
+			has_ethic = ethic_polytheism
+			from = {has_ethic = ethic_polytheism}
+			}
+			AND = {
+			has_ethic = ethic_animatism
+			from = {has_ethic = ethic_animatism}
+			}
+			AND = {
+			has_ethic = ethic_animism
+			from = {has_ethic = ethic_animism}
+			}
+			AND = {
+			has_ethic = ethic_any_religion
+			from = {has_ethic = ethic_any_religion}
+			}
+	}
+}
+
+is_dogmatic_country = {
+has_country_flag = dogmatic_religion
+}
+is_flexible_country = {
+has_country_flag = flexible_religion
 }

@@ -33,6 +33,7 @@ on_pop_added = {
 # FromFrom = Pop
 on_pop_grown = {
 	events = {
+	potv_religions.4 ## set country religion
 	#herecy.3 ## recalculate heretics
 	}
 }
@@ -42,6 +43,7 @@ on_pop_grown = {
 # FromFrom = Pop
 on_pop_assembled = {
 	events = {
+		potv_religions.4 ## set country religion
 		#herecy.3 ## recalculate heretics
 	}
 }
@@ -92,6 +94,14 @@ on_pop_abducted  = {
 on_monthly_pulse = {
 	events = {
 		herecy.1
+		control_herecy.1
+		potv_religions.1 #make sure everybody has a religion
+	}
+}
 
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		fake_religion_lvlup.1
 	}
 }

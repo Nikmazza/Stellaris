@@ -81,6 +81,7 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = collector_in_orbit
+						days = 90
 					}
 				}
 			}
@@ -336,6 +337,19 @@ country_event = {
 				location = this
 			}
 		}
+		## remove the no leave fed flags
+		every_country = {
+			limit = {
+				has_country_flag = interdictors_member
+			}
+			## force fallen empires to leave alliances
+			if = { limit = { is_country_type = awakened_fallen_empire }
+			leave_alliance = { override_requirements = yes }
+			}
+				remove_country_flag = interdictors_member
+				remove_country_flag = ai_no_leave_fed
+			}
+		
 		
 		#notify everybody else
 			every_country = {
@@ -399,6 +413,19 @@ country_event = {
 			}
 		}
 		
+		## remove the no leave fed flags
+		every_country = {
+			limit = {
+				has_country_flag = interdictors_member
+			}
+			## force fallen empires to leave alliances
+			if = { limit = { is_country_type = awakened_fallen_empire }
+			leave_alliance = { override_requirements = yes }
+			}
+				remove_country_flag = interdictors_member
+				remove_country_flag = ai_no_leave_fed
+			}
+			
 		#removes curator poi, will replace it
 			every_country = {
 			limit = {
@@ -464,7 +491,7 @@ fleet_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_global_flag = galactic_mid_crisis_happened
+		has_global_flag = mad_collector_happened
 		has_fleet_flag = thanos_fleet		
 		is_fleet_idle = yes	
 		##no esta purgando gente ni en su casa

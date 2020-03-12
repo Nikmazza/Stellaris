@@ -1,12 +1,41 @@
 
 
-@entries_row1_y = 320
-@entries_column1 = 11
+@entries_row1_y = 285
+@entries_row1_y2 = 430
+@entries_column1 = 185
 @entries_column2 = 315
 @entries_column3 = 620
 
-@entry_h = 260
-@entry_w = 290
+@entry_h = 130
+@entry_w = 770
+
+
+@Ymiddle = 55 
+@Ytop = 90
+@Ybottom = 25
+
+@X1col = 25 
+@X2col = 100 
+@X3col = 175
+@X4col = 250 
+@X5col = 325 
+@X6col = 400 
+@X7col = 475 
+
+@YArrowmiddle = 65 
+@YArrowtop = 100
+@YArrowbottom = 30
+
+@XArrow1col = 80 
+@XArrow2col = 155 
+@XArrow3col = 230
+@XArrow4col = 305 
+@XArrow5col = 380
+@XArrow6col = 455 
+
+@XArrow1colSlit = 45 
+@XArrow3colMerger = 200
+@XArrow4colSlit = 270
 
 guiTypes = {
 
@@ -32,7 +61,7 @@ guiTypes = {
 	### ENCLAVE TRADER EVENT OPTION ###
 
 	containerWindowType = {
-		name = "religion_atheism_option"
+		name = "religion_council_option"
 		position = { x=0 y=0 }
 		size = { width = 50 height = 35 }
 		moveable = no
@@ -57,7 +86,7 @@ guiTypes = {
 	### ENCLAVE TRADER EVENT WINDOW ###
 
 	containerWindowType = {
-		name = "religion_atheism_window"
+		name = "religion_council_window"
 		orientation = upper_left
 		moveable = yes
 		origo = center
@@ -107,6 +136,16 @@ guiTypes = {
 			name = "heading"
 			font = "malgun_goth_24"
 			text = "DIPLOMACY"
+			position = { x =  -1120 y = -1115 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "headingNew"
+			font = "malgun_goth_24"
+			text = "potv_window_title"
 			position = { x = 20 y = 5 }
 			maxWidth = 543
 			maxHeight = 22
@@ -259,6 +298,7 @@ guiTypes = {
 			orientation = UPPER_LEFT
 		}
 		
+		## leader details
 		containerWindowType = {
 			name = "leader_details"
 			position = { x = 25 y = 75 }
@@ -347,7 +387,7 @@ guiTypes = {
 			}
 		}	
 		
-		### EVENT DIPLO ###
+		### ACTION PANEL ###
 		
 		containerWindowType = {
 			name = "EVENT_DIPLO"
@@ -375,20 +415,17 @@ guiTypes = {
 				text_color_code = "H"
 			}
 			
-		
-		
-			buttonType = {
+
+		buttonType = {
 				name = "option_list_bg"
 				size = { x = 330 y = 520 }
 				position = { x = 920 y = -340 }
 				spriteType = "GFX_relics_panel_bg"
 				alwaysTransparent = yes
 			}
-		
-
-		
+	
 		instantTextBoxType={
-			name = "religious_influence2"
+			name = "religious_influence"
 			font = "malgun_goth_24"
 			text = "Religious Actions"
 			position = { x = 1030 y = -320 }
@@ -398,9 +435,8 @@ guiTypes = {
 			text_color_code = "E"
 			fixedsize = yes
 		}
-		
-		
-			listboxType = {
+	
+		listboxType = {
 				name = "option_list"
 				position = { x = 920 y = -265 }
 				backGround=""
@@ -414,273 +450,404 @@ guiTypes = {
 	
 	
 			################################################################
-			# TRADITION CATEGORY regional
+			# MAIN SPLIT
+			################################################################
+			containerWindowType = {
+			name = "main_split"
+			position = { x = 15 y = 300 }
+			size = { width = 890 height = 275 }
+			
+			
+			background = {
+					name = "black"
+					spriteType = "GFX_tile_outliner_bg"
+					alwaysTransparent = yes
+				}
+			
+			
+			iconType = {
+					name = "main_split_tradition_back"
+					position = { x = 70 y = 115 }
+					spriteType = "GFX_integrated_religion"
+					pdx_tooltip = "main_split_tradition_tooltip"
+				}
+				
+				
+			effectButtonType = {
+					name = "main_split_tradition"
+					position = { x = 70 y = 115 }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "main_split_tradition"
+				}
+				
+				
+				
+				
+			iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_double"
+						position = { x = 120 y = 135 }
+						scale = 1.5
+						rotation = 1.5708
+					}
+					
+		}
+	
+			################################################################
+			# TRADITION CATEGORY flexible
 			################################################################
 
 			containerWindowType = {
-				name = "regional_religion"
+				name = "flexible_religion"
 				size = { width = @entry_w height = @entry_h }
 				position = { x = @entries_column1 y = @entries_row1_y }
 
-				background = {
-					name = "black"
-					spriteType = "GFX_tradition_category_tile_green"
-					alwaysTransparent = yes
-				}
+				
 
 				iconType = {
 					name = "hex_bg"
-					spriteType = "GFX_tradition_hex_bg_green"
-					position = { x = -23 y = -18 }
+					spriteType = "GFX_tradition_hex_bg_blue"
+					position = { x = -110 y = -60 }
+					scale = 3.9
 					alwaysTransparent = yes
 				}
 
 				instantTextBoxType = {
 					name = "category_label"
 					font = "malgun_goth_24"
-					position = { x = 18 y = 4 }
-					text = "regional_religion"
+					position = { x = 550 y = 65 }
+					text = "flexible_religion"
 				}
 
 
-			effectButtonType = {
-					name = "regional_tradition_1"
-					position = { x = 95 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "regional_tradition_1"
-				}							
-				
-				effectButtonType = {
-					name = "regional_tradition_2"
-					position = { x = 60 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "regional_tradition_2"
-				}				
-				
-				effectButtonType = {
-					name = "regional_tradition_3"
-					position = { x = 130 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "regional_tradition_3"
-				}				
-				
-				effectButtonType = {
-					name = "regional_tradition_4"
-					position = { x = 200 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "regional_tradition_4"
-				}
-				
-				effectButtonType = {
-					name = "regional_tradition_5"
-					position = { x = 200 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "regional_tradition_5"
-				}
-				
-	
 				containerWindowType = {
 					name = "tree"
 
 					iconType = {
 						name = "arrow_1"
 						spriteType = "GFX_arrow_double"
-						position = { x = 76 y = 100 }
+						position = { x = @XArrow1colSlit y = @YArrowmiddle }
+						rotation = 1.5708
 					}
 					
 					iconType = {
 						name = "arrow_2"
 						spriteType = "GFX_arrow_single"
-						position = { x = 217 y = 100 }
+						position = { x =  @XArrow2col y = @YArrowtop }
+						rotation = 1.5708
 					}
+						iconType = {
+						name = "arrow_3"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow2col y = @YArrowbottom }
+						rotation = 1.5708
+					}
+					iconType = {
+						name = "arrow_4"
+						spriteType = "GFX_arrow_merge"
+						position = {x =  @XArrow3colMerger y = @YArrowmiddle  }
+						rotation = 1.5708
+					}
+					
+						iconType = {
+						name = "arrow_5"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow4col y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+						iconType = {
+						name = "arrow_6"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow5col y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+
+					
+					
 				}
+				
+
+				iconType = {
+					name = "regional_tradition_1_back"
+					position = { x = @X1col y = @Ymiddle }
+					spriteType = "GFX_diversity_tolerance"
+					pdx_tooltip = "regional_tradition_1_tooltip"
+				}
+				iconType = {
+					name = "regional_tradition_2_back"
+					position = { x = @X2col y = @Ytop }
+					spriteType = "GFX_religion_celebration"
+					pdx_tooltip = "regional_tradition_2_tooltip"
+				}
+				iconType = {
+					name = "regional_tradition_3_back"
+					position = { x = @X2col y = @Ybottom }
+					spriteType = "GFX_ominist_forums"
+					pdx_tooltip = "regional_tradition_3_tooltip"
+				}
+				iconType = {
+					name = "empire_tradition_1_back"
+					position = { x = @X3col y = @Ytop }
+					spriteType = "GFX_preaching_license"
+					pdx_tooltip = "empire_tradition_1_tooltip"
+				}
+				iconType = {
+					name = "empire_tradition_2_back"
+					position = { x = @X3col y = @Ybottom }
+					spriteType = "GFX_promote_charity"
+					pdx_tooltip = "empire_tradition_2_tooltip"
+				}
+				iconType = {
+					name = "empire_tradition_3_back"
+					position = { x = @X4col y = @Ymiddle }
+					spriteType = "GFX_cosmopolitan_faith"
+					pdx_tooltip = "empire_tradition_3_tooltip"
+				}
+				iconType = {
+					name = "galactic_tradition_1_back"
+					position = { x = @X5col y = @Ymiddle }
+					spriteType = "GFX_ecumenism"
+					pdx_tooltip = "galactic_tradition_1_tooltip"
+				}
+				iconType = {
+					name = "galactic_tradition_2_back"
+					position = { x = @X6col y = @Ymiddle }
+					spriteType = "GFX_soul_crushers"
+					pdx_tooltip = "galactic_tradition_2_tooltip"
+				}
+				
+				
+
+				effectButtonType = {
+					name = "regional_tradition_1"
+					position = { x = @X1col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "regional_tradition_1"
+				}							
+				effectButtonType = {
+					name = "regional_tradition_2"
+					position = { x = @X2col y = @Ytop }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "regional_tradition_2"
+				}				
+				effectButtonType = {
+					name = "regional_tradition_3"
+					position = { x = @X2col y = @Ybottom }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "regional_tradition_3"
+				}
+				effectButtonType = {
+					name = "empire_tradition_1"
+					position = { x = @X3col y = @Ytop }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "empire_tradition_1"
+				}				
+				effectButtonType = {
+					name = "empire_tradition_2"
+					position = { x = @X3col y = @Ybottom }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "empire_tradition_2"
+				}								
+				effectButtonType = {
+					name = "empire_tradition_3"
+					position = { x = @X4col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "empire_tradition_3"
+				}	
+				effectButtonType = {
+					name = "galactic_tradition_1"
+					position = { x = @X5col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "galactic_tradition_1"
+				}				
+				effectButtonType = {
+					name = "galactic_tradition_2"
+					position = { x = @X6col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
+					orientation = left
+					effect = "galactic_tradition_2"
+				}	
+
+		
 			}
 			################################################################
-			# TRADITION CATEGORY empire
+			# TRADITION CATEGORY dogmatic
 			################################################################
 
 			containerWindowType = {
-				name = "empire_religion"
+				name = "dogmatic_religion"
 				size = { width = @entry_w height = @entry_h }
-				position = { x = @entries_column2 y = @entries_row1_y }
+				position = { x = @entries_column1 y = @entries_row1_y2 }
 				
-				background = {
-					name = "black"
-					spriteType = "GFX_tradition_category_tile_orange"
-					alwaysTransparent = yes
-				}
+			
 				
 				iconType = {
 					name = "hex_bg"
 					spriteType = "GFX_tradition_hex_bg_orange"
-					position = { x = -23 y = -18 }
+					position = { x = -110 y = -65 }
+					scale = 3.9
 					alwaysTransparent = yes
 				}
 				
 				instantTextBoxType = {
 					name = "category_label"
 					font = "malgun_goth_24"
-					position = { x = 18 y = 4 }
-					text = "empire_religion"
+					position = { x = 550 y = 65 }
+					text = "dogmatic_religion"
 				}
 
-				effectButtonType = {
-					name = "empire_tradition_1"
-					position = { x = 60 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "empire_tradition_1"
+
+
+
+
+				containerWindowType = {
+					name = "tree"
+
+					iconType = {
+						name = "dogmatic_arrow_1"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow1col y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+					iconType = {
+						name = "dogmatic_arrow_2"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow2col y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+					iconType = {
+						name = "dogmatic_arrow_3"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow3col y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+					iconType = {
+						name = "dogmatic_arrow_4"
+						spriteType = "GFX_arrow_double"
+						position = { x = @XArrow4colSlit y = @YArrowmiddle }
+						rotation = 1.5708
+					}
+					iconType = {
+						name = "dogmatic_arrow_5"
+						spriteType = "GFX_arrow_single"
+						position = { x =  @XArrow5col y = @YArrowbottom }
+						rotation = 1.5708
+					}
+
+
+
+
+
+				}
+				
+			
+				iconType = {
+					name = "regional_tradition_4_back"
+					position = { x = @X1col y = @Ymiddle }
+					spriteType = "GFX_state_religion"
+					pdx_tooltip = "regional_tradition_4_tooltip"
 				}				
+				iconType = {
+					name = "regional_tradition_5_back"
+					position = { x = @X2col y = @Ymiddle }
+					spriteType = "GFX_ban_herecy"
+					pdx_tooltip = "regional_tradition_5_tooltip"
+				}				
+				iconType = {
+					name = "empire_tradition_4_back"
+					position = { x = @X3col y = @Ymiddle }
+					spriteType = "GFX_aggressive_missionaries"
+					pdx_tooltip = "empire_tradition_4_tooltip"
+				}				
+				iconType = {
+					name = "empire_tradition_5_back"
+					position = { x = @X4col y = @Ymiddle }
+					spriteType = "GFX_religious_persecution"
+					pdx_tooltip = "empire_tradition_5_tooltip"
+				}				
+				iconType = {
+					name = "galactic_tradition_3_back"
+					position = { x = @X5col y = @Ytop }
+					spriteType = "GFX_religious_conditioning"
+					pdx_tooltip = "galactic_tradition_3_tooltip"
+				}				
+				iconType = {
+					name = "galactic_tradition_4_back"
+					position = { x = @X5col y = @Ybottom }
+					spriteType = "GFX_shared_beliefs"
+					pdx_tooltip = "galactic_tradition_4_tooltip"
+				}				
+				iconType = {
+					name = "galactic_tradition_5_back"
+					position = { x = @X6col y = @Ybottom }
+					spriteType = "GFX_inquisition"
+					pdx_tooltip = "galactic_tradition_5_tooltip"
+				}
 				
+
 				effectButtonType = {
-					name = "empire_tradition_2"
-					position = { x = 130 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					name = "regional_tradition_4"
+					position = { x = @X1col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
-					effect = "empire_tradition_2"
-				}								
-				
+					effect = "regional_tradition_4"
+				}
 				effectButtonType = {
-					name = "empire_tradition_3"
-					position = { x = 95 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					name = "regional_tradition_5"
+					position = { x = @X2col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
-					effect = "empire_tradition_3"
-				}	
-				
+					effect = "regional_tradition_5"
+				}
 				effectButtonType = {
 					name = "empire_tradition_4"
-					position = { x = 200 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					position = { x = @X3col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
 					effect = "empire_tradition_4"
 				}				
-				
 				effectButtonType = {
 					name = "empire_tradition_5"
-					position = { x = 200 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					position = { x = @X4col y = @Ymiddle }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
 					effect = "empire_tradition_5"
 				}
-
-				containerWindowType = {
-					name = "tree"
-
-					iconType = {
-						name = "arrow_1"
-						spriteType = "GFX_arrow_merge"
-						position = { x = 82 y = 100 }
-					}
-
-					iconType = {
-						name = "arrow_2"
-						spriteType = "GFX_arrow_single"
-						position = { x = 217 y = 100 }
-					}
-				}
-			}
-
-			################################################################
-			# TRADITION CATEGORY galactiv
-			################################################################
-
-			containerWindowType = {
-				name = "galactic_religion"
-				size = { width = @entry_w height = @entry_h }
-				position = { x = @entries_column3 y = @entries_row1_y }
-			
-				background = {
-					name = "black"
-					spriteType = "GFX_tradition_category_tile_yellow"
-					alwaysTransparent = yes
-				}
-				
-				iconType = {
-					name = "hex_bg"
-					spriteType = "GFX_tradition_hex_bg_yellow"
-					position = { x = -23 y = -18 }
-					alwaysTransparent = yes
-				}
-				
-				instantTextBoxType={
-					name = "category_label"
-					font = "malgun_goth_24"
-					position = { x = 18 y = 4 }
-					text = "galactic_religion"
-				}
-				
-				
-				
-				effectButtonType = {
-					name = "galactic_tradition_1"
-					position = { x = 95 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "galactic_tradition_1"
-				}				
-				
-				effectButtonType = {
-					name = "galactic_tradition_2"
-					position = { x = 95 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
-					orientation = left
-					effect = "galactic_tradition_2"
-				}				
-				
 				effectButtonType = {
 					name = "galactic_tradition_3"
-					position = { x = 165 y = 55 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					position = { x = @X5col y = @Ytop }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
 					effect = "galactic_tradition_3"
 				}				
-				
 				effectButtonType = {
 					name = "galactic_tradition_4"
-					position = { x = 165 y = 120 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					position = { x = @X5col y = @Ybottom }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
 					effect = "galactic_tradition_4"
 				}				
-				
 				effectButtonType = {
 					name = "galactic_tradition_5"
-					position = { x = 165 y = 190 }
-					quadTextureSprite = "GFX_tr_versatility_adaptive_programming"
+					position = { x = @X6col y = @Ybottom }
+					quadTextureSprite = "GFX_tradition_locked"
 					orientation = left
 					effect = "galactic_tradition_5"
-				}
+				}		
+
 				
-
-				containerWindowType = {
-					name = "tree"
-
-					iconType = {
-						name = "arrow_1"
-						spriteType = "GFX_arrow_single"
-						position = { x = 112 y = 100 }
-					}
-
-					iconType = {
-						name = "arrow_2"
-						spriteType = "GFX_arrow_single"
-						position = { x = 182 y = 100 }
-					}
-
-					iconType = {
-						name = "arrow_3"
-						spriteType = "GFX_arrow_single"
-						position = { x = 182 y = 170 }
-					}
-				}
 			}
-	
+
+
+			
 	
 	}
 }

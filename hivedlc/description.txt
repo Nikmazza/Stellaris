@@ -49,19 +49,18 @@ Grants Cocoons technology which grants the cocoon building that allows hive mind
 Cocoons can now assemble pops from other species too
 You can assimilate other species
 Assimilated species within your empire will crossbreed, creating half-breeds
-Species grown in cocoons can now gain an additional otherwise unattainable random trait, the specie type will favor some traits over others.
++1 Genetic Modification points per unique species in the empire
 
 
 [img]https://imgur.com/w8PPmlG.png[/img]
 
 [h1]Overmind[/h1] [i]starting civic only[/i]
-[i]This hive is ruled by an Overmind and executed by Remote drones.[/i]
+[i]This hive is ruled by an Overmind, that control and manipulate Remote drones.[/i]
 
 Start the game with all Remote drones Pops (secondary species) with Full citizenship, Drone living standard that are Extremely Adaptative
 Only members of the Main species can be Leaders
 Members of the Main species can only be Leaders
-
-+5 Stability
+Can always Assimilate biological pops
 
 
 [h1]Parasitic Embryos[/h1] [i]starting civic only[/i]
@@ -109,14 +108,13 @@ Research focus provides
 +50% Leader exp
 
 
-[h1]Mutualistic Behavior[/h1]
+[h1]Mutualistic Behavior[/h1] [i]starting civic only[/i]
 [i]Mutualism plays a key part in ecology and so has this Hive learned to thrive by cooperating with other species from its home planet, now looking at the stars for new species to cooperate with.[/i]
 
 Administrative Capacity +30
-Stability +5
 Empire Sprawl Penalty +75%
 Can establish Branch Offices without Commercial Pacts
-Must use Defensive Wars Only policy
+Cannot use Unrestricted Wars policy
 Cannot engage in Indiscriminate Orbital Bombardment
 Refugees are always welcome
 Can always Assimilate biological pops

@@ -113,7 +113,7 @@ fleet_event = {
     id = ghastly_eyrie.11
     title = ghastly_eyrie.11.name
     desc = ghastly_eyrie.11.desc
-    picture = GFX_evt_ghastly_eyrie_wraith2
+    picture = GFX_evt_ghastly_eyrie_wraith
     show_sound = event_mystic_reveal
 
     hide_window = no

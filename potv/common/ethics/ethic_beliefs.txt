@@ -56,7 +56,7 @@ ethic_no_religion = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -72,12 +72,60 @@ ethic_no_religion = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		value = 1.5
 		
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
+		}
+
+		modifier = {
+			factor = 1
+			owner = { has_ethic = ethic_no_religion }
+		}		
+		
+		modifier = {
+		factor = 2
+		from = {	
+			any_owned_pop = {
+				pop_is_heretic = yes
+				has_ethic = ethic_no_religion
+				}					
+			}	
 		}	
+		modifier = {
+		factor = 5
+		from = {	
+			any_owned_pop = {
+				has_pop_flag = heretic_preacher
+				has_ethic = ethic_no_religion
+				}					
+			}	
+		}	
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_no_religion}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_no_religion}
+				}	
+			}
+		}	
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_no_religion_missionaries	
+			}
+		}
 	}
 }
 
@@ -128,7 +176,7 @@ ethic_atheism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -152,7 +200,12 @@ ethic_atheism = {
 		}	
 		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_atheism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -161,13 +214,37 @@ ethic_atheism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
-				has_ethic = ethic_animism
+				has_ethic = ethic_atheism
 				}					
 			}	
+		}	
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_atheism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_atheism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_atheism_missionaries	
+			}
 		}
 	}
 }
@@ -219,7 +296,7 @@ ethic_agnosticism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -240,9 +317,15 @@ ethic_agnosticism = {
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
-		}
+		}	
+		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_agnosticism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -251,14 +334,38 @@ ethic_agnosticism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
-				has_ethic = ethic_animism
+				has_ethic = ethic_agnosticism
 				}					
 			}	
-		}	
+		}		
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_agnosticism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_agnosticism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_agnosticism_missionaries	
+			}
+		}
 	}
 }
 
@@ -309,7 +416,7 @@ ethic_deism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -330,9 +437,15 @@ ethic_deism = {
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
-		}
+		}	
+		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_deism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -341,14 +454,38 @@ ethic_deism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
-				has_ethic = ethic_animism
+				has_ethic = ethic_deism
 				}					
 			}	
-		}	
+		}		
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_deism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_deism}
+				}	
+			}
+		}			
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_deism_missionaries	
+			}
+		}
 	}
 }
 
@@ -399,7 +536,7 @@ ethic_polytheism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -420,9 +557,15 @@ ethic_polytheism = {
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
-		}
+		}	
+		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_polytheism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -431,14 +574,38 @@ ethic_polytheism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
-				has_ethic = ethic_animism
+				has_ethic = ethic_polytheism
 				}					
 			}	
-		}	
+		}		
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_polytheism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_polytheism}
+				}	
+			}
+		}			
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_polytheism_missionaries	
+			}
+		}
 	}
 }
 
@@ -489,7 +656,7 @@ ethic_animatism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -511,8 +678,14 @@ ethic_animatism = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
+		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_animatism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -521,14 +694,38 @@ ethic_animatism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
-				has_ethic = ethic_animism
+				has_ethic = ethic_animatism
 				}					
 			}	
 		}	
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_animatism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_animatism}
+				}	
+			}
+		}			
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_animatism_missionaries	
+			}
+		}
 	}
 }
 
@@ -579,7 +776,7 @@ ethic_animism = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -601,8 +798,14 @@ ethic_animism = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
+		
 		modifier = {
-		factor = 5
+			factor = 1
+			owner = { has_ethic = ethic_animism }
+		}
+		
+		modifier = {
+		factor = 2
 		from = {	
 			any_owned_pop = {
 				pop_is_heretic = yes
@@ -611,13 +814,37 @@ ethic_animism = {
 			}	
 		}	
 		modifier = {
-		factor = 10
+		factor = 5
 		from = {	
 			any_owned_pop = {
 				has_pop_flag = heretic_preacher
 				has_ethic = ethic_animism
 				}					
 			}	
+		}	
+		modifier = {
+		factor = 8
+			from = { 
+				AND = {
+					has_building = building_monolith
+					owner = {has_ethic = ethic_animism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 10
+			from = { 
+				AND = {
+					has_building = building_spiritual_monolith
+					owner = {has_ethic = ethic_animism}
+				}	
+			}
+		}		
+		modifier = {
+		factor = 11
+			from = { 
+				has_modifier = ethic_animism_missionaries	
+			}
 		}
 	}
 }
@@ -630,7 +857,11 @@ ethic_any_religion = {
 	
 	tags = {
 	}
-	
+	country_modifier = {
+		country_base_influence_produces_add = 1
+		pop_happiness = 0.2
+		planet_stability_add = 5
+	}
 	
 	random_weight = {
 		value = 100
@@ -669,7 +900,7 @@ ethic_any_religion = {
 		}
 		# Effects of indoctrination mission
 		modifier = {
-			factor = 10
+			factor = 5
 			is_country_type = primitive
 			capital_scope = {
 				has_observation_outpost = yes
@@ -685,12 +916,8 @@ ethic_any_religion = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
-		
-		modifier = {
-			factor = 0
-			has_trait = trait_hive_mind
-		}	
+		value = 0
+			
 	}
 }
 

@@ -4,7 +4,43 @@
 #		has_ethic = ethic_polytheism
 #		has_ethic = ethic_animatism
 #		has_ethic = ethic_animism
+	
+
+
+purge_heretics = {
+	category = purge
+	is_capped_by_modifier = no
+	clothes_texture_index = 2
 		
+	possible = {
+		pop_is_heretic = yes
+		owner = {has_policy_flag = heretics_purged}
+	}	
+
+	pop_modifier = {
+		pop_happiness = -10
+	}
+
+	resources = {
+		category = planet_jobs
+
+		produces = { # regular processing
+			unity = 6
+		}
+	
+	}	
+		
+	weight = {
+		weight = 999999
+
+		
+	}
+}
+
+
+
+
+	
 ethic_atheism_preacher = {
 	category = heretic
 	is_capped_by_modifier = no
@@ -28,7 +64,7 @@ ethic_atheism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -39,7 +75,7 @@ ethic_atheism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1
@@ -98,7 +134,7 @@ ethic_agnosticism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -107,7 +143,7 @@ ethic_agnosticism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1
@@ -164,7 +200,7 @@ ethic_deism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -173,7 +209,7 @@ ethic_deism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1
@@ -230,7 +266,7 @@ ethic_polytheism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -239,7 +275,7 @@ ethic_polytheism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1
@@ -296,7 +332,7 @@ ethic_animatism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -305,7 +341,7 @@ ethic_animatism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1
@@ -362,7 +398,7 @@ ethic_animism_preacher = {
 				type = citizenship_robot_servitude
 			}
 		}
-		
+		planet = { NOT = { has_modifier = herecy_banned } }
 	}
 
 	planet_modifier = {
@@ -371,7 +407,7 @@ ethic_animism_preacher = {
 	triggered_planet_modifier = {
 			potential = {
 				owner = { has_country_flag = regional_tradition_3 }
-				planet = { has_building = ominist_forums }
+				planet = { has_building = building_ominist_forums }
 				}
 			modifier = {
 				planet_amenities_add = 1

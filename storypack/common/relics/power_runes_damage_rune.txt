@@ -1,6 +1,6 @@
 # Damage Rune ##################################################
 r_damage_rune = {
-	activation_duration = 3600
+	activation_duration = 1800
 	portrait = "GFX_relic_damage_rune"
 	sound = "relic_activation_damage_rune"
 
@@ -8,7 +8,7 @@ r_damage_rune = {
 		category = relics
 		# Activation cost
 		cost = {
-			influence = 50
+			influence = 100
 		}
 	}
 
@@ -19,23 +19,34 @@ r_damage_rune = {
 			is_at_war = yes
 		}
 	}
+	#triggered_country_modifier = {
+	#	potential = {
+	#		always = yes
+	#	}
+	#		ship_weapon_damage = 0.1
+	#		army_damage_mult = 0.5
+	#}
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
-			ship_weapon_damage = 0.1
-			army_damage_mult = 0.5
-	}
-
+	custom_tooltip = damage_rune_passive
+  	}
+	
 	score = 500
 
 	active_effect = {
 		custom_tooltip = damage_rune_activated
-		custom_tooltip = relic_triumph_cooldown
+		custom_tooltip = damage_rune_triumph_cooldown
+		set_timed_country_flag = {
+			flag = r_damage_rune_active
+			days = 1800
+		}
+
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown"
-				days = 3600
+				days = 1800
 			}
 		}
 	}

@@ -99,9 +99,9 @@ planet_event = {
 		#add_district = district_queen_den
 		
 		# 18 jobs
-		add_district = district_nursery
-		add_district = district_nursery
-		add_district = district_nursery
+		add_district = district_subterranean_network
+		add_district = district_subterranean_network
+		add_district = district_subterranean_network
 		}
 	}
   }

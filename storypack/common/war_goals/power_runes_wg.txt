@@ -116,7 +116,7 @@ wg_power_runes = {
         }
     }
     ai_weight = {
-        weight = 5
+        weight = 1.5
     }
 }
 
@@ -134,6 +134,7 @@ wg_cube_war = {
 
 on_accept = {
         hidden_effect = {
+## abort special project		
             from = {
                 add_threat = {
                     who = root
@@ -147,6 +148,19 @@ on_accept = {
 					}
 				}
             }
+## no need for interdiction
+## remove the no leave fed flags
+		every_country = {
+			limit = {
+				has_country_flag = interdictors_member
+			}
+			## force fallen empires to leave alliances
+			if = { limit = { is_country_type = awakened_fallen_empire }
+			leave_alliance = { override_requirements = yes }
+			}
+				remove_country_flag = interdictors_member
+				remove_country_flag = ai_no_leave_fed
+			}
         }
 		if = {
 			limit = { from = { has_relic = r_cube } }
@@ -178,11 +192,26 @@ on_status_quo = {
 				location = event_target:latest_cube_location
 					}
 				}
+				
+		## no need for interdiction
+		## remove the no leave fed flags
+		every_country = {
+			limit = {
+				has_country_flag = interdictors_member
+			}
+			## force fallen empires to leave alliances
+			if = { limit = { is_country_type = awakened_fallen_empire }
+			leave_alliance = { override_requirements = yes }
+			}
+				remove_country_flag = interdictors_member
+				remove_country_flag = ai_no_leave_fed
+			}
         }
 		if = {
 			limit = {  has_relic = r_cube }
 			remove_relic = r_cube
         }
+
 
     }
 	

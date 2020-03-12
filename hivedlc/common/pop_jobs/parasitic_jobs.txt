@@ -18,7 +18,7 @@ purge_parasitic = {
 		trigger = {
 				has_purge_type = { type = purge_processing }
 				is_robotic_species = no
-				is_lithoid = yes
+				is_lithoid = no
 			}
 			food = 1
 		}
@@ -26,7 +26,7 @@ purge_parasitic = {
 		trigger = {
 				has_purge_type = { type = purge_processing }
 				is_robotic_species = no
-				is_lithoid = no
+				is_lithoid = yes
 			}
 			minerals = 1
 		}

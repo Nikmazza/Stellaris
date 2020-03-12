@@ -7,13 +7,15 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		
-
 		every_country = {
-		limit = { is_country_type = default }
-		add_modifier = { modifier = religious_country days = -1}
+			limit = {
+			##NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_empty_religion = yes
+			}
+			set_random_religion = yes
 		}
-
+		
+		
 	}
 }
 
@@ -65,11 +67,26 @@ pop_event = {
 	is_triggered_only = yes
 
 	immediate = {	
-	if = {limit = {pop_has_empty_religion = yes} pop_add_country_religion = yes }
+	if = {limit = {has_empty_religion = yes} pop_add_country_religion = yes }
 		
 		 }
 }
 
+# A pop has finished assembling
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = potv_religions.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {	
+	fromfrom = {
+	if = {limit = {has_empty_religion = yes} pop_add_country_religion = yes }
+		}
+		 }
+}
 
 
   

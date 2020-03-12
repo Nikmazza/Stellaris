@@ -1,4 +1,4 @@
-helgentar_system_initializer = {
+hyrokkin_system_initializer = {
 	name = "Hyrokkin"
 	class = "sc_pulsar"
 	usage = misc_system_init

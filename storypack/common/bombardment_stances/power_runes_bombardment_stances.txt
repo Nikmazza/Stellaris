@@ -5,7 +5,7 @@ damage_rune = {
 		}
 	}
 	
-	icon_frame = 6
+	icon_frame = 3
 	default = no
 	
 	stop_when_armies_dead = no

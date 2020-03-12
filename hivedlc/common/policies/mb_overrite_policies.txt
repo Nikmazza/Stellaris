@@ -199,6 +199,43 @@ war_philosophy = {
 	}
 	
 	option = {
+		name = "protection_wars"
+		
+		policy_flags = {
+			protection_wars
+		}
+		
+		potential = {
+			has_valid_civic = civic_mutualistic_behavior
+		}
+		
+	
+		on_enabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_protect
+				}
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_protect
+				}
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_mutualistic_behavior
+			}
+		}
+	}
+	
+	
+	option = {
 		name = "no_wars"
 		
 		policy_flags = {

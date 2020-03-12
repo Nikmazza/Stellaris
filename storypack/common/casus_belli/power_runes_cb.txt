@@ -3,7 +3,9 @@ cb_power_runes = {
     show_in_diplomacy = yes
     show_notification = yes
     potential = {
+	OR = {
         is_country_type = default
+	}
         is_subject = no
     }
     is_valid = {

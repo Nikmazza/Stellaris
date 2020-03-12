@@ -192,6 +192,36 @@ xeno_wish = {
             }
 
         }
+
+## balance?
+balance_wish = {
+            every_playable_country = {
+				 country_event = { id = nyblax_cube.112 }
+			}
+       every_pop = {
+				random_list = {
+		50 = {  kill_pop = yes }
+		50 = { }
+
+		}
+               
+				
+        }
+        every_country = {
+            every_owned_leader = {
+				random_list = {
+					50 = {  
+					kill_leader = {
+							show_notification = yes
+							}
+							}
+					50 = { }
+				}
+
+                }
+            }
+
+        }
 		
 ## hey guys
 unite_wish = {
