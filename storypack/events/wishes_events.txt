@@ -1,0 +1,15 @@
+namespace = wishes
+
+## death wish kills all organics
+# collectors gain comms with anyone that has surveyed their planet
+planet_event = {
+	id = wishes.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		death_wish_recursive = yes
+	
+	}
+}
+

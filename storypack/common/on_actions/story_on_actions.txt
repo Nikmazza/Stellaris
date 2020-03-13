@@ -3,7 +3,7 @@
 # Scope = Ship
 # From = System
 # FromFrom = Country
-on_entering_system = {
+on_entering_system_first_time = {
 	events = {
 		techis.0
 		narrow_maze.0

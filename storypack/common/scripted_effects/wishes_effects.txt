@@ -1,3 +1,43 @@
+death_wish_recursive = {
+##these are our first steps
+
+closest_system = {
+				limit = {
+					any_system_planet = {
+						count_pops = {
+							count > 0
+							limit = {
+								is_organic_species = yes
+							}
+						}
+						
+						}
+						}
+						every_system_planet = {
+						every_owned_pop = {
+							limit = { is_organic_species = yes }
+								kill_pop = yes
+						}
+						}
+					root = {
+					planet_event = {
+						id = wishes.1
+						days = 2
+						random = 1
+					}
+					}
+				
+			
+	}
+
+
+}
+
+
+
+
+
+
 ## empire kills them all
 death_wish = {
 
