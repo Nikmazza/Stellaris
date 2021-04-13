@@ -1,10 +1,10 @@
-name="Unofficial Hive DLC: Forgotten Queens"
+name="Forgotten Queens: A Gestalt Expantion"
 tags={
 	"Balance"
 	"Graphics"
 	"Gameplay"
 	"Overhaul"
 }
-version="3.021"
-supported_version="2.8.*"
+version="130421"
+supported_version="3.0.*"
 remote_file_id="1715190550"
