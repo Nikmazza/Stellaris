@@ -59,22 +59,106 @@ country_event = {
 
 
     immediate = {
-	awaken_paranoid_fe = yes
+	#awaken_paranoid_fe = yes
 	
-        random_country = {
-            limit = {
-                is_subject = no
-                NOT = { has_relic = r_cube }
-				OR = {
-                is_country_type = default
-				is_country_type = awakened_fallen_empire
+		# Find strongest neutral power and offer them to become league leader
+		# First federation leaders are asked, then simply the strongest country
+		if = {
+			limit = {
+				any_federation = {
+					NOT = {
+						any_member = {
+							has_relic = r_cube
+						}
+					}
+					any_member = {
+						is_federation_leader = yes
+						NOT = { has_country_flag = cube_war_league_leader_declined }
+					}
+					NOT = {
+						any_federation = {
+							NOT = { is_same_value = prev }
+							relative_power = {
+								who = prev
+								value > equivalent
+								category = fleet
+							}
+							any_member = {
+								is_federation_leader = yes
+								NOT = { has_country_flag = cube_war_league_leader_declined }
+							}
+						}
+					}
 				}
-                NOT = { has_country_flag = cube_war_league_leader }
-				
-            }
-            country_event = { id = cube_war_events.13 }
-        }
-    }
+			}
+			random_federation = {
+				limit = {
+					NOT = {
+						any_member = {
+							has_relic = r_cube
+						}
+					}
+					any_member = {
+						is_federation_leader = yes
+						NOT = { has_country_flag = cube_war_league_leader_declined }
+					}
+					NOT = {
+						any_federation = {
+							NOT = { is_same_value = prev }
+							relative_power = {
+								who = prev
+								value > equivalent
+								category = fleet
+							}
+							any_member = {
+								is_federation_leader = yes
+								NOT = { has_country_flag = cube_war_league_leader_declined }
+							}
+						}
+					}
+				}
+				random_member = {
+					limit = {
+						is_federation_leader = yes
+						NOT = { has_country_flag = cube_war_league_leader_declined }
+					}
+					country_event = { id = cube_war_events.13 }
+				}
+			}
+		}
+
+		else = {
+			random_country = {
+				limit = {	
+					is_subject = no
+					NOT = { has_relic = r_cube }
+					OR = {
+						is_country_type = default
+						#is_country_type = awakened_fallen_empire
+					}				
+					NOT = { has_country_flag = cube_war_league_leader_declined }
+	
+					NOT = {
+						any_country = {
+							is_country_type = default
+							relative_power = {
+								who = prev
+								value > equivalent
+							}
+							is_subject = no
+							NOT = { has_relic = r_cube }
+							OR = {
+								is_country_type = default
+								#is_country_type = awakened_fallen_empire
+							}
+							NOT = { has_country_flag = cube_war_league_leader_declined }
+						}
+					}
+				}
+				country_event = { id = cube_war_events.13 }
+			}
+		}
+	}
 }
 
 
@@ -109,11 +193,73 @@ country_event = {
 
 			set_timed_country_flag = { flag = ai_no_leave_fed days = 5400 }
 			set_timed_country_flag = { flag = interdictors_member days = 5400 }
-		         join_alliance = {
-                    who = root
-                    name = "The Interdictors"
-                    override_requirements = yes
-                }
+			
+			## if he had a federation, keep it, else create new
+						if = {
+						limit = { #existing federation will become the Non-Aligned League
+							has_federation = yes
+							is_federation_leader = yes
+						}
+						federation = {
+							set_name = "The Interdictors"
+							set_federation_flag = the_interdictors
+							if = {
+								limit = {
+									has_federation_perk = cohesion_join_1
+								}
+								add_cohesion = 50
+							}
+						}
+
+					}
+					else_if = {
+						limit = { has_federation = yes }
+						leave_alliance = {
+							override_requirements = yes
+						}
+						## leave my alliance and create my own thingy
+						 join_alliance = {
+							who = root
+							name = "The Interdictors"
+							override_requirements = yes
+						}
+						hidden_effect = {
+								root.federation = {
+									set_federation_flag = the_interdictors
+									if = {
+										limit = {
+											has_federation_perk = cohesion_join_1
+										}
+										add_cohesion = 50
+									}
+									else = { add_cohesion = 100 }
+									add_federation_experience = 4200 #level 3 with some breathing room
+								}
+							}
+						
+					}
+					else = {
+					##create my own thingy
+					join_alliance = {
+							who = root
+							name = "The Interdictors"
+							override_requirements = yes
+						}
+						hidden_effect = {
+								root.federation = {
+									set_federation_flag = the_interdictors
+									if = {
+										limit = {
+											has_federation_perk = cohesion_join_1
+										}
+										add_cohesion = 50
+									}
+									else = { add_cohesion = 100 }
+									add_federation_experience = 4200 #level 3 with some breathing room
+								}
+							}
+					}
+		        
 				## invite everybody to the party
 				every_country = {
 					limit = {
@@ -123,7 +269,7 @@ country_event = {
 						}
 						OR = {
 							is_country_type = default
-							is_fe_country = yes
+							#is_fe_country = yes
 							}						
 						NOT = { has_country_flag = cube_war_league_leader }
 					}
@@ -145,6 +291,7 @@ country_event = {
             factor = 1
         }
         hidden_effect = {
+		set_country_flag = cube_war_league_leader_declined
             country_event = { id = cube_war_events.12 }
         }
     }
@@ -176,6 +323,38 @@ country_event = {
 			who = from
 			override_requirements = yes
 		}
+				hidden_effect = {
+					from.federation = { #counteract the -100 cohesion you'd normally get for new members
+						if = {
+							limit = {
+								has_federation_perk = cohesion_join_1
+							}
+							add_cohesion = 50
+						}
+						else = { add_cohesion = 100 }
+						#add_federation_experience = 150
+					}
+				}
+				if = {
+					limit = {
+						is_overlord = yes
+						from.federation = {
+							has_federation_law = allow_subjects_to_join_yes
+						}
+					}
+					every_subject = {
+						join_alliance = {
+							who = from
+							override_requirements = yes
+						}
+						hidden_effect = {
+							from.federation = {
+								add_cohesion = 100
+								#add_federation_experience = 100
+							}
+						}
+					}
+				}
        
     }
     option = {

@@ -20,7 +20,9 @@
 ###################################################################################################
 
 open_council = {
-	potential = { is_gestalt = no }
+	potential = { 
+		is_gestalt = no	
+	}
 	allow = {
 		is_gestalt = no
 	}

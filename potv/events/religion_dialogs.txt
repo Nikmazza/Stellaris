@@ -4,6 +4,7 @@ namespace = potv_religion_dialog
 country_event = {
 	id = potv_religion_dialog.1
 	title = "religious_system"
+	desc = "religious_system_desc"
 	custom_gui = "religion_council_window"
 
 
@@ -126,6 +127,7 @@ country_event = {
 country_event = {
 	id = potv_religion_dialog.2
 	title = "religious_system"
+	desc = "religious_system_desc"
 	custom_gui = "religion_council_window"
 
 
@@ -262,6 +264,7 @@ country_event = {
 country_event = {
 	id = potv_religion_dialog.3
 	title = "religious_system"
+	desc = "religious_system_desc"
 	custom_gui = "religion_council_window"
 
 

@@ -1,3 +1,36 @@
+#message_type = {
+#	key = "CONSTRUCTION_MESSAGE_TYPE"				# Message key, used from code.
+#	icon = "GFX_message_other_construction"			# Sprite to use for gui item "message_icon_button"
+#	icon_frame = 1									# Frame index to use for gui item "message_frame"
+#
+#	name = "MESSAGE_DECLARE_WAR_TITLE"			# Localization key to use for title, if impty it will use "MESSAGE_<key>_TITLE instead.
+#	sound = "advisor_notification_construction_complete"	# Sound to play on message creation
+#
+#	sound_is_advisor = yes							# Depricated and does nothing.
+#	auto_opens = others								# Specifies if the message should be auto opened or not, valid: 'none', 'player', 'others' and 'all' (default: 'player). Some messages as events are ignoring this since thay have their own option.
+#	ping = "ping_notification_green"					# Ping map to use for map visualization.
+#}
+
+message_type = {
+	key = MESSAGE_TYPE_TIMELESS_SHIFT
+	icon = "GFX_message_timeless_shift"
+	icon_frame = 1
+
+	name = "MESSAGE_TIMELESS_SHIFT_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_STARVING_MOONS
+	icon = "GFX_message_starving_moons"
+	icon_frame = 1
+
+	name = "MESSAGE_STARVING_MOONS_TITLE"
+	sound = "notification"
+	ping = "ping_notification_red"
+}
+
 message_type = {
 	key = MESSAGE_TYPE_TRAIT_GAINED
 	icon = "GFX_message_trait_gained"
@@ -150,6 +183,7 @@ message_type = {
 	sound = advisor_notification_discovery_detected
 	sound_is_advisor = yes
 	ping = "arrow_notification_yellow"
+	auto_opens = all
 }
 
 message_type = {
@@ -656,6 +690,7 @@ message_type = {
 
 	name = "MESSAGE_DECLARE_WAR_TITLE"
 	ping = "ping_notification_red"
+	auto_opens = others
 }
 
 message_type = {
@@ -666,6 +701,7 @@ message_type = {
 	name = "MESSAGE_OFFER_PEACE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -676,6 +712,7 @@ message_type = {
 	name = "MESSAGE_KICK_FROM_FEDERATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -686,6 +723,7 @@ message_type = {
 	name = "MESSAGE_OFFER_FEDERATION_ASSOCIATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -696,6 +734,7 @@ message_type = {
 	name = "MESSAGE_REVOKE_FEDERATION_ASSOCIATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -706,6 +745,7 @@ message_type = {
 	name = "MESSAGE_ASK_FOR_FEDERATION_ASSOCIATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -716,6 +756,7 @@ message_type = {
 	name = "MESSAGE_END_FEDERATION_ASSOCIATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -726,6 +767,7 @@ message_type = {
 	name = "MESSAGE_OPEN_BORDERS_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -736,6 +778,7 @@ message_type = {
 	name = "MESSAGE_CLOSE_BORDERS_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -746,6 +789,7 @@ message_type = {
 	name = "MESSAGE_FORM_DEFENSIVE_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -756,6 +800,7 @@ message_type = {
 	name = "MESSAGE_BREAK_DEFENSIVE_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -766,6 +811,7 @@ message_type = {
 	name = "MESSAGE_FORM_NON_AGGRESSION_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -776,6 +822,7 @@ message_type = {
 	name = "MESSAGE_FORM_COMMERCIAL_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -786,6 +833,7 @@ message_type = {
 	name = "MESSAGE_FORM_RESEARCH_AGREEMENT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 
@@ -797,6 +845,7 @@ message_type = {
 	name = "MESSAGE_FORM_MIGRATION_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -807,6 +856,7 @@ message_type = {
 	name = "MESSAGE_BREAK_MIGRATION_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -817,6 +867,7 @@ message_type = {
 	name = "MESSAGE_BREAK_NON_AGGRESSION_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -827,6 +878,7 @@ message_type = {
 	name = "MESSAGE_BREAK_COMMERCIAL_PACT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -837,6 +889,7 @@ message_type = {
 	name = "MESSAGE_BREAK_RESEARCH_AGREEMENT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -847,6 +900,7 @@ message_type = {
 	name = "MESSAGE_GUARANTEE_INDEPENDENCE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -857,6 +911,7 @@ message_type = {
 	name = "MESSAGE_BREAK_GUARANTEE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -867,6 +922,7 @@ message_type = {
 	name = "MESSAGE_SUPPORT_INDEPENDENCE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -877,6 +933,7 @@ message_type = {
 	name = "MESSAGE_BREAK_SUPPORT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -887,6 +944,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_VASSALIZATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -897,6 +955,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_VASSALIZED_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -907,6 +966,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_PROTECTORATE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 
@@ -918,6 +978,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_SUBSIDIARY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -928,6 +989,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_THRALL_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -938,6 +1000,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_TRIBUTARY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -948,6 +1011,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_DOMINION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -958,6 +1022,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_SATELLITE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -968,6 +1033,7 @@ message_type = {
 	name = "MESSAGE_DEMAND_SIGNATORY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -978,6 +1044,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_SUBSIDIARY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -988,6 +1055,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_PROTECTORATE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -998,6 +1066,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_THRALL_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1008,6 +1077,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_TRIBUTARY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1018,6 +1088,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_DOMINION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1028,6 +1099,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_SATELLITE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1038,6 +1110,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BECOME_SIGNATORY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1048,6 +1121,7 @@ message_type = {
 	name = "MESSAGE_FORM_FEDERATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -1058,16 +1132,60 @@ message_type = {
 	name = "MESSAGE_INVITE_TO_FEDERATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
 	key = "DIPLO_ACTION_ASK_TO_JOIN_FEDERATION"
-	icon = "GFX_message_join_federation"
+	icon = "GFX_message_invite_to_federation"
 	icon_frame = 1
 
 	name = "MESSAGE_ASK_TO_JOIN_FEDERATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
+}
+
+message_type = {
+	key = "DIPLO_ACTION_VOTE_FOR_FEDERATION_LAW"
+	icon = "GFX_message_laws_change"
+	icon_frame = 1
+
+	name = "ACTION_VOTE_FOR_FEDERATION_LAW_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_VOTE_FOR_FEDERATION_TYPE"
+	icon = "GFX_message_laws_change"
+	icon_frame = 1
+
+	name = "ACTION_VOTE_FOR_FEDERATION_TYPE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "DIPLO_ACTION_VOTE_FOR_FEDERATION_LAW_VOTE_PASSED"
+	icon = "GFX_message_laws_passed"
+	icon_frame = 1
+
+	name = "ACTION_VOTE_FOR_FEDERATION_LAW_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = others
+}
+
+message_type = {
+	key = "DIPLO_ACTION_VOTE_FOR_FEDERATION_LAW_VOTE_FAILED"
+	icon = "GFX_message_laws_failed"
+	icon_frame = 1
+
+	name = "ACTION_VOTE_FOR_FEDERATION_LAW_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1078,6 +1196,7 @@ message_type = {
 	name = "MESSAGE_LEAVE_FEDERATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1088,6 +1207,7 @@ message_type = {
 	name = "MESSAGE_OFFER_TRADE_DEAL_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -1098,6 +1218,7 @@ message_type = {
 	name = "MESSAGE_REQUEST_WAR_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_red"
+	auto_opens = others
 }
 
 message_type = {
@@ -1108,6 +1229,7 @@ message_type = {
 	name = "MESSAGE_PROPOSE_INVITE_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1118,6 +1240,7 @@ message_type = {
 	name = "MESSAGE_ASK_TO_BE_RELEASED_SUBJECT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1128,6 +1251,7 @@ message_type = {
 	name = "MESSAGE_RELEASE_SUBJECT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+	auto_opens = others
 }
 
 message_type = {
@@ -1148,6 +1272,7 @@ message_type = {
 	name = "MESSAGE_MAKE_RIVAL_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_red"
+	auto_opens = others
 }
 
 message_type = {
@@ -1158,6 +1283,7 @@ message_type = {
 	name = "MESSAGE_END_RIVALRY_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 
@@ -1169,26 +1295,29 @@ message_type = {
 	name = "MESSAGE_DIPLOMATIC_INSULT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
 	key = "DIPLO_ACTION_INTEGRATE_SUBJECT"
 	icon = "GFX_message_started_integration"
 	icon_frame = 1
-	
+
 	name = "MESSAGE_INTEGRATE_SUBJECT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
 	key = "DIPLO_ACTION_CANCEL_SUBJECT_INTEGRATION"
 	icon = "GFX_message_stopped_integration"
 	icon_frame = 1
-	
+
 	name = "MESSAGE_CANCEL_SUBJECT_INTEGRATION_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
+	auto_opens = others
 }
 
 message_type = {
@@ -1586,4 +1715,106 @@ message_type = {
 	name = "MESSAGE_ARCHAEOLOGY_SITE_DISCOVERED_TITLE"
 	sound = "archeology_notifications_new_dig_site"
 	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_SENATE_IN_SESSION"
+	icon = "GFX_message_senate_in_session"
+	icon_frame = 1
+
+	name = "MESSAGE_SENATE_IN_SESSION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_RESOLUTION_PASSED"
+	icon = "GFX_message_resolution_passed"
+	icon_frame = 1
+
+	name = "MESSAGE_RESOLUTION_PASSED_TITLE"
+	sound = "notification_resolution_passed"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_RESOLUTION_FAILED"
+	icon = "GFX_message_resolution_failed"
+	icon_frame = 1
+
+	name = "MESSAGE_RESOLUTION_FAILED_TITLE"
+	sound = "notification_resolution_defeated"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "MESSAGE_COUNCIL_ELECTION_RESULT"
+	icon = "GFX_message_council_election_result"
+	icon_frame = 1
+
+	name = "MESSAGE_COUNCIL_ELECTION_RESULT_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "MESSAGE_RESOLUTION_VETOED"
+	icon = "GFX_message_resolution_vetoed"
+	icon_frame = 1
+
+	name = "MESSAGE_RESOLUTION_VETOED_TITLE"
+	sound = "notification_resolution_vetoed"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "MESSAGE_RESOLUTION_EMERGENCY_MEASURE"
+	icon = "GFX_message_emergency_measure"
+	icon_frame = 1
+
+	name = "MESSAGE_RESOLUTION_EMERGENCY_MEASURE_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = "MESSAGE_TERRAVORE_CONSUME_WORLD"
+	icon = "GFX_message_terraforming"
+	icon_frame = 1
+
+	name = "MESSAGE_TERRAVORE_CONSUME_WORLD_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_FEDERATION_LEVEL_UNLOCKED"
+	icon = "GFX_message_federation_level_unlocked"
+	icon_frame = 1
+
+	name = "MESSAGE_FEDERATION_LEVEL_UNLOCKED_TITLE"
+	sound = "notification_player_level_up"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_NECROPHAGE_POPS_NECROPHAGED"
+	icon = "GFX_message_planet_destroyed"
+	icon_frame = 1
+
+	name = "MESSAGE_NECROPHAGE_POPS_NECROPHAGED_TITLE"
+	sound = "event_necrophage"
+	ping = "ping_notification_green"
+	auto_opens = none
+}
+
+message_type = {
+	key = "DIPLO_ACTION_ASK_TO_LEAVE_FEDERATION"
+	icon = "GFX_message_leave_federation"
+	icon_frame = 1
+
+	name = "MESSAGE_ASK_TO_LEAVE_FEDERATION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_yellow"
+	auto_opens = others
 }

@@ -1,34 +1,34 @@
 district_hollow_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
-	
+
 	show_on_uncolonized = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	}
-	
+
 	potential = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	}
-	
+
 	conversion_ratio = 1
 	convert_to = {
 		district_city
 		district_nexus
 		district_hive
-	}	
-	
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
 			minerals = 1000
 		}
 		upkeep = {
-			minerals = 5
-		}		
+			energy = 5
+		}
 	}
-	
+
 	planet_modifier = {
-		planet_housing_add = 35
+		planet_housing_add = 30
 	}
 
 	triggered_planet_modifier = {
@@ -37,45 +37,106 @@ district_hollow_housing = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-
-			job_maintenance_drone_add = 2
+			job_maintenance_drone_add = 12
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { 
-				is_fallen_empire = no
-				is_regular_empire = yes 
+			owner = { has_non_swapped_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
 			}
 		}
 		modifier = {
-			job_clerk_add = 2
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_fallen_empire = no
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_non_swapped_tradition = tr_prosperity_interstellar_franchising }
+		}
+		modifier = {
+			job_clerk_add = 5
 		}
 	}
 
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { 
+			owner = {
 				is_fallen_empire = no
-				is_regular_empire = yes 
+				is_regular_empire = yes
 			}
 		}
 		text = job_clerk_effect_desc
-	}	
-	
+	}
+
 	triggered_desc = {
-		trigger = { 
+		trigger = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
 		text = job_maintenance_drone_effect_desc
-	}	
-	
+	}
+
 	ai_weight = {
-		weight = 1
+		weight = 0
+		modifier = {
+			weight = 5
+			free_housing < 10
+		}
 	}
 }
 
@@ -87,11 +148,11 @@ district_queen_den = {
 		from = {
 			is_hive_empire = yes
 		}
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	}
 	
 	potential = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 			owner = { 
 			exists = owner
 			is_hive_empire = yes
@@ -108,12 +169,13 @@ district_queen_den = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
+			minerals = 150
+			food = 350
 			exotic_gases = 50
 		}
 		upkeep = {
 			energy = 5
-			exotic_gases = 2
+			exotic_gases = 1
 		}		
 	}
 	
@@ -130,17 +192,14 @@ district_queen_den = {
 		}
 		modifier = {
 		job_spawning_drone_add = 1
-		job_synapse_drone_add = 5
+		job_synapse_drone_add = 10
 		#job_synapse_drone_per_pop = 0.05
-			#job_larva_queen_add = 4
-			#job_maintenance_drone_add = 2
+		#job_larva_queen_add = 4
+		#job_maintenance_drone_add = 2
 	
 			
 		}
 	}
-
-
-
 
 
 	triggered_desc = {
@@ -179,12 +238,12 @@ district_soldier_den = {
 	is_capped_by_modifier = no
 	
 	show_on_uncolonized = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	
 	}
 	
 	potential = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	
 	}
 	
@@ -199,17 +258,18 @@ district_soldier_den = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
+			minerals = 700
 			volatile_motes = 50
 		}
 		upkeep = {
-			energy = 5
+			energy = 3
 			volatile_motes = 2
 		}		
 	}
 	
 	planet_modifier = {
 		planet_housing_add = 15
+		planet_army_build_speed_mult = 0.15
 		#planet_stability_add = 1
 	}
 
@@ -225,11 +285,6 @@ district_soldier_den = {
 	}	
 	
 
-	
-	
-	
-	
-	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -275,126 +330,110 @@ district_soldier_den = {
 	}
 }
 
+
 district_subterranean_network = {
 	base_buildtime = 600
-	
-	min_for_deposits_on_planet = 3	
-	max_for_deposits_on_planet = 6
-	#is_capped_by_modifier = no
-	
+	is_capped_by_modifier = no
+
 	show_on_uncolonized = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	}
-	planet_modifier = {
-		##planet_housing_add = 15
-	}
+
 	potential = {
-		is_planet_class = pc_hollow
+		uses_district_set = hollow
 	}
-	
+
 	conversion_ratio = 1
 	convert_to = {
 		district_city
 		district_nexus
 		district_hive
-	}	
-	
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
+			minerals = 800
+			volatile_motes = 50
 		}
 		upkeep = {
-			
-		}		
-	}
-	
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-			is_gestalt = yes 
-			OR = {
-			AND = {
-				is_lithoid = no
-				NOT = { has_valid_civic = civic_hive_overmind }
-			}
-			AND = {
-				is_lithoid = yes	
-				has_valid_civic = civic_hive_overmind
-				has_lithoid_overminded_species = no
-				}			
-			}
-			}
-		}
-		modifier = {			
-			job_agri_drone_add = 2
-			job_mining_drone_add = 2
-			job_technician_drone_add = 2
-		}
-	}	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-			is_gestalt = yes 
-			OR = {
-				AND = {
-					is_lithoid = yes
-					NOT = { has_valid_civic = civic_hive_overmind }
-				}
-				AND = {
-					is_lithoid = no		
-					has_valid_civic = civic_hive_overmind				
-					has_lithoid_overminded_species = yes
-					}			
-			}
-			}
-		}
-		modifier = {			
-			#job_agri_drone_add = 2
-			job_mining_drone_add = 3
-			job_technician_drone_add = 3
-		}
-	}	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-			is_regular_empire = yes 
-			is_lithoid = no
-			}
-		}
-		modifier = {
-			job_miner_add = 2
-			job_technician_add = 2
-			job_farmer_add = 2
+			energy = 5
+			volatile_motes = 2
 		}
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-			is_regular_empire = yes 
-			is_lithoid = yes
-			}
-		}
-		modifier = {
-			job_miner_add = 3
-			job_technician_add = 3
-			#job_farmer_add = 2
-		}
-	}
-	ai_weight = {
-		weight = 10
 
-		# There are already unworked jobs
-		# Blocks districts unworkable by remaining pops (slaves/robots etc)
-		# Will be improved... at some point
+	planet_modifier = {
+		planet_housing_add = 8
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
 		modifier = {
-			factor = 0
-			free_jobs > 0 
+			job_fabricator_add = 8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_foundry_add = 8
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_alloy_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_fabricator_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 500
+				}
+				has_monthly_income = {
+					resource = minerals
+					value > 99
+				}
+			}
 		}
 	}
 }

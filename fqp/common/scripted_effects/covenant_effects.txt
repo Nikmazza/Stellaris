@@ -1,0 +1,28 @@
+give_chosen = {
+
+	
+		if = {
+			limit = { 
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			ruler = { not = { has_trait = leader_trait_ruler_chosen	} } 
+			ruler = {  is_organic_species = yes }
+			}
+			#destroy_country = yes
+				ruler = {
+					add_ruler_trait = leader_trait_ruler_chosen
+					set_leader_flag = covenant_chosen 
+					}
+		}
+
+}
+
+remove_chosen = {
+
+	
+every_owned_leader = {
+			limit = { has_leader_flag = covenant_chosen }
+				remove_ruler_trait = leader_trait_ruler_chosen
+				remove_leader_flag = covenant_chosen
+			}
+
+}

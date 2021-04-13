@@ -105,3 +105,10 @@ opinion_happy_wish = {
 	}
 }
 
+
+opinion_galactic_unifier = {
+	opinion = {	base = 1000	}
+	#accumulative = yes
+	decay = { base = 5 }
+}
+

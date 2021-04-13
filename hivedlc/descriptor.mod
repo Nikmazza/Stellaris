@@ -5,6 +5,6 @@ tags={
 	"Gameplay"
 	"Overhaul"
 }
-version="2.51"
-supported_version="2.5.*"
+version="3.021"
+supported_version="2.8.*"
 remote_file_id="1715190550"

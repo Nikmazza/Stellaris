@@ -8,12 +8,16 @@ r_invisibility_rune = {
 		category = relics
 		# Activation cost
 		cost = {
-			influence = 50
+			influence = 100
 		}
 	}
 	
 	ai_weight = {
-		weight = 200
+		weight = 200			
+		#modifier = {
+		#	weight = 0.1
+		#	is_active_resolution = "resolution_power_runes_ban_invisibility"
+		#}
 	}
 	
 	score = 500
@@ -26,6 +30,10 @@ r_invisibility_rune = {
   	}
 	
 	active_effect = {
+		set_timed_country_flag = {
+				flag = r_invisibility_rune_active
+				days = 3600
+			}
 		add_modifier = {
 				modifier = "invisibility_rune" 
 				days = 3600

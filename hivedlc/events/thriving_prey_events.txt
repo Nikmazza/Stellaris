@@ -11,7 +11,7 @@ planet_event = {
 		if = { ## thriving prey
 		limit = {
 		owner = {
-				has_civic = civic_hive_thriving_prey
+				has_origin = origin_hive_thriving_prey
 				}
 		}
 

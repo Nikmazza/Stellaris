@@ -5,10 +5,10 @@ authority = { value = auth_hive_mind } }
 	description = "civic_tooltip_hive_the_way_effects"
 	modification = no
 	possible = {
-		civics = {
+		origin = {
 			NOR = {
-				value = civic_hive_thriving_prey
-				value = civic_hive_overmind				  
+				value = origin_hive_thriving_prey
+				value = origin_hive_overmind				  
 			}
 		}
 	}
@@ -46,10 +46,10 @@ always = no
 		civics = {
 			NOR = {
 				value = civic_fanatic_purifiers 
-				value = civic_life_seeded 
-				value = civic_mechanists
-				value = civic_syncretic_evolution
-				value = civic_post_apocalyptic
+				#value = civic_life_seeded 
+				#value = civic_mechanists
+				#value = civic_syncretic_evolution
+				#value = civic_post_apocalyptic
 			}
 		}
 	}

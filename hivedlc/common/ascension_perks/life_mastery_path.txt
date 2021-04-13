@@ -1,8 +1,14 @@
 
 ap_life_assemblers = {
 	on_enabled = {
-		give_technology = { tech = "tech_cocoons"  message = no}
+		add_research_option = tech_genetic_chimerism
+		#give_technology = { tech = "tech_cocoons"  message = no}
 	}
+	
+	modifier = {
+		description = ap_life_assemblers_modifier_desc
+	}
+	
 	possible = {	
 		
 		custom_tooltip = {
@@ -12,6 +18,14 @@ ap_life_assemblers = {
 		custom_tooltip = {
 			fail_text = "requires_technology_tech_cloning"
 			has_technology = tech_cloning
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_mind_meld"
+			NOT = { has_ascension_perk = ap_mind_meld }
+		}
+		custom_tooltip = {
+			fail_text = "requires_not_ap_engineered_evolution"
+			NOT = { has_ascension_perk = ap_engineered_evolution }
 		}
 		
 	}
@@ -24,7 +38,7 @@ ap_life_assemblers = {
 	}
 	
 	ai_weight = {
-		factor = 0		
+		factor = 5		
 	}
 }
 
@@ -61,7 +75,7 @@ ap_life_masters = {
 	}
 	
 	potential = {
-		NOT = {
+		NOR = {
 			has_ascension_perk = ap_life_masters
 			has_valid_civic  = civic_hive_devouring_swarm 
 		}
@@ -69,7 +83,7 @@ ap_life_masters = {
 	}
 	
 	ai_weight = {
-		factor = 100
+		factor = 50
 	}
 }
 

@@ -4,6 +4,6 @@ tags={
 	"Graphics"
 }
 picture="thumbnail.png"
-version="1.7"
-supported_version="2.5.*"
+version="2.0"
+supported_version="2.7.*"
 remote_file_id="1878601358"

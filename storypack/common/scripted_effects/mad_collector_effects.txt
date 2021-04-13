@@ -170,6 +170,7 @@ if = {
 			
 ##fleet scope
 destroy_ftl_system = {
+remove_global_flag = thanos_hunting
 ##set_timed_global_flag = { flag = thanos_idle_flag days = 61 }
 		closest_system = {
 			limit = {
@@ -242,14 +243,9 @@ reform_collectors = {
 
 ## collector kills them all
 thanos_snap = {
-        every_pop = {
-				limit = {
-			exists = owner
-			owner = { NOT = { is_country = event_target:target_collectors } }	
-				}
-                    kill_pop = yes
-        }
-		
+		event_target:target_collectors = {
+        xeno_wish = yes
+		}
 		##notify
         every_country = {
             every_owned_leader = {
@@ -442,8 +438,9 @@ set_global_flag = thanos_building_cube
 			country_event = { id = complexwar.5061 days = 2700 }
 			
 			## boom!
-			country_event = { id = complexwar.5063 days = 5400 }
 			
+			country_event = { id = complexwar.5063 days = 5400 }
+				
 }
 
 

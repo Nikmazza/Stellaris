@@ -1,3 +1,0 @@
-
-@transport_hp = 300
-@transport_evasion = 20

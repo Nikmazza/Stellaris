@@ -32,6 +32,45 @@ planet_districts = {
 	}
 	
 }
+planet_districts_hab_research = {
+	parent = planet_structures
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+	
+}
+planet_districts_hab_energy = {
+	parent = planet_structures
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+	
+}
+planet_districts_hab_mining = {
+	parent = planet_structures
+
+	generate_mult_modifiers = {
+		cost
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+	}
+	
+}
 planet_structures = {
 	parent = planets
 	generate_mult_modifiers = {
@@ -558,7 +597,33 @@ ships = {
 		}
 	}
 
+	##juggernaut	
+	triggered_cost_modifier = {
+		key = ship_juggernaut
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
 
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = juggernaut
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_juggernaut
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_size = juggernaut
+		}
+	}
 	
 	##science
 	triggered_cost_modifier = {
@@ -612,6 +677,33 @@ ships = {
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
 			is_ship_class = shipclass_constructor
+		}
+	}
+	##colonizer
+	triggered_cost_modifier = {
+		key = ship_colonizer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_colonizer
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_colonizer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_colonizer
 		}
 	}
 	##starbases

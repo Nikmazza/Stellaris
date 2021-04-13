@@ -744,7 +744,7 @@ ethic_animism = {
 	}	
 	
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_ANIMATISM_POS
+		desc = POP_ATTRACTION_ANIMISM_POS
 		trigger = {
 			OR = {
 				has_ethic = ethic_animism

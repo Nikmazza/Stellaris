@@ -1,6 +1,6 @@
 namespace = story_patch
 
-@story_version = 2.05
+@story_version = 20200921
 
 #broadcast the latest version
 event = {

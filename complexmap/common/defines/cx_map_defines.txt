@@ -1,11 +1,11 @@
 	NGraphics = {
-		GALAXY_STAR_ICON_SCALE				= 1.25
-		GALAXY_DUST_SIZE 					= 40.0
-		GALAXY_DUST_SIZE_EXTRA 				= 50.0
+		GALAXY_STAR_ICON_SCALE				= 1.35
+		#GALAXY_DUST_SIZE 					= 40.0
+		#GALAXY_DUST_SIZE_EXTRA 				= 50.0
 		GALAXY_DUST_ROTATION_SPEED			= 0.055
-		GALAXY_NEBULA_DUST_SIZE 			= 25.0
-		GALAXY_NEBULA_DUST_SIZE_EXTRA 		= 35.0
-		GALAXY_NEBULA_DUST_ROTATION_SPEED	= 0.03
+		#GALAXY_NEBULA_DUST_SIZE 			= 25.0
+		#GALAXY_NEBULA_DUST_SIZE_EXTRA 		= 35.0
+		GALAXY_NEBULA_DUST_ROTATION_SPEED	= 0.02
 		
 		STAR_PIN_CIRCLE_RADIUS				= 2.0	# The lines that go from solar systems down to the 0-plane. This is the radius of that circle
 		STAR_PIN_CIRCLE_NUM_POINTS			= 0	# how many points in the circle on the 0-plane

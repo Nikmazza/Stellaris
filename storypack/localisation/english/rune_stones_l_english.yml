@@ -20,10 +20,10 @@
  r_illusion_rune:0 "The Illusion Rune"
  r_illusion_rune_desc:0 "The Illusion Rune was created by a race of antrophoids that could camouflage, in their attempt to use The Rune to hide from The Nyblax, they dissapeared. The Illusion Rune grants its user absolute control over reality itself, converting antimatter into matter."
  illusion_rune_activated:1 "§HUnlocks Decision:§! §G$decision_planet_illusion_rune$§!, granting the ability to add two planetary features to a planet."
- illusion_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y360§!"
+ illusion_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y1800§!"
  
  r_arcane_rune:0 "The Arcane Rune"
- r_arcane_rune_desc:0 "The First Rune, also known as The Arcane Rune, was created by Vorta, a Shakzem scientist. He drained the living energy out of his people to harvest the required power to forge the Rune. In the end, the power of one Rune was not enough to achieve his goals."
+ r_arcane_rune_desc:0 "The First Rune, also known as The Arcane Rune, was created by Vorta, a Shakzem scientist. He drained the living energy out of his people to harvest the required power to forge the Rune."
  arcane_rune_activated:1 "Creates a §YGovernor§!, §YScientist§!, §YAdmiral§! or §YGeneral§! from the souls of the harvested Shakzem people."
  arcane_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y1800§!"
 
@@ -32,7 +32,7 @@
 
  r_regeneration_rune:0 "The Regeneration Rune"
  r_regeneration_rune_desc:0 "The Regeneration Rune was created by a Hive mind entity that was merged into one single planet-like being when used for the first time. It has the power to heal and repair damage extremely fast."
- regeneration_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y200§!"
+ regeneration_rune_triumph_cooldown:0 "\n$relic_activation_cooldown$: £time£ §Y900§!"
 
 
  r_cube:0 "§RThe Nyblax Cube§!"
@@ -493,27 +493,27 @@ pr_maintenance.68.a:0 "A weird development."
 ## notifications
 ## robotontos
  nyblax_cube.101.name:0 "The Death Wish"
- nyblax_cube.101.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to target and destroy all biological lifeforms.\n\nA swarm of microscopic agents spread across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remained.\n\nEveryone was desintegrated and turned into dust in this devastating event."
+ nyblax_cube.101.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to target and destroy all biological lifeforms.\n\nA swarm of microscopic agents is spreading across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remains.\n\nEveryone is being desintegrated and turned into dust during this devastating event."
  nyblax_cube.101.a:0 "Astonishing."
 
  nyblax_cube.102.name:0 "A Happy Wish"
- nyblax_cube.102.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! was laughing, and the laughter was contagious! Suddenly all sentient life in the galaxy felt content and with pleasure.\n\nIt seems the purpose of §Y[From.GetRulerTitle] [From.GetRulerName]§! was to bring laughter and joy to the galaxy."
+ nyblax_cube.102.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! was laughing, and the laughter was contagious!\nHis laughter spreads across the galaxy bringing joy and happiness. All sentient life are feeling content and with pleasure.\n\nIt seems the purpose of §Y[From.GetRulerTitle] [From.GetRulerName]§! was to bring laughter and joy to the galaxy."
  nyblax_cube.102.a:0 "Smile and put on a happy face."
 
- nyblax_cube.103.name:0 "The Great Conqueror"
+ nyblax_cube.103.name:0 "The Great Conqueror" #vasal
  nyblax_cube.103.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube and somehow The §YNyblax Cube§! got into every system and changed their data. Before anybody could do something about it, all their systems indicated that they were vassals to the §Y[From.GetAdjective]§! people!! The §Y[From.GetAdjective]§! are not sorry, simply better!"
  nyblax_cube.103.a:0 "All hail [From.GetRulerTitle] [From.GetRulerName]!"
 
  nyblax_cube.104.name:0 "The Peace Bringer"
- nyblax_cube.104.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to bring peace. It is unknown what the §YNyblax Cube§! did but, the galaxy started to lose the will to fight.\n\nThose wars that were active will remain until there is a victor, but from now on, no other wars will be waged!"
+ nyblax_cube.104.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to bring peace. It is unknown what the §YNyblax Cube§! did but, the galaxy started to lose the will to fight.\n\nFrom now on, no other wars will be waged!"
  nyblax_cube.104.a:0 "Awesome."
 
  nyblax_cube.104b.name:0 "The Peace Breaker"
  nyblax_cube.104b.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to break the peace. It is unknown what the §YNyblax Cube§! did but, the galaxy regained the will to fight.\n\nFrom now on: WAR!"
  nyblax_cube.104b.a:0 "Awesome."
 
- nyblax_cube.105.name:0 "The Great Conqueror"
- nyblax_cube.105.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube and after activating it, every planet was under the rule of the §Y[From.GetAdjective]§! people!!\n\nThe §Y[From.GetAdjective]§! now control the galaxy and their people, no more borders, no more wars, just the §Y[From.GetAdjective]§! united worlds."
+ nyblax_cube.105.name:0 "The Great Conqueror" #conquer planets
+ nyblax_cube.105.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube and after activating it, every planet started to fall under the rule of the §Y[From.GetAdjective]§! people!!\n\nThe §Y[From.GetAdjective]§! are slowly controling the galaxy and their people. Soon: no more borders, no more wars, just the §Y[From.GetAdjective]§! united worlds."
  nyblax_cube.105.a:0 "All hail [From.GetRulerTitle] [From.GetRulerName]!"
 ## 106 is knowledge but we removed it
  nyblax_cube.107.name:0 "The God of Light"
@@ -521,15 +521,15 @@ pr_maintenance.68.a:0 "A weird development."
  nyblax_cube.107.a:0 "Amen."
 
  nyblax_cube.108.name:0 "The Death Wish"
- nyblax_cube.108.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to target and destroy all lifeforms other than themselves. A swarm of microscopic agents spread across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remained. Everyone was desintegrated in this devastating event."
+ nyblax_cube.108.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to target and destroy all lifeforms other than themselves. A swarm of microscopic agents is spreading across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remains.\n\nEveryone is being desintegrated and turned into dust during this devastating event."
  nyblax_cube.108.a:0 "Astonishing."
 
  nyblax_cube.109.name:0 "The Power of Friendship"
- nyblax_cube.109.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n It is unclear what §Y[From.GetRulerTitle] [From.GetRulerName]§! did with the Cube, but a warm hug was felt by everybody in the galaxy, even robots had a subrutine simulating confort and warmth. Every envoy, politician and ruler from every planet accross the galaxy gathered and created the ultimate alliance\n\nMay this alliance last forever!"
+ nyblax_cube.109.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\nIt is unclear what §Y[From.GetRulerTitle] [From.GetRulerName]§! did with the Cube, but a warm hug was felt by everybody in the galaxy, even robots had a subrutine simulating confort and warmth. Every envoy, politician and ruler from every planet accross the galaxy gathered and created the ultimate alliance\n\nMay this alliance last forever!"
  nyblax_cube.109.a:0 "Lovely!"
 
  nyblax_cube.110.name:0 "The Assimilation"
- nyblax_cube.110.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube and the galaxy was now one voice, and those whose voices could not be heard were destroyed in the process."
+ nyblax_cube.110.desc:0 "By using the §YPower Runes§! in unison, the §R[From.GetAdjective]§! activated the §YNyblax Cube§!.\n\n§Y[From.GetRulerTitle] [From.GetRulerName]§! configured the Cube to unite the galaxy under a single voice. A swarm of microscopic agents is spreading across the hole galaxy, infecting and reproducing inside the targeted hosts, changing their cellular structures to fit the collective.\n\nEveryone's individuality is being lost during this event. The galaxy will be one voice, and those whose voices can not be heard will be destroyed in the process."
  nyblax_cube.110.a:0 "We are one."
 
  nyblax_cube.111.name:0 "Payday"
@@ -551,11 +551,11 @@ pr_maintenance.68.a:0 "A weird development."
 
 ## notifications
  nyblax_cube.100.name:0 "The Wish"
- nyblax_cube.100.desc:0 "After collecting all the §YPower Runes§!, the Mad Collector placed them in each side of the §YNyblax Cube§!.\n\nThe Mad Collector configured the Cube to target and destroy all lifeforms other than themselves!\nA swarm of microscopic agents spread across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remained.\n\nEveryone was desintegrated in this devastating event...\n\nHe did exactly what he said he was going to do. He wiped out all sentient creatures in the galaxy but them.\n\nNow the galaxy has gone silent, waiting for new life to thrive once again."
+ nyblax_cube.100.desc:0 "After collecting all the §YPower Runes§!, the Mad Collector placed them in each side of the §YNyblax Cube§!.\n\nThe Mad Collector configured the Cube to target and destroy all lifeforms other than themselves!\nA swarm of microscopic agents is spreading across the hole galaxy, infecting and reproducing inside the targeted hosts, eating and decomposing their cellular structures until no other organisms remain.\n\nEveryone is being desintegrated in this devastating event...\n\nHe did exactly what he said he was going to do. He wipes out all sentient creatures in the galaxy but them.\n\nNow the galaxy is going silent, waiting for new life to thrive once again."
  nyblax_cube.100.a:0 "He was... inevitable."
 
  nyblax_cube.4.name:0 "The Nyblax Cube"
- nyblax_cube.4.desc:0 "After collecting all the §YPower Runes§! and using some minor artifacts we where able to forge the §YNyblax Cube§!.\n\nPower beyond our wildest dreams await!\n\nThe §YNyblax Cube§! requires a vast amount of power to be activated. A §Yspecial project§! was created to power up the Artifact."
+ nyblax_cube.4.desc:0 "After collecting all the §YPower Runes§! and using some minor artifacts we were able to forge the §YNyblax Cube§!.\n\nPower beyond our wildest dreams await!\n\nThe §YNyblax Cube§! requires a vast amount of power to be activated. A §Yspecial project§! was created to power up the Artifact."
  nyblax_cube.4.a:0 "We are... inevitable."
 
 
@@ -563,7 +563,7 @@ pr_maintenance.68.a:0 "A weird development."
 
  happy_wish:0 "The Nyblax Happiness"
  opinion_happy_wish:0 "The Nyblax Happiness"
-
+ opinion_galactic_unifier:0 "Galactic Unifier"
  ################### DEBUG EVENTS #############
 
  pr_debug.0.a:0 "Sweet"
