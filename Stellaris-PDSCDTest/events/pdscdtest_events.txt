@@ -1,0 +1,292 @@
+namespace = pdscdtest
+
+@initDays = 1 #1800 Debugging: 1 it is used to delay the start of the chain and to give an initial randomness to the first encounter
+@initRandomDays = 1 #900 Debugging: 1 it is used to delay the start of the chain and to give an initial randomness to the first encounter
+@timeToVanish = 10 #1800 Debugging: 10 time the players have to dig or explore the special project
+@timeVanished = 10 #3600 Debugging: 10 the amount of time the creature will be gone
+
+# Start the PDSCTest chain
+country_event = {
+	id = pdscdtest.0
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:global_event_country = {
+			country_event = { id = pdscdtest.1 days = @initDays random = @initRandomDays }
+		}
+	}
+}
+
+# Start the PDSCTest chain
+country_event = {
+	id = pdscdtest.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+
+		#spawn the "creature" in a random system in a random range of years
+		create_TVA_location = yes
+		country_event = { id = pdscdtest.10 days = @initDays random = @initRandomDays } #debug: days = 3600
+		
+		#tell everybody where TVA will show up and give POI
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			begin_event_chain = { event_chain = pdscdtest_poi_chain target = this }
+			create_point_of_interest = {
+				id = pdscdtest_pois
+				name = "tva_poi"
+				desc = tva_desc
+				event_chain = pdscdtest_poi_chain
+				location = event_target:new_location
+			}
+			
+			#notify
+            country_event = { id = pdscdtest.2 }
+		}
+	}
+}
+
+# Spawn the creature in a random system and creates it if needed
+# requires new_location
+country_event = {
+	id = pdscdtest.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = { limit = { NOT = { has_global_flag = tva_lair_found } }
+			#spawn the creature in a random system in a random range of years
+			create_TVA_asteroid = yes #requires new_location
+			
+			
+			# notify that the asteroid has appeared as predicted and create the special project
+			every_country = {
+				limit = {
+					is_country_type = default
+					NOT = { has_country_flag = pdscdtest_opt_out }
+				}
+				create_TVA_special_project = yes
+				#notify
+				if = { limit = { NOT = { has_country_flag = pdscdtest_do_not_disturb } } country_event = { id = pdscdtest.11 } }
+				
+			}
+			
+			#destroy in 5 years
+			country_event = { id = pdscdtest.20 days = @timeToVanish }
+		}
+	}
+}
+
+# Destroy the creature and make it appear in 10 years
+country_event = {
+	id = pdscdtest.20
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = { limit = { NOT = { has_global_flag = tva_lair_found } }
+			#vanish and set next location
+			event_target:new_location = { remove_planet = yes }
+			create_TVA_location = yes
+			
+			#respawn in 10 years
+			country_event = { id = pdscdtest.10 days = @timeVanished }
+			
+			# notify about the vanishment and remove POI to everyone, notify about the next POI
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				clear_tva_special_projects = yes
+				create_point_of_interest = {
+					id = pdscdtest_pois
+					name = "tva_poi"
+					desc = tva_desc
+					event_chain = pdscdtest_poi_chain
+					location = event_target:new_location
+				}
+				#notify
+				if = { limit = { NOT = { has_country_flag = pdscdtest_do_not_disturb } } country_event = { id = pdscdtest.21 } }
+			}
+		}
+	}
+}
+
+# Notification: the TVA myth event chain started
+country_event = {
+	id = pdscdtest.2
+	title = "pdscdtest.2.name"
+	desc = "pdscdtest.2.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_asteroid_field
+
+	is_triggered_only = yes
+
+	
+	option = {
+		name = pdscdtest.2.a
+	}
+	option = {
+		name = pdscdtest.2.b
+		owner = {
+			end_event_chain = pdscdtest_poi_chain
+		}
+		hidden_effect = { set_country_flag = pdscdtest_opted_out }
+	}
+}
+
+# Notification:  notify that TVA has appeared as predicted and create the special project
+country_event = {
+	id = pdscdtest.11
+	title = "pdscdtest.11.name"
+	desc = "pdscdtest.11.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_asteroid_field
+	location = event_target:new_location
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+	option = {
+		name = DONTDISTURB
+		hidden_effect = { set_country_flag = pdscdtest_do_not_disturb }
+	}
+}
+
+# Notification: notify about the vanishment and remove POI to everyone, notify about the next POI
+country_event = {
+	id = pdscdtest.21
+	title = "pdscdtest.21.name"
+	desc = "pdscdtest.21.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_star_chart
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+	option = {
+		name = DONTDISTURB
+		hidden_effect = { set_country_flag = pdscdtest_do_not_disturb }
+	}
+}
+
+# Notification: you just discovered clue n1
+country_event = {
+	id = pdscdtest.51
+	title = "pdscdtest.51.name"
+	desc = "pdscdtest.51.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_unspeakable_horror #GFX_evt_hive #GFX_evt_barren_dig_site #GFX_evt_archaeology_camp #GFX_evt_archaeological_dig
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# Notification: you just discovered clue n2
+country_event = {
+	id = pdscdtest.52
+	title = "pdscdtest.52.name"
+	desc = "pdscdtest.52.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_physics_research
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		give_technology = { tech = tech_ftl_inhibitor message = yes }
+	}
+}
+
+# Notification: notify we found TVAs location
+country_event = {
+	id = pdscdtest.53
+	title = "pdscdtest.53.name"
+	desc = "pdscdtest.53.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_star_chart
+	location = event_target:new_location
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+# Notification: notify everybody that TVA aint comming back
+country_event = {
+	id = pdscdtest.54
+	title = "pdscdtest.54.name"
+	desc = "pdscdtest.54.desc"
+	show_sound = event_mystic_reveal
+	picture = GFX_evt_star_chart
+
+	is_triggered_only = yes
+
+	option = {
+		name = pdscdtest.54.a
+		end_event_chain = pdscdtest_poi_chain
+	}
+}
+
+# First episode
+fleet_event = {
+	id = pdscdtest.101
+	title = "pdscdtest.101.name"
+	desc = pdscdtest.101.desc
+	picture = GFX_evt_overgrown_city #GFX_evt_alien_ruins
+	show_sound = event_wind_ruins
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = pdscdtest.101.a
+		small_artifact_reward = yes
+	}
+}
+
+# Second episode
+fleet_event = { #Contents revealed
+	id = pdscdtest.102
+	title = "pdscdtest.102.name"
+	desc = pdscdtest.102.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_metal_fatigue
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = pdscdtest.102.a
+		owner = {
+			add_research_option = tech_jump_drive_1
+			add_relic = r_tva_jump_drive
+			end_event_chain = pdscdtest_poi_chain
+		}
+	}
+	
+	after = {
+		medium_artifact_reward = yes
+	}
+}

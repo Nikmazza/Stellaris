@@ -1,0 +1,7 @@
+# This = Country, first member added
+on_galactic_community_formed = {
+	events = {
+		pdscdtest.0 #hidden event that starts the pdscdtest chain
+	}
+
+}

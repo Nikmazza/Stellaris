@@ -1,0 +1,63 @@
+﻿l_english: 
+ DONTDISTURB: "OK. Cease notifications."
+ pdscdtest_poi_chain_title: "The Vanishing Asteroid"
+ pdscdtest_poi_chain_desc: "Ever since the galactic community was formed, tales and myths about inexplicable events, uncharted sectors and fictional space creatures poured into universal folklore. Freighters and passengers would sometimes return with epic tales about ghost ships, space battles that never took place or monsters in the void that never existed.\n\nWhile some events might have a scientific explanation behind the phenomena, the scientific community is usually pretty fast at dismissing such fables.\nNevertheless, over the past years, a very well-respected scientist of the galactic community has been obsessed with one of these myths... 'The Vanishing Asteroid' he calls it.\n\nAccording to legend, there is a ghost city located on an asteroid, but every time the city is spotted, by the time scientists arrive at the location, the asteroid had vanished.\nEven though it is considered to be nothing more than a prank, the scientist claims to have made a breakthrough in the subject.\nBy using navigational logs and subspace readings collected by the ships that allegedly spotted the asteroid, the Nalo algorithm was created to predict where it will show up next.\n\nSince the galactic community does not have the necessary resources to pursue such endeavour, the scientist decided to share his research across all the members of the galaxy in hopes someone will be able to unlock 'The Vanishing Asteroid's' mysteries."
+
+
+ pdscdtest.2.name: "$pdscdtest_poi_chain_title$"
+ pdscdtest.2.desc: "$pdscdtest_poi_chain_desc$"
+ pdscdtest.2.a: "We will solve the mystery."
+ pdscdtest.2.b: "Seems like a waste of time."
+ 
+ pdscdtest.11.name: "The Vanishing Asteroid: Successful Prediction"
+ pdscdtest.11.desc: "As predicted, 'The Vanishing Asteroid' just materialized at the coordinates provided by the Nalo algorithm. Further studying the asteroid could yield expository results to unravel the mysteries surrounding the celestial object.\n\nA Special Project has been issued to study the phenomena surrounding the asteroid."
+ 
+ pdscdtest.21.name: "The Vanishing Asteroid: Asteroid Vanished"
+ pdscdtest.21.desc: "Years after the reappearance of the vanishing asteroid, the celestial object has now vanished once again. New coordinates have been predicted by the Nalo algorithm and added to the situation log.\n\nHaving access to the predicted solar system would pose a strategic advantage in unraveling the mysteries surrounding 'The Vanishing Asteroid'."
+ 
+ pdscdtest.51.name: "The Vanishing Asteroid: That's no asteroid!"
+ pdscdtest.51.desc: "Unaware of 'The Vanishing Asteroid's' cycle, our science team did preliminar readings on the celestial object's surface and scanned for anomalies.\nThese preliminary reports show a city carbon dated millions of years ago, located in a valley between bright ancient crustal highlands and prominent impact craters.\nMany of the city buildings are tarnished by what appears to be meteor strikes.\nWhile scanning the object's surface our scientists noted seismic activity, which should not be possible on an asteroid. At first, it was hypothesised that the quakes were a prelude to the asteroid's vanishment, yet nothing happened.\n\nLifeforms-scans were initiated to void any mining activity that could have eluded our sensors. While the team was anticipating either a few lifeforms or none at all, scans provided some unexpected results. Scanning for lifeforms exposed a single being; a supermassive organism laying underneath the piled dust of meteor impacts.\nThe creature, that somewhat resembles a mass of organs with a rock-like crust, feeds upon processing solar energy and the minerals provided by the various meteor impacts.\nFurther studies show that the organism is immobile and constitutes a 95% of the asteroid's.\n\nIt is true we know a lot about the creature's physiology and that it poses no threat to our team, yet we are oblivious when it comes to the phenomena surrounding it. Launching an expedition without knowing when the creature will vanish could pose a risk with unknown consequences; which is why our team is now waiting for the event to happen again in order to time the cycles and prepare an expedition to the surface for the next time it resurfaces."
+ 
+ 
+ pdscdtest.52.name: "The Vanishing Asteroid: The Science Behind"
+ pdscdtest.52.desc: "As our science team was about to descend to the creature's surface, topographical variances were detected. New circular depressions in the surface of the creature suggest that, while vanished, the creature received meteor impacts. While these new findings imply that the creature does not simply vanish from the material plane, they also raise a few questions: Where does the creature go? And how?\n\nAn archeological outpost was established at the creature's surface where the team was determined to answer these questions.\nBy analyzing previous data and subspace residue, our scientists have determined that the creature uses an advanced FTL method capable of tearing an asteroid-size hole in the fabric of reality, allowing for near-instantaneous movement between systems.\nIt is hard to know the exact science behind the FTL jumps without analyzing the source that allows for such a feat. Unfortunately, to locate the source of the FTL jumps our team needs to run a full expedition to the city and time is of the essence.\n\nAfter countless hours of research, our scientists believe that by combining FTL inhibition technology and locking into the correct frequency they could disable the FTL drive without completely destroying it.\nIn order to lock into the device's frequency, the team placed strategic probes all around the city which will remain active and gather information while the creature jumps between systems. After the creature returns, we will be able to retrieve the information gathered, lock into the FTL frequency and pinpoint the system the creature jumps to."
+ 
+ pdscdtest.53.name: "The Vanishing Asteroid: The Lair"
+ pdscdtest.53.desc: "The mission was a success! With all the intel gathered by the probes, our team of scientists were able accurately pinpoint the location of the creature's home system and create a jamming frequency to disrupt the FTL device. Alas, as a side effect to the jamming, the FTL device was triggered one last time, forcing the creature to jump to it's home system where it will remain for us to study and explore.\n\nThe situation log has been updated with the coordinates of the creature's lair.\nFinally the secrets behind 'The Vanishing Asteroid' are within our grasp!"
+ 
+ pdscdtest.54.name: "The Vanishing Asteroid: Lost Track"
+ pdscdtest.54.desc: "Years after the reappearance of the vanishing asteroid, the celestial object has now vanished once again. Unlike other iterations, the Nalo algorithm is unable to predict any new coordinates. According to our scientists, a fortuitous changed in the vanishing cycle prevents the algorithm from predicting its next move."
+ pdscdtest.54.a: "What a shame."
+ 
+ tva_dig_site: "Vanishing Asteroid"
+ tva_dig_site_desc: "A supermassive organism that resembles a mass of organs with a rock-like crust hosts a ghost city. The FTL device that made the creature jump has been jammed and an archeological outpost has been set."
+ 
+ pdscdtest.101.name: "The Eonian City"
+ pdscdtest.101.desc: "Corridors overgrown with local flora decorate the ruins of a city lost to time. While taking a look at the sky, one can see an array of smaller asteroids colliding and threatening with impacting the creature's surface.\n\nThe civilization that built this city is long gone but their architecture lives on. Statues resembling giant bacteria give away the civilization's phenotype, and by taking a closer look at the city's layout, it is easy to imagine how they evolved. These extremophiles would live near the pores of the creature, which exhales a compound of gases and heat, allowing life to flourish.\n\nIt is also possible to find technological remnants while exploring the city. A lab within one of the main buildings holds what appears to be the FTL device we were looking for, a complex machine encrypted with a language we are yet to decypher."
+ pdscdtest.101.a: "Unlock it's secrets"
+ 
+ 
+ pdscdtest.102.name: "The Maturin Drive"
+ pdscdtest.102.desc: "After decoding the machine's language, our specialists started reverse engineering what they called 'The Maturin Drive'. This complex machine is composed of a mainframe, particle accelerators, cooling systems and an interface.\n\nAfter studying the system logs through the machine’s interface, our team concluded that the drive malfunctioned on their very first jump, causing a feedback loop which triggered back and forth jumps every so many years.\n\nTrying to reverse engineer 'The Maturin Drive' proved to be rather difficult and, while it is true we got a better understanding about space-time and jump drives, the mainframe of 'The Maturin Drive' is too arcane for us to fully comprehend.\nAs a last resort, our team was able to salvage the 'The Maturin Drive' mainframe and create a user-friendly interface for us to use."
+ pdscdtest.102.a: "Excelent"
+ 
+ 
+ 
+ NAME_tva: "Vanishing Asteroid"
+ tva_poi: "Predicted location"
+ tva_desc: "The algorithm provided by the galactic community scientist predicted the coordinates of the system where the asteroid will show up next."
+ tva_final_poi: "The Lair"
+ tva_final_desc: "Home system to a supermassive organism that resembles a mass of organs with a rock-like crust."
+ 
+ 
+ r_tva_jump_drive: "The Maturin Drive"
+ r_tva_jump_drive_desc: "A powerful FTL device capable of tearing an asteroid-size hole in the fabric of reality, allowing for near-instantaneous movement between systems across the galaxy. The Maturin Drive was designed by a bacteria-like race that lived in the back of a giant superorganism and recoved from the ruins of their home city."
+ 
+ tva_triumph: "Maturin Triumph"
+ 
+ TVA_PROJECT_1: "The Vanishing Asteroid"
+ TVA_PROJECT_1_DESC: "As predicted, 'The Vanishing Asteroid' materialized at the coordinates provided by the Nalo algorithm. Further studying the asteroid could yield expository results to unravel the mysteries surrounding the celestial object."
+ TVA_PROJECT_2: "Archeological Outpost"
+ TVA_PROJECT_2_DESC: "Exploring the creature's surface could help us unravel the mysteries behind the vanishments and the ghost city."
+ TVA_PROJECT_3: "Intel Gathering"
+ TVA_PROJECT_3_DESC: "The probes established during the last project have been collecting data ever since, retrieving this information will help us lock into the FTL frequency to jam the device and pinpoint the system the creature jumps to."

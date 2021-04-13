@@ -1,0 +1,33 @@
+civic_machine_replicators = {
+	playable = {
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+
+	possible = {
+		authority = { value = auth_machine_intelligence }
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+				value = civic_machine_servitor 
+			}
+		}
+	}	
+	advanced_start = yes
+	
+	modification = no
+	random_weight = { base = 5 }
+	description = "civic_tooltip_machine_replicators_effects"
+
+	traits = {
+		trait = trait_machine_central
+		}
+
+	has_secondary_species = {	# see game_start.11
+		title = civic_machine_replicators_secondary_species
+		traits = {
+			trait = trait_machine_replica
+		}
+	}
+			
+}

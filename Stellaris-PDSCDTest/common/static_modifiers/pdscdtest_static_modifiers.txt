@@ -1,0 +1,4 @@
+tva_triumph = {
+	ship_ftl_jumpdrive_range_mult = 10
+	ship_jumpdrive_cooldown_mult = 1
+}

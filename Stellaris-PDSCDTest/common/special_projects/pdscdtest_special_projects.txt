@@ -1,0 +1,104 @@
+@daysToResearch = 2 #1440 Debugging: 2
+@timeLimit = 3600
+@scientistT1Skill = 1 #1 Debugging: 1
+@scientistT1Skill = 1 #3 Debugging: 1
+@scientistT1Skill = 1 #5 Debugging: 1
+
+
+special_project = {
+	key = "TVA_PROJECT_3"
+	days_to_research = @daysToResearch
+	tech_department = physics_technology
+	timelimit = @timeLimit
+	picture = GFX_evt_physics_research
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	event_scope = ship_event
+
+	event_chain = pdscdtest_poi_chain
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = @scientistT3Skill
+	}
+	
+	on_success = {
+		if = { limit = { NOT = { has_global_flag = tva_lair_found } }
+			from = {
+				set_country_flag = tva_locator
+				end_tva_chase = yes
+			}
+		}
+		from = {
+			create_point_of_interest = {
+				id = pdscdtest_final_poi
+				name = "tva_final_poi"
+				desc = tva_final_desc
+				event_chain = pdscdtest_poi_chain
+				location = event_target:new_location
+			}
+		}
+	}
+	
+	on_fail = {
+	}
+}
+special_project = {
+	key = "TVA_PROJECT_2"
+	#cost = 0
+	days_to_research = @daysToResearch
+	tech_department = physics_technology
+	timelimit = @timeLimit
+	picture = GFX_evt_archaeology_camp
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	event_scope = ship_event
+
+	event_chain = pdscdtest_poi_chain
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = @scientistT2Skill
+	}
+	
+	on_success = {
+		from = {
+			country_event = { id = pdscdtest.52 }
+		}
+	}
+	
+	on_fail = {
+	}
+}
+special_project = {
+	key = "TVA_PROJECT_1"
+	#cost = 0
+	days_to_research = @daysToResearch
+	tech_department = physics_technology
+	timelimit = @timeLimit
+	picture = GFX_evt_asteroid_field
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	
+	event_scope = ship_event
+
+	event_chain = pdscdtest_poi_chain
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = @scientistT1Skill
+	}
+	
+	on_success = {
+		from = {
+			country_event = { id = pdscdtest.51 }
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+
