@@ -1,0 +1,122 @@
+@tsspeed = 0.5
+@width = 0.5
+@texture_tiling = 200
+@duration = 2
+
+@speed = 30
+@dur = 2
+
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "scout_laser_1"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "techno_scout_laser_1"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+		shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "techno_strike_craft_laser_3"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+		shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "strike_craft_laser_1"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+		shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "strike_craft_laser_2"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+		shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}
+
+projectile_gfx_ballistic  = {
+	#common for all types of projectiles
+	name = "strike_craft_laser_3"
+	color = { 0.1 	0.1 	0.5 	0.4 }
+	hit_entity = "strikecraft_round_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+	
+		shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "strikecraft_round_small_entity"
+	speed = @speed		
+	max_duration = @dur	
+}

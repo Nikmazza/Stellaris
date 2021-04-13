@@ -1,0 +1,61 @@
+objectTypes = {
+
+########## AJ TACHYON CANNON / DM Kinetic Artillery (light blue) texture_diffuse = "tracer_round_acot_kinetic_artillery_dm.dds"
+# kinetic_artillery_tracer_round.mesh is vanilla file
+	#pdxmesh = {
+		#name = "acot_kinetic_artillery_dm_tracer_round_mesh"
+		#file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		#scale = 1.0
+		
+		#meshsettings = {
+			#texture_diffuse = "tracer_round_acot_kinetic_artillery_dm.dds"
+		#}
+	#}
+	
+		pdxmesh = {
+		name = "aj_tachyon_cannon_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.3
+		
+		meshsettings = {
+			texture_diffuse = "aj_tachyon_cannon_tracer_round.dds"
+		}
+	}
+
+########## AJ ENERGY CANNON / DM Kinetic Artillery (red)
+	
+		pdxmesh = {
+		name = "aj_energy_cannon_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "aj_energy_cannon_tracer_round.dds"
+		}
+	}
+
+########## FOCUSED ARC ARTILLERY / DM Kinetic Artillery (purple)
+	
+		pdxmesh = {
+		name = "aj_focused_arc_artillery_tracer_round_mesh"
+		file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "aj_focused_arc_artillery_tracer_round.dds"
+		}
+	}
+	
+########## ARC ARTILLERY / DM Kinetic Artillery (blue)
+	
+		pdxmesh = {
+		name = "aj_arc_artillery_tracer_round_mesh"
+		file = "gfx/models/combat_items/kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "aj_arc_artillery_tracer_round.dds"
+		}
+	}
+	
+}
