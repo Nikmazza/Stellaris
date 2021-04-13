@@ -184,6 +184,23 @@ generate_start_pops = {
 		}
 	}
 	if = {
+		limit = { owner = { has_valid_civic = civic_machine_replicators } }
+		last_created_species = {
+			save_event_target_as = replicate
+		}
+		create_replica = yes
+		## needs an eventtarget named replicate, it gives the new_replica species back
+		last_created_species = {
+			set_species_flag = replicated_species@root.owner
+		}
+		owner = {
+			change_dominant_species  = { species = event_target:new_replica change_all = yes }
+			every_recruited_leader = {
+				change_species = event_target:new_replica
+			}
+		}
+	}
+	if = {
 		limit = { owner = { has_valid_civic = civic_machine_servitor } }
 		while = {
 			limit = { num_pops < 33 }
