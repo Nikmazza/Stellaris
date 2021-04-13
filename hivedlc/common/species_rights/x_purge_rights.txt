@@ -5,7 +5,6 @@ purge_normal = {
 	pop_decline_rate = 200 # 2 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
 	
 	pop_modifier = {
-		pop_decline_speed = 6
 		pop_happiness = -10
 	}	
 	
@@ -59,7 +58,6 @@ purge_necrophage = {
 	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
 	
 	pop_modifier = {
-		pop_decline_speed = 3
 		pop_happiness = -0.5
 	}	
 	
@@ -118,7 +116,6 @@ purge_processing = {
 	pop_decline_rate = 100 # 1 pop per month, overrides BASE_POP_DECLINE, will only work on purge types
 
 	pop_modifier = {
-		pop_decline_speed = 3
 		pop_happiness = -10
 	}
 
