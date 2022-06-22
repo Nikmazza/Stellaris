@@ -41,8 +41,16 @@ can_generate_leader_from_pop = {
 		root = { has_authority = auth_machine_intelligence }
 		root = { is_mechanical_empire = yes }
 	}
+	OR = {
+		is_same_species = root
+		root = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
 }
-
 
 
 #Root = country

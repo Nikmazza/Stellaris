@@ -8,6 +8,7 @@
  job_larva_queen:0 "Brood Queen"
  job_larva_queen_plural:0 "Brood Queens"
  job_larva_queen_desc:0 "A mature Queen seasonally produces winged virgin queens and males, called alates. Unfertilized eggs develop into males. Fertilized eggs usually develop into wingless, sterile workers, but may develop into virgin queens if the larvae receive special attention." 
+ mod_job_larva_queen_per_pop:0 "§G+1§! $job_larva_queen$ per $VALUE$ Pops"
  
  civic_hive_organic:0 "Organic Structures"
  civic_hive_organic_desc: "This hive creates living structures and space ships by metamorphosing their larva at will."

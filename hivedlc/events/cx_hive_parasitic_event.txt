@@ -58,7 +58,7 @@ event = {
 		is_parasite = yes
 		is_overlord = yes
 		any_subject = {
-			is_subject_type = pop_tributary
+			any_agreement = { agreement_preset = preset_pop_tributary }
 			NOT = { is_at_war_with = overlord }
 		}
 		}
@@ -71,13 +71,13 @@ event = {
 				is_parasite = yes
 				is_overlord = yes
 				any_subject = {
-						is_subject_type = pop_tributary
+						any_agreement = { agreement_preset = preset_pop_tributary }
 						NOT = { is_at_war_with = overlord }
 					}
 				}
 				every_subject = {
 					limit = {
-						is_subject_type = pop_tributary
+						any_agreement = { agreement_preset = preset_pop_tributary }
 						NOT = { is_at_war_with = overlord }					
 					}
 					every_owned_planet = {
@@ -234,7 +234,7 @@ planet_event = {
 
 
 	trigger = {
-		From = { is_subject_type = pop_tributary }
+		From = { any_agreement = { agreement_preset = preset_pop_tributary } }
 		From = { overlord = { not = { has_policy_flag = blood_tributary_greedy } } }	
 	}
 
@@ -249,7 +249,7 @@ planet_event = {
 		if = { 
 			limit = {
 				event_target:popOwner = {
-					is_subject_type = pop_tributary
+					any_agreement = { agreement_preset = preset_pop_tributary }
 					NOT = { is_at_war_with = overlord }	
 				}
 				event_target:abduct_pop = { is_organic_species = yes }	

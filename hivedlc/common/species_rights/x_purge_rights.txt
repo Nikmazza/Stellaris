@@ -1,8 +1,7 @@
-
 purge_normal = {
 	token = purge_normal
 	pop_escape_chance = 0.05
-	pop_decline_rate = 200 # 2 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 100 # 2 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
 	
 	pop_modifier = {
 		pop_happiness = -10
@@ -55,7 +54,7 @@ purge_normal = {
 purge_necrophage = {
 	token = purge_necrophage
 	pop_escape_chance = 0.1
-	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 20 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
 	
 	pop_modifier = {
 		pop_happiness = -0.5
@@ -98,22 +97,13 @@ purge_necrophage = {
 		}
 	}
 	ai_will_do = {
-		factor = 100
-		modifier = {
-			factor = 0
-			from = {
-				has_valid_ai_personality = yes
-				NOT = {
-					has_ai_personality_behaviour = purger
-				}
-			}
-		}		
+		factor = 100		
 	}
 }
 purge_processing = {
 	token = purge_processing
 	pop_escape_chance = 0.20
-	pop_decline_rate = 100 # 1 pop per month, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 50 # 1 pop per month, overrides BASE_POP_DECLINE, will only work on purge types
 
 	pop_modifier = {
 		pop_happiness = -10
@@ -123,8 +113,8 @@ purge_processing = {
 		host_has_dlc = "Utopia"
 		exists = from
 		from = { 
-		NOT = { has_authority = auth_machine_intelligence }
-		NOT = { has_valid_civic = civic_mutualistic_behavior }
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_valid_civic = civic_mutualistic_behavior }
 		}
 	}
 	
@@ -155,12 +145,12 @@ purge_processing = {
 					has_ethic = ethic_gestalt_consciousness
 					has_valid_civic = civic_fanatic_purifiers
 					has_policy_flag = purge_allowed
-					AND = {
-						has_policy_flag = pre_sapients_eat
-						prev = {
-							is_sapient = no
-						}
-					}
+					# AND = { #species rights are disabled for presapients
+					# 	has_policy_flag = pre_sapients_eat
+					# 	prev = {
+					# 		is_sapient = no
+					# 	}
+					# }
 				}
 			}
 		}
@@ -172,12 +162,11 @@ purge_processing = {
 			NOR = { 
 				has_trait = trait_delicious 
 				from = { 
-
-OR  = {
-has_valid_civic = civic_hive_parasitic 
-has_valid_civic = civic_hive_devouring_swarm 
-}
-}
+					OR  = {
+						has_valid_civic = civic_hive_parasitic 
+						has_valid_civic = civic_hive_devouring_swarm 
+					}
+				}
 				AND = {
 					is_sapient = no
 					from = {
@@ -198,5 +187,33 @@ has_valid_civic = civic_hive_devouring_swarm
 	}
 }
 
+citizenship_purge_machine = {
+	token = citizenship_purge_machine
+	new_pop_weight = 0.0
 
+	potential = {
+		exists = from
+		from = { has_authority = auth_machine_intelligence }
+		NOR = {
+			has_trait = trait_machine_unit
+			has_trait = trait_mechanical
+			has_trait = trait_machine_replica
+		}
+		NAND = {
+			is_lonely_hive_mind_pop = no
+			from = { has_valid_civic = civic_machine_servitor }
+		}
+	}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = same_species_disallowed
+			NOT = { is_same_species = from }
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 

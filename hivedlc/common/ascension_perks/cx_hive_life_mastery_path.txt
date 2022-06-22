@@ -1,7 +1,7 @@
 
 ap_life_assemblers = {
 	on_enabled = {
-		add_research_option = tech_genetic_chimerism
+		#add_research_option = tech_genetic_chimerism
 		#give_technology = { tech = "tech_cocoons"  message = no}
 	}
 	
@@ -10,14 +10,19 @@ ap_life_assemblers = {
 	}
 	
 	possible = {	
-		
 		custom_tooltip = {
 			fail_text = "hive_mind_biological_ascension_only1"
 			 has_authority = auth_hive_mind
 		}
 		custom_tooltip = {
-			fail_text = "requires_technology_tech_cloning"
-			has_technology = tech_cloning
+			fail_text = "requires_xeno_species"
+			any_owned_pop = {
+				NOR = {
+					is_same_species = root.owner
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_not_ap_mind_meld"
@@ -44,13 +49,13 @@ ap_life_assemblers = {
 
 
 
-
 ap_life_masters = {
 	on_enabled = {
 		custom_tooltip = "life_masters_tooltip"
+		add_research_option = tech_genetic_chimerism
 		add_research_option = tech_gene_manipulation
 		hidden_effect = {
-			country_event = { id = life_masters.0 }
+			country_event = { id = life_masters.110 }
 		}
 	}
 	possible = {
@@ -75,10 +80,7 @@ ap_life_masters = {
 	}
 	
 	potential = {
-		NOR = {
-			has_ascension_perk = ap_life_masters
-			has_valid_civic  = civic_hive_devouring_swarm 
-		}
+		NOT = { has_ascension_perk = ap_life_masters }
 		has_authority = auth_hive_mind	
 	}
 	

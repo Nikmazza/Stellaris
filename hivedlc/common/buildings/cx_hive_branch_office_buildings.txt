@@ -19,7 +19,7 @@ building_recycling_center = {
 	icon = building_commercial_forum
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -66,7 +66,7 @@ building_recycling_center = {
 building_targeted_flora = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -114,7 +114,7 @@ building_targeted_flora = {
 building_targeted_fauna = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -161,7 +161,7 @@ building_targeted_fauna = {
 building_observatory = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -207,7 +207,7 @@ building_foreign_arquitecture = {
 	base_buildtime = 480
 	base_cap_amount = 1
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -244,7 +244,7 @@ building_species_protector_center = {
 	base_buildtime = 480
 	base_cap_amount = 1
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -292,7 +292,7 @@ building_urban_maintenance = {
 	base_buildtime = 480
 	
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -340,7 +340,7 @@ building_tourism_campaign = {
 	base_buildtime = 480
 	
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	allow = {
 		num_pops >= 35
@@ -402,7 +402,7 @@ building_organic_recycling_center = {
 	icon = building_commercial_forum
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -452,7 +452,7 @@ building_organic_recycling_center = {
 building_organic_targeted_flora = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	icon = building_targeted_flora
 	potential = {
 		has_branch_office = yes
@@ -502,7 +502,7 @@ building_organic_targeted_flora = {
 building_organic_targeted_fauna = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	icon = building_targeted_fauna
 	potential = {
 		has_branch_office = yes
@@ -550,7 +550,7 @@ building_organic_targeted_fauna = {
 building_organic_observatory = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	icon = building_observatory
 	potential = {
 		has_branch_office = yes
@@ -598,7 +598,7 @@ building_organic_foreign_arquitecture = {
 	base_buildtime = 480
 	base_cap_amount = 1
 	icon = building_foreign_arquitecture
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -638,7 +638,7 @@ building_organic_species_protector_center = {
 	base_cap_amount = 1
 	icon = building_species_protector_center
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -691,7 +691,7 @@ building_organic_urban_maintenance = {
 	base_buildtime = 480
 	icon = building_urban_maintenance
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	potential = {
 		has_branch_office = yes
@@ -738,7 +738,7 @@ building_organic_tourism_campaign = {
 	base_buildtime = 480
 	icon = building_tourism_campaign
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	allow = {
 		num_pops >= 35
@@ -797,7 +797,7 @@ building_organic_tourism_campaign = {
 building_organic_larvae_chamber = {
 	base_buildtime = 360
 	base_cap_amount = 1
-	branch_office_building = yes
+	owner_type = corporate
 	icon = building_hive_capital
 	potential = {
 		has_branch_office = yes
@@ -853,7 +853,7 @@ building_necroid_outworld_mortuary = {
 	base_buildtime = 480
 	
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	allow = {
 		#num_pops >= 35
@@ -906,7 +906,7 @@ building_organic_necroid_outworld_mortuary = {
 	base_buildtime = 480
 	icon = building_necroid_outworld_mortuary
 	
-	branch_office_building = yes
+	owner_type = corporate
 	
 	allow = {
 		#num_pops >= 35

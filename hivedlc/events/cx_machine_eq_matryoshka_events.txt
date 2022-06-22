@@ -36,19 +36,20 @@ pop_event = {
 	}
 	
 
-	immediate = {	
+	immediate = {
+		set_update_modifiers_batch = begin
 		root = {	
-						species = { save_event_target_as = matryoshka_species }
-						modify_species = {
-							species = event_target:matryoshka_species
-							add_trait = trait_digital
-							change_scoped_species = yes
-							# change only this pop's species
-						}
-							change_species = last_created
-				
+			species = { save_event_target_as = matryoshka_species }
+			modify_species = {
+				species = event_target:matryoshka_species
+				add_trait = trait_machine_digital
+				change_scoped_species = yes
+				# change only this pop's species
+			}
+			change_species = last_created
                 }
-		 }
+		set_update_modifiers_batch = end
+	}
 }
 
 
@@ -63,7 +64,7 @@ pop_event = {
 
 	trigger = {
 		from = { NOT = { is_planet_class = pc_matryoshka } }
-		has_trait = trait_digital
+		has_trait = trait_machine_digital
 	}
 	
 

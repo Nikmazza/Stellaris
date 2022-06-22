@@ -37,14 +37,14 @@ district_hollow_housing = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 12
+			job_maintenance_drone_add = 9
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_non_swapped_tradition = tr_prosperity_public_works }
+			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
 			planet_housing_add = 3
@@ -98,17 +98,17 @@ district_hollow_housing = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 10
+			job_clerk_add = 6
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_non_swapped_tradition = tr_prosperity_interstellar_franchising }
+			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 5
+			job_clerk_add = 6
 		}
 	}
 
@@ -129,14 +129,6 @@ district_hollow_housing = {
 			owner = { is_gestalt = yes }
 		}
 		text = job_maintenance_drone_effect_desc
-	}
-
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 5
-			free_housing < 10
-		}
 	}
 }
 
@@ -169,8 +161,7 @@ district_queen_den = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 150
-			food = 350
+			minerals = 750
 			exotic_gases = 50
 		}
 		upkeep = {
@@ -192,7 +183,7 @@ district_queen_den = {
 		}
 		modifier = {
 		job_spawning_drone_add = 1
-		job_synapse_drone_add = 10
+		job_synapse_drone_add = 5
 		#job_synapse_drone_per_pop = 0.05
 		#job_larva_queen_add = 4
 		#job_maintenance_drone_add = 2
@@ -217,19 +208,6 @@ district_queen_den = {
 		
 		}
 		text = job_synapse_drone_effect_desc
-	}
-
-	
-	ai_weight = {
-		weight = 1
-
-		# There are already unworked jobs
-		# Blocks districts unworkable by remaining pops (slaves/robots etc)
-		# Will be improved... at some point
-		modifier = {
-			factor = 1
-			free_jobs > 0 
-		}
 	}
 }
 
@@ -279,8 +257,8 @@ district_soldier_den = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-				job_warrior_drone_add = 15
-				job_patrol_drone_add = 10
+				job_warrior_drone_add = 10
+				job_patrol_drone_add = 7
 		}
 	}	
 	
@@ -294,8 +272,8 @@ district_soldier_den = {
 			}
 		}
 		modifier = {
-				job_soldier_add = 15
-				job_enforcer_add = 10
+				job_soldier_add = 10
+				job_enforcer_add = 7
 		}
 	}	
 
@@ -308,26 +286,11 @@ district_soldier_den = {
 			}
 		}
 		modifier = {
-			job_duelist_add = 5
+			job_duelist_add = 2
 			job_soldier_add = 10
-			job_enforcer_add = 10
+			job_enforcer_add = 5
 		}
 	}	
-
-
-	
-
-	ai_weight = {
-		weight = 1
-
-		# There are already unworked jobs
-		# Blocks districts unworkable by remaining pops (slaves/robots etc)
-		# Will be improved... at some point
-		modifier = {
-			factor = 0
-			free_jobs > 0 
-		}
-	}
 }
 
 
@@ -372,7 +335,7 @@ district_subterranean_network = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_fabricator_add = 8
+			job_fabricator_add = 5
 		}
 	}
 
@@ -382,7 +345,7 @@ district_subterranean_network = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_alloy_drone_add = 8
+			job_alloy_drone_add = 5
 		}
 	}
 
@@ -392,7 +355,7 @@ district_subterranean_network = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_foundry_add = 8
+			job_foundry_add = 5
 		}
 	}
 
@@ -411,7 +374,85 @@ district_subterranean_network = {
 		}
 		text = job_alloy_drone_effect_desc
 	}
+# Extra jobs from foundry buildings
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_active_building = building_foundry_2
+		}
+		modifier = {
+			job_foundry_add = 1
+		}
+	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_active_building = building_foundry_3
+		}
+		modifier = {
+			job_foundry_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_active_building = building_foundry_2
+		}
+		modifier = {
+			job_fabricator_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			has_active_building = building_foundry_3
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_active_building = building_foundry_2
+		}
+		modifier = {
+			job_alloy_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			has_active_building = building_foundry_3
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -420,20 +461,4 @@ district_subterranean_network = {
 		text = job_fabricator_effect_desc
 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 500
-			owner = {
-				has_monthly_income = {
-					resource = alloys
-					value < 500
-				}
-				has_monthly_income = {
-					resource = minerals
-					value > 99
-				}
-			}
-		}
-	}
 }

@@ -229,11 +229,11 @@ planet_event = {
 		}
 		##lithoids are minerals
 		while = {
-			limit = { any_pop = { is_lithoid = yes	} }
+			limit = { any_owned_pop = { is_lithoid = yes	} }
 			change_variable = { which = mineralcount value = 1 }
 			while = {
 			count = 15
-			random_pop = { limit = {  is_lithoid = yes  }
+			random_owned_pop = { limit = {  is_lithoid = yes  }
 			kill_pop = yes
 			 }
 			}
@@ -241,22 +241,22 @@ planet_event = {
 		}
 		##organics are food
 		while = {
-			limit = { any_pop = { is_flesh_species = yes	} }
+			limit = { any_owned_pop = { is_flesh_species = yes	} }
 			change_variable = { which = foodcount value = 1 }
 			while = {
 			count = 20
-			random_pop = { limit = {  is_flesh_species = yes  }
+			random_owned_pop = { limit = {  is_flesh_species = yes  }
 			kill_pop = yes
 			 }
 			}
 			
 		}
 		while = {
-			limit = { any_pop = { is_robot_pop = yes } }
+			limit = { any_owned_pop = { is_robot_pop = yes } }
 			change_variable = { which = alloycount value = 1 }
 			while = {
 			count = 20
-			random_pop = { limit = {  is_robot_pop = yes  }
+			random_owned_pop = { limit = {  is_robot_pop = yes  }
 			kill_pop = yes
 			 }
 			}

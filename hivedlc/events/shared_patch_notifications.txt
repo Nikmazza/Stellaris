@@ -4,7 +4,7 @@ namespace = complexDLC
 event = {
 	id = complexDLC.1001
 	hide_window = yes
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	immediate = {
@@ -15,7 +15,7 @@ event = {
 event = {
 	id = complexDLC.1002
 	hide_window = yes
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	immediate = {
@@ -26,7 +26,7 @@ event = {
 event = {
 	id = complexDLC.1003
 	hide_window = yes
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	immediate = {
@@ -38,7 +38,7 @@ event = {
 event = {
 	id = complexDLC.1
 	hide_window = yes
-	#is_triggered_only = yes
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	immediate = {
@@ -144,7 +144,7 @@ country_event = {
 	}
 	option = {
 		custom_gui = "patch_notes_options_close"
-		name = "Close"
+		name = cx_patch_notes_close
 		default_hide_option = yes
 		trigger = {  }
 		allow = { }
@@ -205,7 +205,7 @@ country_event = {
 	}
 	option = {
 		custom_gui = "patch_notes_options_close"
-		name = "Close"
+		name = cx_patch_notes_close
 		default_hide_option = yes
 		trigger = {  }
 		allow = { }
@@ -266,7 +266,7 @@ country_event = {
 	}
 	option = {
 		custom_gui = "patch_notes_options_close"
-		name = "Close"
+		name = cx_patch_notes_close
 		default_hide_option = yes
 		trigger = {  }
 		allow = { }
@@ -328,7 +328,7 @@ country_event = {
 	}
 	option = {
 		custom_gui = "patch_notes_options_close"
-		name = "Close"
+		name = cx_patch_notes_close
 		default_hide_option = yes
 		trigger = {  }
 		allow = { }

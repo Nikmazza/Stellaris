@@ -23,7 +23,7 @@ opinion_parasitic_alien_overlord = {
 	trigger = {
 		is_country_type = default
 		is_subject = yes
-		is_subject_type = pop_tributary
+		any_agreement = { agreement_preset = preset_pop_tributary }
 		overlord = { is_same_value = from }	
 	}
 	opinion = {

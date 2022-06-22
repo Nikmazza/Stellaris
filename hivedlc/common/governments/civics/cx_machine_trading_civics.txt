@@ -1,13 +1,14 @@
 civic_machine_trading = {
+   	icon = "gfx/interface/icons/governments/civics/civic_machine_trading.dds"
 	modification = no
-   	playable = {
-		host_has_dlc = "Synthetic Dawn Story Pack"
-	}
-
-	possible = {
+	potential = { 
+		always = no
 		authority = { value = auth_machine_intelligence }
 	}	
 	advanced_start = yes
+	possible = {
+		always = no
+	}
 	
 	random_weight = { base = 5 }
 

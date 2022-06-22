@@ -1,23 +1,22 @@
 district_matryoshka_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
-	
-	
+
 	show_on_uncolonized = {
 		uses_district_set = matryoshka
 	}
-	
+
 	potential = {
 		uses_district_set = matryoshka
 	}
-	
+
 	conversion_ratio = 1
 	convert_to = {
 		district_city
 		district_nexus
 		district_hive
-	}	
-	
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -25,21 +24,20 @@ district_matryoshka_housing = {
 		}
 		upkeep = {
 			energy = 5
-		}		
+		}
 	}
-	
+
 	planet_modifier = {
-		planet_housing_add = 50
+		planet_housing_add = 25
 		job_maintenance_drone_add = 2
 		job_technician_drone_add = 2
 	}
 
-		
-	
 	ai_weight = {
 		weight = 1
 	}
 }
+
 
 district_matryoshka_recursive_function = {
 	base_buildtime = 600

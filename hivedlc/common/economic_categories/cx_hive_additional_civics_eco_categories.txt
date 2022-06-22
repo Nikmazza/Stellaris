@@ -1,7 +1,6 @@
 unemployment_resources = {
 	parent = planet_pops
 	generate_mult_modifiers = {
-		produces
 	}
 	generate_add_modifiers = {
 		upkeep

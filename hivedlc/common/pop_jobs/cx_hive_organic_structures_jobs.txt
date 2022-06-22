@@ -6,18 +6,14 @@ larva_queen = {
 	condition_string = DRONE_JOB_TRIGGER
 	building_icon = building_spawning_pool
 		
-	possible = {
-		drone_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_drone_job
 	
 	triggered_planet_modifier = {
 		potential = {
 			 owner = { has_policy_flag = organic_structures_normal }
 		}
 		modifier = {
-		pop_growth_speed = 0.025
-		#planet_stability_add = -1
-		#planet_amenities_no_happiness_add = -2
+			pop_growth_speed = 0.025
 		}
 	}
 	triggered_planet_modifier = {
@@ -26,25 +22,9 @@ larva_queen = {
 			owner = { has_policy_flag = organic_structures_workers  }
 		}
 		modifier = {
-		pop_growth_speed = 0.05
-		#planet_stability_add = -1
-		#planet_amenities_no_happiness_add = -2
+			pop_growth_speed = 0.05
 		}
-	}	
-
-
-	triggered_planet_modifier = {
-		potential = {
-		
-		owner = { is_organic = no }
-		}
-		modifier = {
-		pop_growth_speed = 0.05
-		#planet_stability_add = -1
-		#planet_amenities_no_happiness_add = -2
-			}
-	}	
-
+	}
 
 
 	resources = {
@@ -56,42 +36,10 @@ larva_queen = {
 			}
 			food = 5
 		}
-
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = yes
-			}
-			minerals = 5
-		}
-		#produces = { larva = 1 }
-		
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_scintillating
-			}
-			rare_crystals = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_gaseous_byproducts
-			}
-			exotic_gases = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_volatile_excretions
-			}
-			volatile_motes = @lithoid_trait_resource_production
-		}
 	}
 	
 	weight = {
-		weight = 100000		
+		weight = @spawner_drone_job_weight
+		mult = 10	
 	}
 }

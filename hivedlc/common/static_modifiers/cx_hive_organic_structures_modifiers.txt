@@ -132,6 +132,10 @@ custom_tooltip = organic_structures_tooltip
 		planet_districts_cities_minerals_cost_mult = -1
 		planet_districts_cities_food_cost_add = 350
 		planet_districts_cities_larva_cost_add = 15
+
+		planet_districts_industrial_minerals_cost_mult = -1
+		planet_districts_industrial_food_cost_add = 350
+		planet_districts_industrial_larva_cost_add = 15
 		
 		## habitat districts
 
@@ -277,13 +281,4 @@ custom_tooltip = organic_structures_tooltip
 		ship_military_station_small_alloys_cost_mult = -0.50
 		ship_military_station_small_food_cost_add = 100
 		ship_military_station_small_larva_cost_add = 5
-		
-		ship_military_station_medium_alloys_cost_mult = -0.50
-		ship_military_station_medium_food_cost_add = 200
-		ship_military_station_medium_larva_cost_add = 10
-
-		ship_military_station_large_alloys_cost_mult = -0.50
-		ship_military_station_large_food_cost_add = 300
-		ship_military_station_large_larva_cost_add = 15	
-
 }
