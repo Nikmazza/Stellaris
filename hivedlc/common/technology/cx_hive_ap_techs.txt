@@ -7,7 +7,7 @@
 
 #mind meld
 tech_mind_meld = {
-	cost = @tier3cost2
+	cost = @tier3cost3
 	area = society
 	tier = 3
 	category = { psionics }

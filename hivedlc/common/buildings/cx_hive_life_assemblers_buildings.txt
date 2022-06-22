@@ -1,7 +1,6 @@
 
 building_cocoons_plant = {
 	base_buildtime = 360
-	base_cap_amount = 1
 
 	potential = {
 		exists = owner
@@ -22,52 +21,57 @@ building_cocoons_plant = {
 		}
 	}
 
-	category = pop_assembly	
+	category = unity
 	
 	planet_modifier = {
-		job_cocoon_add = 1
+		#job_cocoon_add = 1
 		#job_cocoon_per_pop = 0.033
-		job_cocoon_per_pop = 0.0001
+		#job_cocoon_per_pop = 0.0001
+		job_life_masters_bio_trophy_add = 10
+		job_artisan_drone_add = 1
+		planet_carry_cap_add = 10
 	}
-	triggered_planet_modifier = {
-		potential = {
-			num_pops > 15
-		}
-		job_cocoon_add = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			num_pops > 30
-		}
-		job_cocoon_add = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			num_pops > 60
-		}
-		job_cocoon_add = 1
-	}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		num_pops > 15
+	#	}
+	#	job_cocoon_add = 1
+	#}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		num_pops > 30
+	#	}
+	#	job_cocoon_add = 1
+	#}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		num_pops > 60
+	#	}
+	#	job_cocoon_add = 1
+	#}
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 300
-			food = 200
+			minerals = 400
 		}
 		upkeep = {
-			trigger = {
-				owner = { is_lithoid = no }
-			}
-			food = 5
 			energy= 5
 		}
+		#upkeep = {
+		#	trigger = {
+		#		owner = { is_lithoid = no }
+		#	}
+		#	food = 5
+		#	energy= 5
+		#}
 
-		upkeep = {
-			trigger = {
-				owner = { is_lithoid = yes }
-			}
-			minerals = 5
-			energy= 5
-		}
+		#upkeep = {
+		#	trigger = {
+		#		owner = { is_lithoid = yes }
+		#	}
+		#	minerals = 5
+		#	energy= 5
+		#}
 	}
 	
 	

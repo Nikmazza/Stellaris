@@ -1,4 +1,4 @@
-name="Forgotten Queens: A Gestalt Expantion"
+name="Expanded Gestalts: Forgotten Queens"
 tags={
 	"Balance"
 	"Graphics"

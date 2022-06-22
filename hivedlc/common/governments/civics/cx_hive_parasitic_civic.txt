@@ -3,7 +3,7 @@ civic_hive_parasitic = {
 	possible = {
 		civics = {
 			NOR = {
-				#value = civic_hive_devouring_swarm
+				value = civic_hive_devouring_swarm
 				value = civic_mutualistic_behavior 
 			}
 		}

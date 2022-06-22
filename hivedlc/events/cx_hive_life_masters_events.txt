@@ -1,7 +1,164 @@
 namespace = life_masters
 
-## iirc this is done to make crossbreed possible in hiveminds
+# A pop has finished growing
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = life_masters.0
+	is_triggered_only = yes
+	hide_window = yes
 
+	trigger = {
+		from = {
+			OR = {
+				has_ascension_perk = ap_life_assemblers
+				has_ascension_perk = ap_life_masters
+			}
+			any_owned_pop = {
+				species = { 
+					has_citizenship_type = { country = from type = citizenship_organic_trophy }
+					NOT = { has_species_flag = mutated_species@root.owner }
+				}
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			5 = {#life assemblers chance
+				set_variable = { which = "mutate" value = 1 }
+			}
+			10 = {#life masters chance
+				modifier = {
+					factor = 0
+					owner = { NOT = { has_ascension_perk = ap_life_masters } }
+				}
+				set_variable = { which = "mutate" value = 1 }
+			}
+			90 = {#nothing happens
+			set_variable = { which = "mutate" value = 0 }
+			}
+		}
+		#create a mutation if we rolled a positive value
+		if = {
+			limit = { check_variable = { which = "mutate" value = 1 } }
+			#get base species
+			if = {
+				limit = {
+					FromFrom = {
+						species = {
+							is_crossbreeding_possible = no
+						}
+					}
+				}
+				FromFrom = { species = { save_event_target_as = halfspecies } }
+				random_owned_species = {
+					limit = {
+						is_crossbreeding_possible = yes
+						is_same_species = event_target:halfspecies
+						#event_target:halfspecies = {
+						#	is_subspecies = prev
+						#}
+					}
+					save_event_target_as = basespecies
+				}
+				if = {
+					limit = {
+						not = { exists = event_target:basespecies }
+					}
+					owner_species = { #this is our fallback
+						save_event_target_as = basespecies
+						set_species_flag = "tmp_main_species"
+					}
+					log = "falledback: [event_target:basespecies.GetName]"
+				}
+			}
+			else = {
+				FromFrom = {
+					species = {
+						save_event_target_as = basespecies
+					}
+				}
+			}
+
+			#get target species
+			random_owned_pop = {
+				limit = { 
+					species = {
+						has_citizenship_type = { country = from type = citizenship_organic_trophy }
+						NOT = { has_species_flag = mutated_species@root.owner }
+						is_crossbreeding_possible = yes
+					}
+				}
+				species = { save_event_target_as = targetspecies }
+			}
+
+			## if we have a valid target, we might proceed
+			if = {
+				limit = {
+					exists = event_target:basespecies
+					exists = event_target:targetspecies
+				}
+				create_half_species = { species_one = event_target:basespecies species_two = event_target:targetspecies }
+
+				#add hive thingy
+				modify_species = {
+					species = last_created_species
+					add_trait = trait_hive_mind
+					base = event_target:basespecies
+					effect = { 
+						#rename_species = {
+						#	name = speciesmutation
+						#}
+						#set_name = speciesmutation
+						save_event_target_as = finalspecies
+					} # optional effect to run on the resulting new species, is executed after any handling of change_scoped_species
+				}
+				#replace the pop
+				FromFrom = {
+					kill_pop = yes
+				}
+				while = {
+					count = 1
+					create_pop = {
+						species = event_target:finalspecies
+					}			
+				}
+				# a mutation has ocurred
+				create_message = {
+					type = MESSAGE_TYPE_SPECIES_MUTATION
+					localization = MESSAGE_SPECIES_MUTATION
+					days = 30
+					target = This
+					variable = {
+						type = name
+						localization = PLANET
+						scope = This
+					}
+				}
+				event_target:targetspecies = {
+					set_species_flag = mutated_species@root.owner
+				}
+				log = "-----------MUTATION HAPPENED-----------------"
+			}
+			else = {
+				log = "-----------INVALID SOURCES-----------------"
+			}
+			log = "- base: [event_target:basespecies.GetName]"
+			log = "- target: [event_target:targetspecies.GetName]"
+			#log = "- last created: [event_target:lastspecies.GetName]"
+			log = "- final: [event_target:finalspecies.GetName]"
+
+			#CLEAR TMP VARIABLES
+			event_target:basespecies = {
+				remove_species_flag = "tmp_main_species"
+			}
+			set_variable = { which = "mutate" value = 0 }
+		}
+	}
+}
+
+## iirc this is done to make crossbreed possible in hiveminds
 # A pop has finished growing
 # This = Planet scope
 # From = Country
@@ -760,7 +917,7 @@ id = life_masters.4
 # Root = pop
 # From = planet
 country_event = {
-	id = life_masters.0
+	id = life_masters.110
 	hide_window = yes
 	is_triggered_only = yes
 

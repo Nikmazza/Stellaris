@@ -19,6 +19,7 @@ pc_matryoshka = {
 	modifier = {
 		planet_jobs_produces_mult = 0.10
 		pop_housing_usage_mult = -0.10
+		planet_max_buildings_add = 12
 	}
 	
 	spawn_odds = 0
@@ -35,4 +36,6 @@ pc_matryoshka = {
 	district_set = matryoshka
 	starting_planet = no
 	show_city = no
+
+	carry_cap_per_free_district = @carry_cap_high
 }

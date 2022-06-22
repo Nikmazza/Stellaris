@@ -1,3 +1,5 @@
+
+
 # A pop has been added to the planet
 # Root = pop
 # From = planet
@@ -16,3 +18,5 @@ on_pop_purged = {
 		cx_machine_replicators.1 # Necrophage Purge
 	}
 }
+
+

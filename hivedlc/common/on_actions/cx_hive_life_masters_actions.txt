@@ -5,7 +5,8 @@
 # FromFrom = Pop
 on_pop_grown = {
 	events = {
-	life_masters.1
+		life_masters.0
+		#life_masters.1
 	}
 }
 

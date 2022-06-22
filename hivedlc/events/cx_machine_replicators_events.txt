@@ -1,6 +1,29 @@
 namespace = cx_machine_replicators
 
 
+
+# change ownership
+country_event = {
+	id = cx_machine_replicators.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_species = {
+			limit = { has_species_flag = replicated_species@root}
+			save_event_target_as = replicated_species
+		}
+		change_dominant_species  = { species = event_target:replicated_species change_all = yes }
+		#change_dominant_species  = { species = event_target:new_replica change_all = yes }
+		
+		#every_owned_leader = {
+		#	change_species = event_target:replicated_species
+		#	change_leader_portrait = species
+		#}
+		
+	}
+}
+
 # Necrophage Purge
 
 # on_pop_purged

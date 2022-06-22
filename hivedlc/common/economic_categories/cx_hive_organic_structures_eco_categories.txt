@@ -71,6 +71,16 @@ planet_districts_hab_mining = {
 	}
 	
 }
+planet_districts_industrial = {
+	parent = planet_districts
+
+	generate_mult_modifiers = {
+		cost
+	}
+	generate_add_modifiers = {
+		cost
+	}
+}
 planet_structures = {
 	parent = planets
 	generate_mult_modifiers = {
@@ -938,7 +948,7 @@ ship_sections = {
 
 
 starbase_buildings = {
-	parent = starbases
+	parent = starbase_constructions
 
 	generate_mult_modifiers = {
 		cost
@@ -952,7 +962,7 @@ starbase_buildings = {
 }
 
 starbase_modules = {
-	parent = starbases
+	parent = starbase_constructions
 
 	generate_mult_modifiers = {
 		cost

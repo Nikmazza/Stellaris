@@ -75,7 +75,7 @@ set_complex_up_to_date = {
 create_complex_country = {
 				create_country = {
 					name = "complex_event_country"
-					type = global_event
+					type = cx_global_event
 					effect = {
 						save_global_event_target_as = complex_event_country
 					}

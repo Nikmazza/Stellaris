@@ -1,19 +1,15 @@
 civic_machine_replicators = {
-	playable = {
-		host_has_dlc = "Synthetic Dawn Story Pack"
-	}
-
+   	icon = "gfx/interface/icons/governments/civics/civic_machine_replicators.dds"
+	potential = { authority = { value = auth_machine_intelligence } }
 	possible = {
-		authority = { value = auth_machine_intelligence }
 		civics = {
 			NOR = {
+				value = civic_machine_servitor
 				value = civic_machine_terminator
 				value = civic_machine_assimilator
-				value = civic_machine_servitor 
 			}
 		}
-	}	
-	advanced_start = yes
+	}
 	
 	modification = no
 	random_weight = { base = 5 }

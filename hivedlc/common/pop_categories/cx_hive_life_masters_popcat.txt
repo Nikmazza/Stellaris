@@ -7,7 +7,7 @@ life_masters_trophy = {
 
 	assign_to_pop = {
 		has_citizenship_type = { type = citizenship_organic_trophy }
-		owner = { has_ascension_perk = ap_life_masters}
+		owner = { has_ascension_perk = ap_life_assemblers}
 	}
 	weight = {
 		weight = 9999
@@ -23,7 +23,7 @@ life_masters_trophy = {
 	}
 
 	pop_modifier = {
-		pop_happiness = -0.40
+		#pop_happiness = -0.40
 		pop_housing_usage_base = 0.85
 		pop_amenities_usage_base = 0.85
 	}
@@ -67,7 +67,22 @@ life_masters_trophy = {
 	unemployment_penalties = {
 		pop_happiness = -0.80
 	}
-	
+	triggered_pop_modifier = {
+		potential = {
+			has_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
+			is_unemployed = yes
+			NOR = {
+				has_very_high_living_standard_type = yes
+				has_high_living_standard_type = yes
+				has_shared_burden_living_standard_type = yes
+			}
+			owner = {
+				is_galactic_community_member = yes
+			}
+		}
+
+		pop_happiness = 0.10
+	}
 	unemployment_resources = {
 		category = unemployment_resources
 		produces = {
@@ -91,21 +106,5 @@ life_masters_trophy = {
 		}
 		upkeep = {
 		}
-	}
-	triggered_pop_modifier = {
-		potential = {
-			has_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
-			is_unemployed = yes
-			NOR = {
-				has_very_high_living_standard_type = yes
-				has_high_living_standard_type = yes
-				has_shared_burden_living_standard_type = yes
-			}
-			owner = {
-				is_galactic_community_member = yes
-			}
-		}
-
-		pop_happiness = 0.10
 	}
 }
