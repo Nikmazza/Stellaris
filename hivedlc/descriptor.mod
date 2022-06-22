@@ -1,4 +1,4 @@
-name="Unofficial Hive DLC: Forgotten Queens"
+name="Expanded Gestalts: Forgotten Queens"
 tags={
 	"Balance"
 	"Graphics"

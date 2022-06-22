@@ -237,11 +237,11 @@ district_soldier_den = {
 		category = planet_districts
 		cost = {
 			minerals = 700
-			volatile_motes = 50
+			rare_crystals = 50
 		}
 		upkeep = {
 			energy = 3
-			volatile_motes = 2
+			rare_crystals = 1
 		}		
 	}
 	
@@ -321,7 +321,7 @@ district_subterranean_network = {
 		}
 		upkeep = {
 			energy = 5
-			volatile_motes = 2
+			volatile_motes = 1
 		}
 	}
 

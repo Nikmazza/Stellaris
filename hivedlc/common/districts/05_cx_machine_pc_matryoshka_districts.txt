@@ -67,7 +67,7 @@ district_matryoshka_recursive_function = {
 		}
 		upkeep = {
 			energy = 5
-			rare_crystals  = 2
+			rare_crystals  = 1
 		}		
 	}
 	
@@ -122,7 +122,7 @@ district_matryoshka_cpu_module = {
 		}
 		upkeep = {
 			energy = 10
-			exotic_gases = 2
+			exotic_gases = 1
 		}		
 	}
 	
@@ -179,7 +179,7 @@ district_matryoshka_bus_module = {
 		}
 		upkeep = {
 			energy = 5
-			volatile_motes = 2
+			volatile_motes = 1
 		}		
 	}
 	
