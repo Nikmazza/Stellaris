@@ -46,7 +46,7 @@ wg_abduct = {
 		from = {
 			set_subject_of = {
 				who = root
-				subject_type = pop_tributary
+				preset = preset_pop_tributary
 			}		
 		}
 		}
@@ -65,7 +65,7 @@ wg_abduct = {
 			last_created_country = { 
 				set_subject_of = {
 					who = root
-					subject_type = pop_tributary
+					preset = preset_pop_tributary
 				}
 			}
 		}	
@@ -122,7 +122,7 @@ wg_restraint = {
 		from = {
 			every_subject = {
 				limit = {
-					is_subject_type = pop_tributary
+					any_agreement = { agreement_preset = preset_pop_tributary }
 					NOT = { is_at_war_with = overlord }					
 				}
 				## release
@@ -135,7 +135,7 @@ wg_restraint = {
 
 			set_subject_of = {
 				who = root
-				subject_type = tributary
+				preset = preset_tributary
 			}				
 		}
 	}
@@ -198,7 +198,7 @@ wg_restraint_megacorp = {
 		from = {
 			set_subject_of = {
 				who = root
-				subject_type = subsidiary
+				preset = preset_subsidiary
 			}
 		}
 	}

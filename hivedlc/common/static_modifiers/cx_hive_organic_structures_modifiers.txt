@@ -281,13 +281,4 @@ custom_tooltip = organic_structures_tooltip
 		ship_military_station_small_alloys_cost_mult = -0.50
 		ship_military_station_small_food_cost_add = 100
 		ship_military_station_small_larva_cost_add = 5
-		
-		ship_military_station_medium_alloys_cost_mult = -0.50
-		ship_military_station_medium_food_cost_add = 200
-		ship_military_station_medium_larva_cost_add = 10
-
-		ship_military_station_large_alloys_cost_mult = -0.50
-		ship_military_station_large_food_cost_add = 300
-		ship_military_station_large_larva_cost_add = 15	
-
 }

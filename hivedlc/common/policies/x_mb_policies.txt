@@ -469,7 +469,7 @@ purge = {
 		modifier = {}
 
 		valid = {
-			NOT = { is_subject_type = signatory }
+			NOT = { any_agreement = { agreement_preset = preset_signatory } }
 			OR = {
 				has_ethic = ethic_gestalt_consciousness
 				has_ethic = ethic_xenophobe

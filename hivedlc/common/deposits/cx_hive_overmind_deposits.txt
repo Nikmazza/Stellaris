@@ -2,7 +2,7 @@ d_collapsed_burrows_remote = {
 	icon = d_deep_sinkhole
 	time = 120
 
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers
 
 	potential = { always = no }
@@ -37,7 +37,7 @@ d_hibernating_lithoids_remote = {
 	icon = d_buried_lithoids
 	time = 360
 
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers
 
 	potential = { always = no }
@@ -88,12 +88,5 @@ d_hibernating_lithoids_remote = {
 
 	ai_weight = {
 		weight = 1
-
-		modifier = {
-			factor = 2
-			planet = {
-				is_homeworld = yes
-			}
-		}
 	}
 }

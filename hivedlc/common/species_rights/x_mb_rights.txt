@@ -16,6 +16,7 @@ citizenship_slavery = {
 			OR = {
 				has_trait = trait_machine_unit
 				has_trait = trait_mechanical
+				has_trait = trait_machine_replica
 			}
 		}
 	}

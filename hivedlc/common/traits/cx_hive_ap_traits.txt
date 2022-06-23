@@ -4,7 +4,6 @@ trait_basic_genetic_template = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = yes
 	
 	modifier = {
 		pop_assembly_speed = 0.20
@@ -12,7 +11,7 @@ trait_basic_genetic_template = {
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -26,7 +25,26 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_2_trait
+				has_modifier = life_masters_3_trait
+				has_modifier = life_masters_4_trait
+				has_modifier = life_masters_5_trait
+				has_modifier = life_masters_6_trait
+				has_modifier = life_masters_7_trait
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -41,7 +59,6 @@ trait_disassemblable = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = yes
 	modifier = {
 		pop_growth_from_immigration = 0.25
 		pop_resettlement_cost_mult = -0.25
@@ -50,7 +67,7 @@ trait_disassemblable = {
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -62,7 +79,24 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_4_trait
+				has_modifier = life_masters_5_trait
+				has_modifier = life_masters_6_trait
+				has_modifier = life_masters_7_trait
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -78,17 +112,16 @@ trait_metal_blood = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = yes
 	modifier = {
-	planet_livestock_sr_living_metal_produces_add = 0.01
-	#army_attack_health_mult = 0.5
-	#army_defense_health_mult = 0.5
-	army_health = 0.5
+		planet_livestock_sr_living_metal_produces_add = 0.01
+		#army_attack_health_mult = 0.5
+		#army_defense_health_mult = 0.5
+		army_health = 0.5
 	}
 
 	# life masters only
 	species_potential_add = {
-always = no
+	always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -98,7 +131,22 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_6_trait
+				has_modifier = life_masters_7_trait
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -114,7 +162,6 @@ trait_refiners = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = yes
 	modifier = {
 		planet_jobs_volatile_motes_produces_mult = 0.15
 		planet_jobs_rare_crystals_produces_mult = 0.15
@@ -123,7 +170,7 @@ trait_refiners = {
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -131,10 +178,22 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
 		}
 	}
 
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
+		}
+	}
 
 	potential_crossbreeding_chance = 0.5
 
@@ -147,7 +206,6 @@ trait_ironmongers = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = yes
 	modifier = {
 		##alloys
 		planet_jobs_alloys_produces_mult = 0.3
@@ -155,13 +213,24 @@ trait_ironmongers = {
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
 			OR = {
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -178,15 +247,13 @@ trait_hyperosmia = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
-	#modification = yes
 	modifier = {
 		planet_jobs_exotic_gases_produces_mult = 0.2
 	}
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -198,8 +265,25 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
 			
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_4_trait
+				has_modifier = life_masters_5_trait
+				has_modifier = life_masters_6_trait
+				has_modifier = life_masters_7_trait
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -215,15 +299,13 @@ trait_lapidaries = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
-	#modification = yes
 	modifier = {
 		planet_jobs_rare_crystals_produces_mult = 0.2
 	}
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -233,7 +315,22 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_6_trait
+				has_modifier = life_masters_7_trait
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -249,15 +346,13 @@ trait_panners = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
-	#modification = yes
 	modifier = {
 		planet_jobs_volatile_motes_produces_mult = 0.2
 	}
 
 	# life masters only
 	species_potential_add = {
-always = no
+		always = no
 		exists = from
 		from = {
 			has_ascension_perk = ap_life_masters
@@ -265,7 +360,20 @@ always = no
 				has_modifier = life_masters_8_trait
 				has_modifier = life_masters_9_trait
 				has_modifier = life_masters_10_trait
-				}
+			}
+		}
+	}
+
+	species_possible_remove = {
+		always = no
+		exists = from
+		from = {
+			has_ascension_perk = ap_life_masters
+			OR = {
+				has_modifier = life_masters_8_trait
+				has_modifier = life_masters_9_trait
+				has_modifier = life_masters_10_trait
+			}
 		}
 	}
 
@@ -281,7 +389,15 @@ trait_cortex = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.05
 		planet_jobs_physics_research_produces_mult = 0.05
@@ -300,7 +416,15 @@ trait_diaphragm = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.05
 	}
@@ -316,7 +440,15 @@ trait_scales = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	improves_leaders = yes
 	modifier = {
 		planet_pops_organics_upkeep_mult = -0.25
@@ -334,7 +466,15 @@ trait_wings = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 		pop_housing_usage_mult = -0.10
 		pop_growth_from_immigration = 0.15
@@ -351,7 +491,15 @@ trait_exoskeleton = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 		planet_jobs_minerals_produces_mult = 0.10
 		planet_jobs_food_produces_mult = 0.10
@@ -369,7 +517,15 @@ trait_shell = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 		pop_housing_usage_mult = -0.05
 		army_health = 0.5
@@ -387,7 +543,15 @@ trait_pheromones = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 	pop_growth_speed = 0.15
 	}
@@ -404,7 +568,15 @@ trait_photosynthetic = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 	planet_jobs_energy_produces_mult = 0.20
 	}
@@ -420,7 +592,15 @@ trait_encrusted_minerals = {
 	sorting_priority = 19
 	initial = no
 	randomized = no
-	modification = no
+	
+	species_potential_add = {
+		always = no
+	}
+
+	species_possible_remove = {
+		always = no
+	}
+
 	modifier = {
 	planet_livestock_minerals_produces_add = 2
 	pop_environment_tolerance = 0.15

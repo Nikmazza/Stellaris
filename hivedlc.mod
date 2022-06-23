@@ -6,6 +6,6 @@ tags={
 	"Overhaul"
 }
 version="130421"
-supported_version="3.0.*"
+supported_version="3.4.*"
 path="C:/Users/Complex/Documents/Paradox Interactive/Stellaris/mod/hivedlc"
 remote_file_id="1715190550"
