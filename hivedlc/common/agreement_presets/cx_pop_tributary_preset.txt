@@ -1,5 +1,5 @@
 preset_pop_tributary = {
-	icon = "GFX_diplomacy_status_is_vassal"
+	icon = "GFX_diplomacy_status_is_pop_tributary"
 	term_data = {
 		discrete_terms = {
 			{ key = specialist_type

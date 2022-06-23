@@ -19,3 +19,23 @@ preset_pop_tributary_flavor_desc:0 "A blood tributary is a relatively autonomous
 format.mutualistic_behavior:0 "[This.GetSpeciesName] <mutualistic_behavior>"
 format.parasitic_alien:0 "[This.GetSpeciesName] <parasitic_alien>"
 format.hive_farmers:0 "[This.GetSpeciesName] <hive_farmers>"
+
+
+blood_tithe:0 "Blood Tithe"
+blood_tithe_desc:0 "This Term dictates how often the Subject sends population to the Overlord."
+
+periodic_blood_tithe:0 "Periodic"
+periodic_blood_tithe_desc:0 "The Subject provides one Pop to the Overlord per Planet every year."
+periodic_blood_tithe_tooltip:0 "$periodic_desc$"
+
+equilibrious_blood_tithe:0 "Equilibrious"
+equilibrious_blood_tithe_desc:0 "The Subject provides one Pop to the Overlord for every Pop that is grown."
+equilibrious_blood_tithe_tooltip:0 "$equilibrious_desc$"
+
+pragmatic_blood_tithe:0 "Pragmatic"
+pragmatic_blood_tithe_desc:0 "For every Pop that is grown in the Subject's Empire, there is a 50% chance that it is sent to the Overlord."
+pragmatic_blood_tithe_tooltip:0 "$pragmatic_desc$"
+
+magnanimous_blood_tithe:0 "Magnanimous"
+magnanimous_blood_tithe_desc:0 "For every Pop that is grown in the Subject's Empire, there is a 25% chance that it is sent to the Overlord."
+magnanimous_blood_tithe_tooltip:0 "$magnanimous_tooltip$"
