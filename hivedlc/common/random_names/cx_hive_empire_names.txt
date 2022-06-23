@@ -26,9 +26,10 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.mutualistic_behavior.1"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <mutualistic_behavior>"
+	lookups = "[This.GetSpeciesName] <mutualistic_behavior>"
+	format = format.mutualistic_behavior
+	noun = format.species
+	prefix_format = format.mutualistic_behavior
 	# Human Empire
 }
 
@@ -63,9 +64,10 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.parasitic_alien.1"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <parasitic_alien>"
+	lookups = "[This.GetSpeciesName] <parasitic_alien>"
+	format = format.parasitic_alien
+	noun = format.species
+	prefix_format = format.parasitic_alien
 	# Human Empire
 }
 
@@ -96,8 +98,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.hive_farmers.1"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <hive_farmers>"
+	lookups = "[This.GetSpeciesName] <hive_farmers>"
+	format = format.hive_farmers
+	noun = format.species
+	prefix_format = format.hive_farmers
 	# Human Empire
 }

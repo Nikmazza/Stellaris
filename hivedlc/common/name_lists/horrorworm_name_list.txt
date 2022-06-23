@@ -47,45 +47,45 @@
 		random_names = {
 			"Eldritch Swarm" "Weird Slimes" "Screechers" 
 		}
-		sequential_name = "%O% Eldritch Swarm"
+		sequential_name = HORRORWORM_Eldritch_Swarm_ORD
 	}
 	
 	army_names = {
 	
 		defense_army = {
-			sequential_name = "%O% Cruxyn"
+			sequential_name = HORRORWORM_Cruxyn_ORD
 		}
 			
 		assault_army = {
-			sequential_name = "%O% Raspryr"
+			sequential_name = HORRORWORM_Raspryr_ORD
 		}
 		
 		slave_army = {
-			sequential_name = "%O% Hollows"
+			sequential_name = HORRORWORM_Hollows_ORD
 		}
 		
 		clone_army = { 
-			sequential_name = "%O% Mirrored Srel"
+			sequential_name = HORRORWORM_Mirrored_Srel_ORD
 		}
 		
 		robotic_army = {
-			sequential_name = "%O% Sklinths"
+			sequential_name = HORRORWORM_Sklinths_ORD
 		}
 		
 		android_army = {
-			sequential_name = "%O% Skrarah"
+			sequential_name = HORRORWORM_Skrarah_ORD
 		}
 		
 		psionic_army = { 
-			sequential_name = "%O% Neurkt'ryn"
+			sequential_name = HORRORWORM_Neurkt_ryn_ORD
 		}
 		
 		xenomorph_army = {
-			sequential_name = "%O% Clythrit"
+			sequential_name = HORRORWORM_Clythrit_ORD
 		}
 		
 		gene_warrior_army = {
-			sequential_name = "%O% Genosrethitr"
+			sequential_name = HORRORWORM_Genosrethitr_ORD
 		}
 	}
 

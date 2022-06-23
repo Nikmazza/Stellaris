@@ -8,9 +8,6 @@ origin_hive_organic = {
 	}
 	possible = {
 		authority = { value = auth_hive_mind }
-		species = {
-			value = BIOLOGICAL
-		}
 	}	
 	flags = { custom_start_screen }
 	advanced_start = yes

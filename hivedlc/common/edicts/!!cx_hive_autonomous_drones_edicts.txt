@@ -15,7 +15,6 @@
 self_awareness = {
 	length = @EdictPerpetual
 	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
 
 	resources = {
 		category = edicts

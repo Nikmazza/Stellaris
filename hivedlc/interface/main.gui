@@ -48,33 +48,28 @@ guiTypes = {
 	### TOPBAR FOR MUSICPLAYER
 	containerWindowType = {
 		name = "maingui_lower_topbar"
-		position = { x=-170 y=34 }
+		position = { x=-68 y=34 }
 		size = { width=170 height=36 }
 		orientation = upper_right
+		hide_position = { x=-68 y=34 }
+		show_position = { x=-170 y=34 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 200
 
 		background = {
 			name ="background"
 			quadTextureSprite = "GFX_topbar_background_cutoff"
 			position = { x= 0 y = 0 }
 		}
-			
-		iconType = {
-			name = "music_commands_icon"
-			spriteType = "GFX_music_commands_icon"
+
+		buttonType = {
+			name = "music_controls_toggle"
+			quadTextureSprite = "GFX_music_commands_icon"
 			position = { x = 33 y = 0 }
-			alwaysTransparent = yes
-		}
-
-		containerWindowType = {
-			name = "topbar_bar_res"
-			size = { width = 260 height = 25 }
-			position = { x = 26 y = 6 }
-
-			background = {
-				name = "topbar_bar_03"
-				spriteType = "GFX_topbar_bar_03"
-				alwaysTransparent = yes
-			}
+			pdx_tooltip = "MUSIC_CONTROLS_TOGGLE_VISIBLE"
+			clicksound = interface
+			oversound = no_sound
 		}
 
 		####################
@@ -124,7 +119,7 @@ guiTypes = {
 				clicksound = interface
 				oversound = no_sound
 			}
-		}		
+		}
 	}
 
 	containerWindowType = {
@@ -318,7 +313,7 @@ guiTypes = {
 					format = center
 					alwaysTransparent = yes
 				}
-			}			
+			}
 
 			containerWindowType = {
 				name = "starbase_group"
@@ -836,7 +831,7 @@ guiTypes = {
 			tooltip_mode_enabled = yes
 			alwaysTransparent = yes
 		}
-	
+		
 		instantTextBoxType={
 			name = "amount"
 			font = "cg_16b"
@@ -915,6 +910,7 @@ guiTypes = {
 			position = { x = 6 y = 39 }
 			spriteType = "GFX_alliance_vote_status"
 			scale = 0.7
+			
 		}
 	}
 
@@ -1047,7 +1043,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "maingui_left_bar_buttons"
-		size = { width = 250 height = 670 } 
+		size = { width = 250 height = 670 }
 		position = { x = -225 y = 35 }
 		hide_position = { x = -225 y = 35 }
 		show_position = { x = -5 y = 35 }
