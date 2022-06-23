@@ -6,9 +6,6 @@ origin_hive_cx_hive_world = {
 	modification = no
 	possible = {
 		authority = { value = auth_hive_mind }
-		species = {
-			value = BIOLOGICAL
-		}
 		civics = {
 			NOR = {
 				#value = civic_hive_devouring_swarm
