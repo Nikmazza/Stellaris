@@ -268,20 +268,11 @@ planet_event = {
 		this = { save_event_target_as = fromPlanet }
 		From = { save_event_target_as = popOwner }
 		From = { overlord = { save_event_target_as = ownerOverlord } }		
-		
-		if = {
-			limit = {
-				from = {
-					has_any_overlord = yes
-				}
-			}
-			log_error = "Has an Overlord"
-		}
 		if = { 
 			limit = {
 				event_target:popOwner = {
 					any_agreement = { agreement_preset = preset_pop_tributary }
-					NOR = {
+					NOT = {
 						is_at_war_with = overlord
 					}
 				}
