@@ -263,7 +263,6 @@ planet_event = {
 	}
 
 	immediate = {
-		log_error = "Parasite Event 3"
 		## save scopes
 		FromFrom = { save_event_target_as = abduct_pop }
 		this = { save_event_target_as = fromPlanet }
