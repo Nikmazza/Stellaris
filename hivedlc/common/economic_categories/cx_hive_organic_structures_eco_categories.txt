@@ -346,8 +346,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = corvette
-			is_ship_size = offspring_corvette
+			OR = {
+				is_ship_size = corvette
+				is_ship_size = offspring_corvette
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -360,8 +362,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = corvette
-			is_ship_size = offspring_corvette
+			OR = {
+				is_ship_size = corvette
+				is_ship_size = offspring_corvette
+			}
 		}
 	}
 	##destroyer
@@ -375,8 +379,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = destroyer
-			is_ship_size = offspring_destroyer
+			OR = {
+				is_ship_size = destroyer
+				is_ship_size = offspring_destroyer
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -389,8 +395,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = destroyer
-			is_ship_size = offspring_destroyer
+			OR = {
+				is_ship_size = destroyer
+				is_ship_size = offspring_destroyer
+			}
 		}
 	}
 	##cruiser	
@@ -404,8 +412,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = cruiser
-			is_ship_size = offspring_cruiser
+			OR = {
+				is_ship_size = cruiser
+				is_ship_size = offspring_cruiser
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -418,8 +428,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = cruiser
-			is_ship_size = offspring_cruiser
+			OR = {
+				is_ship_size = cruiser
+				is_ship_size = offspring_cruiser
+			}
 		}
 	}
 	##battleship	
@@ -433,8 +445,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = battleship
-			is_ship_size = offspring_battleship
+			OR = {
+				is_ship_size = battleship
+				is_ship_size = offspring_battleship
+			}
 		}
 	}
 	triggered_upkeep_modifier = {
@@ -447,8 +461,10 @@ ships = {
 
 		trigger = {
 			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = battleship
-			is_ship_size = offspring_battleship
+			OR = {
+				is_ship_size = battleship
+				is_ship_size = offspring_battleship
+			}
 		}
 	}
 	##titan	
