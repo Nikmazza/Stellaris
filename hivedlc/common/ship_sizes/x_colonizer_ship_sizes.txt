@@ -165,4 +165,7 @@ colonizer = {
 			alloys = @colony_upkeep_alloys
 		}
 	}
+	ai_ship_data = {
+		min = value:desired_colonizers
+	}
 }
