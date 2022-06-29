@@ -66,9 +66,11 @@ can_generate_military_leader_from_pop = {
 	OR = {
 		is_robot_pop = no
 		OR = {
-			has_technology = tech_synthetic_leaders
-			has_authority = auth_machine_intelligence
-			is_mechanical_empire = yes
+			root = {
+				has_technology = tech_synthetic_leaders
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
+			}
 		}
 	}
 	OR = {
