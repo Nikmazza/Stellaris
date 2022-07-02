@@ -8,6 +8,10 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		always = no
+	}
+
 	immediate = {
 		event_target:complex_event_country = {set_variable = { which = latest_fq_version value = @fq_version }}
 	}
@@ -18,6 +22,10 @@ event = {
 	id = fq_patch.2
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
 
 	immediate = {
 		event_target:complex_event_country = {set_variable = { which = latest_fq_version value = @fq_version }}
