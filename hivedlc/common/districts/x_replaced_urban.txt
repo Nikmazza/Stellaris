@@ -9,6 +9,7 @@ district_hive = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			uses_district_set = shattered_ring_world
 		}
 	}
 
@@ -19,16 +20,19 @@ district_hive = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			uses_district_set = shattered_ring_world
 		}
 	}
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
 	}
 
 	conversion_ratio = 0.5
 	convert_to = {
 		district_arcology_housing
+		district_rw_hive
 		district_nexus
 		district_city
 		district_hollow_housing
@@ -102,6 +106,7 @@ district_nexus = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			uses_district_set = shattered_ring_world
 		}
 	}
 
@@ -112,16 +117,19 @@ district_nexus = {
 			uses_district_set = standard
 			uses_district_set = hive_world
 			uses_district_set = machine_world
+			uses_district_set = shattered_ring_world
 		}
 	}
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
 	}
 
 	conversion_ratio = 0.5
 	convert_to = {
 		district_arcology_housing
+		district_rw_nexus
 		district_city
 		district_hive
 		district_matryoshka_housing
