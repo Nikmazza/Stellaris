@@ -31,6 +31,14 @@ species_can_live_on_planet = {
 					prev = { species_can_be_necrophaged = yes }
 				}
 			}
+			AND = { #Parasitic Embryos Necrophage Pops
+				exists = root.owner
+				root.owner = {
+					is_hive_empire = yes
+					has_valid_civic = civic_hive_parasitic
+					prev = { has_job = purge_parasitic }
+				}
+			}
 		}
 	}	
 	NAND = {
