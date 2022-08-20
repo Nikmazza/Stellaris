@@ -126,18 +126,6 @@ armies = {
 starbase_stations = {
 	parent = starbases
 
-	triggered_cost_modifier = {
-		key = starbase_outpost
-		modifier_types = {
-			mult
-			add
-		}
-
-		trigger = {
-			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = starbase_outpost
-		}
-	}
 	triggered_upkeep_modifier = {
 		key = starbase_outpost
 		modifier_types = {
@@ -186,19 +174,6 @@ starbase_stations = {
 			is_ship_size = starbase_starfortress
 		}
 	}
-	triggered_upkeep_modifier = {
-		key = starbase_citadel
-		modifier_types = {
-			mult
-			add
-		}
-
-		trigger = {
-			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_size = starbase_citadel
-		}
-	}
-	
 	triggered_cost_modifier = {
 		key = starbase_ion_cannon
 		modifier_types = {

@@ -12,6 +12,7 @@ country_event = {
 				AND = {
 					is_lithoid_empire = no
 					is_organic = yes
+					has_valid_civic = civic_hive_organic
 				}
 			}
 			## add organic mechanics to non-ai players
@@ -36,7 +37,12 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { is_lithoid_empire = yes }
+			limit = {
+				AND = {
+					is_lithoid_empire = yes
+					has_valid_civic = civic_hive_organic
+				}
+			}
 			## do something with rock ppl	  
 			## add organic mechanics to non-ai players
 			if = { 
