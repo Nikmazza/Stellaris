@@ -11,7 +11,6 @@ building_psychic_lobe = {
 
 	allow = {
 		has_major_upgraded_capital = yes
-		buildings_simple_allow = yes
 	}
 
 	destroy_trigger = {
