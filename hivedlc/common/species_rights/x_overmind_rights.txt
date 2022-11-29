@@ -119,7 +119,7 @@ colonization_control_no = {
 			fail_text = "SPECIES_CANNOT_COLONIZE"
 			NOR = {
 				has_trait = trait_syncretic_proles
-				has_trait = trait_nerve_stapled
+				can_think = no
 			}
 		}
 		custom_tooltip = {

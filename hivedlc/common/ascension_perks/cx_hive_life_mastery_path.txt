@@ -36,6 +36,7 @@ ap_life_assemblers = {
 	}
 	
 	potential = {
+		always = no
 		NOT = {
 			has_ascension_perk = ap_life_assemblers
 		}
@@ -80,6 +81,7 @@ ap_life_masters = {
 	}
 	
 	potential = {
+		always = no
 		NOT = { has_ascension_perk = ap_life_masters }
 		has_authority = auth_hive_mind	
 	}

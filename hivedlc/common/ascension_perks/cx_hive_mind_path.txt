@@ -11,7 +11,6 @@ ap_mind_meld = {
 		description = ap_mind_meld_tooltip
 	}
 	possible = {	
-		
 		custom_tooltip = {
 			fail_text = "hive_mind_biological_ascension_only1"
 			 has_authority = auth_hive_mind
@@ -39,7 +38,7 @@ ap_mind_meld = {
 	}
 	
 	potential = {
-#always = no
+		always = no
 		NOR = {
 			has_ascension_perk = ap_mind_meld
 		}
@@ -89,7 +88,7 @@ ap_omnipresence = {
 	}
 	
 	potential = {
-#always = no
+		always = no
 		NOR = {
 			has_ascension_perk = ap_omnipresence
 		}

@@ -166,49 +166,44 @@ planet_event = {
 planet_event = {
 	id = life_masters.1
 	
-		is_triggered_only = yes
+	is_triggered_only = yes
 	hide_window = yes
 	
-		immediate = {
+	immediate = {
 		if = {
 			limit = { from = { has_ascension_perk = ap_life_masters } }
-
-				if = {
-			limit = { FromFrom = { NOT = { has_trait = trait_hive_mind } } }
-			
-			FromFrom = {
-			species = { save_event_target_as = half_pop_species }
-				##add trait
-			modify_species = {
-				species = event_target:half_pop_species
-				add_trait = trait_hive_mind
-				add_traits_at_start_of_list = yes
-			}
-			
-				set_citizenship_type = {
-					country = From
-					type = citizenship_full
-				}		
-				
-				set_living_standard = {
-					country = From
-					type = living_standard_hive_mind
-				}
-				
-				set_migration_controls = {
-				country = From
-				type = no
-				}
-				set_population_controls = {
-				country = From
-				type = no
-				}
-				
+			if = {
+				limit = { FromFrom = { NOT = { has_trait = trait_hive_mind } } }
+				FromFrom = {
+					species = {
+						save_event_target_as = half_pop_species
+					}
+					modify_species = {
+						species = event_target:half_pop_species
+						add_trait = trait_hive_mind
+						add_traits_at_start_of_list = yes
+					}
+					set_citizenship_type = {
+						country = From
+						type = citizenship_full
+					}
+					set_living_standard = {
+						country = From
+						type = living_standard_hive_mind
+					}
+					set_migration_controls = {
+						country = From
+						type = migration_control_no
+					}
+					set_population_controls = {
+						country = From
+						type = population_control_no
+					}
 				}	
-		}	
+			}	
+		}
 	}
-	}
-	}
+}
 
 
 
