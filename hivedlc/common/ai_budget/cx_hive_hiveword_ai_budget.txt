@@ -15,11 +15,11 @@ food_expenditure_colonies_hive_world = {
 		}
 	}
 
-	fraction = {
+	weight = {
 		weight = 2.0
 	}
 
-	static_max = {
+	desired_max = {
 		base = 2200
 	}
 }

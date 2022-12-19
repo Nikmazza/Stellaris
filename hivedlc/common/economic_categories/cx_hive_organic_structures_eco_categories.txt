@@ -1,32 +1,5 @@
-
-stations = {
-	use_for_ai_budget = yes
-	ai_use_parent_for_resources_upkeep = {
-		energy
-	}
-
-	generate_mult_modifiers = {
-		produces
-	}
-	
-	generate_add_modifiers = {
-	}
-
-	parent = country
-}
-planet_districts = {
-	parent = planet_structures
-
-	generate_mult_modifiers = {
-		cost
-		upkeep
-	}
-	generate_add_modifiers = {
-	}
-	
-}
 planet_districts_hab_research = {
-	parent = planet_structures
+	parent = planet_districts
 
 	generate_mult_modifiers = {
 		cost
@@ -34,10 +7,10 @@ planet_districts_hab_research = {
 	generate_add_modifiers = {
 		cost
 	}
-	
 }
+
 planet_districts_hab_energy = {
-	parent = planet_structures
+	parent = planet_districts
 
 	generate_mult_modifiers = {
 		cost
@@ -47,8 +20,9 @@ planet_districts_hab_energy = {
 	}
 	
 }
+
 planet_districts_hab_mining = {
-	parent = planet_structures
+	parent = planet_districts
 
 	generate_mult_modifiers = {
 		cost
@@ -58,6 +32,7 @@ planet_districts_hab_mining = {
 	}
 	
 }
+
 planet_districts_industrial = {
 	parent = planet_districts
 
@@ -68,15 +43,7 @@ planet_districts_industrial = {
 		cost
 	}
 }
-planet_structures = {
-	parent = planets
-	generate_mult_modifiers = {
-		cost
-		upkeep
-	}
-	generate_add_modifiers = {
-	}
-}
+
 planet_buildings = {
 	parent = planet_structures
 
@@ -88,9 +55,10 @@ planet_buildings = {
 		cost
 		upkeep
 	}
+	modifier_category = planet
 }
 planet_buildings_strongholds = {
-	parent = planet_structures
+	parent = planet_buildings
 
 	generate_mult_modifiers = {
 		cost
@@ -112,19 +80,14 @@ armies = {
 	generate_add_modifiers = {
 		cost
 	}
-
-	ai_use_parent_for_resources_upkeep = {
-		energy
-	}
-
+	modifier_category = army
+	
 	parent = country
 }
 
-
-
-
 starbase_stations = {
 	parent = starbases
+	modifier_category = starbase
 
 	triggered_upkeep_modifier = {
 		key = starbase_outpost
@@ -188,39 +151,27 @@ starbase_stations = {
 	}
 }
 
-ship_upgrades = {
-	parent = ships
-	use_for_ai_budget = yes
-	
-	generate_mult_modifiers = {
-	}
-	generate_add_modifiers = {
-	}
-}
-
-starbases = {
-	use_for_ai_budget = yes
-
-	generate_mult_modifiers = {
-		upkeep
-	}
-	generate_add_modifiers = {
-	}
-	ai_use_parent_for_resources_upkeep = {
-		energy
-	}
-
-	parent = country
-}
-
-
 colonies  = {
 	use_for_ai_budget = yes
 	ai_use_parent_for_resources_upkeep = {
 		energy
 	}
+	modifier_category = ship
 	
-	parent = country
+	triggered_cost_modifier = {
+		key = ship_colonizer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			is_ship_class = shipclass_colonizer
+		}
+	}
+
+	parent = ships
 
 	generate_mult_modifiers = {
 		cost
@@ -242,28 +193,17 @@ planet_branch_offices = {
 		cost
 		produces
 	}
+	modifier_category = planet
 }
 
 planet_larva_queens = {
 	icon = "job_larva_queen"
 	parent = planet_jobs
-	generate_mult_modifiers = {
-	}
 	generate_add_modifiers = {
 		produces
 	}
+	modifier_category = pop
 }
-
-planet_branch_office_buildings = {
-	parent = planets
-
-	generate_mult_modifiers = {
-	}
-	
-	generate_add_modifiers = {
-	}
-}
-
 
 planet_districts = {
 	parent = planet_structures
@@ -274,6 +214,7 @@ planet_districts = {
 		cost
 		upkeep
 	}
+	modifier_category = planet
 }
 
 planet_districts_cities = {
@@ -284,14 +225,13 @@ planet_districts_cities = {
 	generate_mult_modifiers = {
 		cost
 	}
+	parent = planet_districts
 }
 
 ships = {
 	use_for_ai_budget = yes
 	generate_mult_modifiers = {
-	}
-	
-	generate_add_modifiers = {
+		upkeep
 	}
 
 	ai_use_parent_for_resources_upkeep = {
@@ -299,6 +239,7 @@ ships = {
 	}
 
 	parent = country
+	modifier_category = ship
 
 	triggered_cost_modifier = {
 		key = starbase_shipyard_build
@@ -579,19 +520,6 @@ ships = {
 			is_ship_class = shipclass_constructor
 		}
 	}
-	##colonizer
-	triggered_cost_modifier = {
-		key = ship_colonizer
-		use_parent_icon = yes
-		modifier_types = {
-			mult
-		}
-
-		trigger = {
-			is_scope_valid = yes #When called from ship designer the design is not valid yet.
-			is_ship_class = shipclass_colonizer
-		}
-	}
 	##starbases
 	triggered_cost_modifier = {
 		key = starbase_outpost
@@ -675,12 +603,6 @@ ships = {
 ship_sections = {
 	parent = ships
 	
-	generate_mult_modifiers = {
-	}
-	
-	generate_add_modifiers = {
-	}
-	
 		##defense platforms	 bad	
 	triggered_cost_modifier = {
 		key = ship_military_station_small
@@ -708,6 +630,7 @@ starbase_buildings = {
 	generate_add_modifiers = {
 		cost
 	}
+	modifier_category = starbase
 }
 
 starbase_modules = {
@@ -720,6 +643,7 @@ starbase_modules = {
 	generate_add_modifiers = {
 		cost
 	}
+	modifier_category = starbase
 }
 
 station_gatherers = {
@@ -734,6 +658,7 @@ station_gatherers = {
 		cost
 		upkeep
 	}
+	modifier_category = deposit
 }
 
 station_researchers = {
@@ -748,6 +673,7 @@ station_researchers = {
 		cost
 		upkeep
 	}
+	modifier_category = deposit
 }
 
 station_observers = {
@@ -759,17 +685,6 @@ station_observers = {
 	}
 	generate_add_modifiers = {
 		cost
-		upkeep
-	}
-}
-
-planet_farmers = {
-	parent = planet_jobs
-	generate_mult_modifiers = {
-		produces
-	}
-	generate_add_modifiers = {
-		produces
 		upkeep
 	}
 }

@@ -18,11 +18,11 @@ food_expenditure_colonies_expand = {
 		}
 	}
 
-	fraction = {
+	weight = {
 		weight = 2.0
 	}
 
-	static_max = {
+	desired_max = {
 		base = 550
 	}
 }
