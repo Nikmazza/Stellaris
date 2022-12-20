@@ -1,5 +1,5 @@
 citizenship_assimilation = {
-	token = citizenship_assimilation
+	is_assimilation = yes
 
 	potential = {
 		OR = {

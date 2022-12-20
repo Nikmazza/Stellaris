@@ -1,5 +1,4 @@
 purge_normal = {
-	token = purge_normal
 	pop_escape_chance = 0.05
 	pop_decline_rate = 100 # 2 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
 	
@@ -52,7 +51,6 @@ purge_normal = {
 }
 
 purge_necrophage = {
-	token = purge_necrophage
 	pop_escape_chance = 0.1
 	pop_decline_rate = 20 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
 	
@@ -101,7 +99,6 @@ purge_necrophage = {
 	}
 }
 purge_processing = {
-	token = purge_processing
 	pop_escape_chance = 0.20
 	pop_decline_rate = 50 # 1 pop per month, overrides BASE_POP_DECLINE, will only work on purge types
 
@@ -184,36 +181,6 @@ purge_processing = {
 				}
 			}
 		}
-	}
-}
-
-citizenship_purge_machine = {
-	token = citizenship_purge_machine
-	new_pop_weight = 0.0
-
-	potential = {
-		exists = from
-		from = { has_authority = auth_machine_intelligence }
-		NOR = {
-			has_trait = trait_machine_unit
-			has_trait = trait_mechanical
-			has_trait = trait_machine_replica
-		}
-		NAND = {
-			is_lonely_hive_mind_pop = no
-			from = { has_valid_civic = civic_machine_servitor }
-		}
-	}
-
-	allow = {
-		hidden_trigger = { exists = from }
-		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
-	}
-	ai_will_do = {
-		factor = 0
 	}
 }
 
