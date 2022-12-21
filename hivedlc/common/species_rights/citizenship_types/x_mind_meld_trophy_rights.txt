@@ -1,6 +1,4 @@
 citizenship_organic_trophy = {
-	token = citizenship_organic_trophy
-
 	potential = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
 		exists = from

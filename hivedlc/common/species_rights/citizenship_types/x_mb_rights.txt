@@ -1,5 +1,5 @@
 citizenship_slavery = {
-	token = citizenship_slavery
+	is_slavery = yes
 
 	in_breach_of = {
 		{
