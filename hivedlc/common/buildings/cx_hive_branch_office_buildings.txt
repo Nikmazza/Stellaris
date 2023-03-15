@@ -20,6 +20,8 @@ building_recycling_center = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	owner_type = corporate
+
+	category = resource
 	
 	potential = {
 		has_branch_office = yes
@@ -67,6 +69,8 @@ building_targeted_flora = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	owner_type = corporate
+
+	category = resource
 	
 	potential = {
 		has_branch_office = yes
@@ -115,6 +119,8 @@ building_targeted_fauna = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	owner_type = corporate
+
+	category = research
 	
 	potential = {
 		has_branch_office = yes
@@ -163,6 +169,8 @@ building_observatory = {
 	base_cap_amount = 1
 	owner_type = corporate
 	
+	category = research
+	
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { 
@@ -206,6 +214,8 @@ building_observatory = {
 building_foreign_arquitecture = {
 	base_buildtime = 480
 	base_cap_amount = 1
+
+	category = research
 	
 	owner_type = corporate
 	
@@ -243,6 +253,8 @@ building_foreign_arquitecture = {
 building_species_protector_center = {
 	base_buildtime = 480
 	base_cap_amount = 1
+
+	category = army
 	
 	owner_type = corporate
 	
@@ -293,6 +305,8 @@ building_urban_maintenance = {
 	
 	
 	owner_type = corporate
+
+	category = unity
 	
 	potential = {
 		has_branch_office = yes
@@ -341,6 +355,8 @@ building_tourism_campaign = {
 	
 	
 	owner_type = corporate
+
+	category = government
 	
 	allow = {
 		num_pops >= 35
@@ -403,6 +419,8 @@ building_organic_recycling_center = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	owner_type = corporate
+
+	category = resource
 	
 	potential = {
 		has_branch_office = yes
@@ -454,6 +472,9 @@ building_organic_targeted_flora = {
 	base_cap_amount = 1
 	owner_type = corporate
 	icon = building_targeted_flora
+
+	category = resource
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { 
@@ -504,6 +525,8 @@ building_organic_targeted_fauna = {
 	base_cap_amount = 1
 	owner_type = corporate
 	icon = building_targeted_fauna
+
+	category = research
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { 
@@ -552,6 +575,8 @@ building_organic_observatory = {
 	base_cap_amount = 1
 	owner_type = corporate
 	icon = building_observatory
+
+	category = research
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { 
@@ -599,6 +624,8 @@ building_organic_foreign_arquitecture = {
 	base_cap_amount = 1
 	icon = building_foreign_arquitecture
 	owner_type = corporate
+
+	category = research
 	
 	potential = {
 		has_branch_office = yes
@@ -637,6 +664,8 @@ building_organic_species_protector_center = {
 	base_buildtime = 480
 	base_cap_amount = 1
 	icon = building_species_protector_center
+
+	category = army
 	
 	owner_type = corporate
 	
@@ -692,6 +721,8 @@ building_organic_urban_maintenance = {
 	icon = building_urban_maintenance
 	
 	owner_type = corporate
+
+	category = unity
 	
 	potential = {
 		has_branch_office = yes
@@ -739,6 +770,8 @@ building_organic_tourism_campaign = {
 	icon = building_tourism_campaign
 	
 	owner_type = corporate
+
+	category = government
 	
 	allow = {
 		num_pops >= 35
@@ -799,6 +832,8 @@ building_organic_larvae_chamber = {
 	base_cap_amount = 1
 	owner_type = corporate
 	icon = building_hive_capital
+
+	category = resource
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { 
@@ -851,6 +886,8 @@ building_organic_larvae_chamber = {
 
 building_necroid_outworld_mortuary = {
 	base_buildtime = 480
+
+	category = unity
 	
 	
 	owner_type = corporate
@@ -905,6 +942,8 @@ building_necroid_outworld_mortuary = {
 building_organic_necroid_outworld_mortuary = {
 	base_buildtime = 480
 	icon = building_necroid_outworld_mortuary
+
+	category = unity
 	
 	owner_type = corporate
 	
