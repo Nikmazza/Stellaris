@@ -6,5 +6,5 @@ tags={
 	"Overhaul"
 }
 version="3.021"
-supported_version="3.4.*"
+supported_version="3.7.3"
 remote_file_id="1715190550"

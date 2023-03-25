@@ -156,6 +156,10 @@ Provides the Research Focus policy to focus and redirect the collective's priori
 [b]Compatibility patches and Language Patches:[/b]
 [url=steamcommunity.com/workshop/filedetails/discussion/1715190550/2950377478183678949/]Link[/url]
 
+[b]Discord server:[/b]
+Join [url=https://discord.gg/6ubd9BG7Px]HERE[/url] for faster support and to help me with fixing future bugs in the mod
+
+
 
 [img]https://imgur.com/2z1gC4T.png[/img]
 
