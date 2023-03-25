@@ -40,6 +40,5 @@ allows_purge = {
 		}		
 		has_valid_civic = civic_fanatic_purifiers
 		has_policy_flag = purge_allowed
-		has_policy_flag = purge_displacement_only
 	}	
 }

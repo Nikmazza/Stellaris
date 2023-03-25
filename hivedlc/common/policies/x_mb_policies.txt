@@ -33,6 +33,7 @@ first_contact_protocol = {
 		valid = {
 			is_homicidal = no
 			is_xenophobe = no
+			NOT = { has_origin = origin_payback }
 		}
 
 		AI_weight = {
@@ -73,6 +74,10 @@ first_contact_protocol = {
 			modifier = {
 				factor = 1.5
 				always = yes #Liu Cixin is right
+			}
+			modifier = {
+				factor = 2
+				has_origin = origin_payback
 			}
 		}
 	}

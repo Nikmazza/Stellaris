@@ -406,33 +406,33 @@ country_event = {
 
 }
 
-namespace = hive_psionic
-planet_event = {
-	id = hive_psionic.0
-	is_triggered_only = yes
-	hide_window = yes
+# namespace = hive_psionic
+# planet_event = {
+# 	id = hive_psionic.0
+# 	is_triggered_only = yes
+# 	hide_window = yes
 	
-	trigger = {
-		exists = owner
-		owner = {
-			AND = {
-				has_authority = auth_hive_mind
-				NOT = {
-					has_country_flag = complex_started_hive_psionics
-				}
-			}
-		}
-		root = { last_building_changed = building_hive_confluence }
-	}
+# 	trigger = {
+# 		exists = owner
+# 		owner = {
+# 			AND = {
+# 				has_authority = auth_hive_mind
+# 				NOT = {
+# 					has_country_flag = complex_started_hive_psionics
+# 				}
+# 			}
+# 		}
+# 		root = { last_building_changed = building_hive_confluence }
+# 	}
 
-	immediate = {
-		log_error = "Tried to start situation"
-		owner = {
-			set_country_flag = complex_started_hive_psionics
-			start_situation = {
-				type = situation_hive_psionics
-				target = this
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		log_error = "Tried to start situation"
+# 		owner = {
+# 			set_country_flag = complex_started_hive_psionics
+# 			start_situation = {
+# 				type = situation_hive_psionics
+# 				target = this
+# 			}
+# 		}
+# 	}
+# }
