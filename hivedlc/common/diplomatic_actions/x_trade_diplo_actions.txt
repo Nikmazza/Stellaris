@@ -4,7 +4,8 @@ action_form_commercial_pact = {
 	icon = "GFX_diplomacy_status_commercial_pact"
 	diplo_view_acceptance_icon = yes
 	should_notify_all_communications = yes
-	requires_actor_independence = no
+	requires_actor_independence = yes
+	requires_recipient_independence = yes
 	AI_acceptance_base_value = -50
 	action_type = positive
 	possible = {
@@ -128,6 +129,31 @@ action_form_commercial_pact = {
 						}
 						NOT = { federation = { any_member = { is_same_value = root } } }
 					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				from = { has_valid_civic = civic_pompous_purists }
+				NOT = { root = { is_overlord_to = from } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_pompous
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
 				}
 			}
 		}

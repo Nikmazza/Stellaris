@@ -22,10 +22,25 @@ can_species_be_assembled = {
 				has_trait = trait_hive_mind
 			}
 			else_if = {
-				limit = { has_trait = trait_plantoid_budding }
+				limit = { has_budding_trait = yes }
 				root = {
 					any_owned_species = { is_exact_same_species = prevprev }
 				}
+			}
+			else_if = {
+				limit = { has_trait = trait_tiyanki }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+				}
+			}
+			else_if = {
+				limit = {
+					root.owner = {
+						has_tradition = tr_cybernetics_assembly_standards
+						has_policy_flag = roboticist_output_build_cyborgs
+					}
+				}
+				has_trait = trait_cybernetic
 			}
 			else_if = {
 				limit = {
@@ -45,21 +60,19 @@ can_species_be_assembled = {
 					}
 				}
 			}
-			else_if = {
-				limit = {
-					root.owner = { has_civic = civic_permanent_employment }
-				}
-				root = {
-					has_building = building_posthumous_employment_center
-				}
-			}
-			else_if = {
-				limit = {
-					root = { has_modifier = tiyanki_trophy }
-				}
-			}
 			else = {
-				root = { has_building = building_clone_vats }
+				root = {
+					OR = {
+						has_building = building_clone_vats
+						has_modifier = tiyanki_trophy
+						owner = { has_modifier = syamelles_curse }
+						AND = {
+							has_building = building_posthumous_employment_center
+							owner = { has_civic = civic_permanent_employment }
+						}
+						has_planet_flag = can_organic_assemble_flag #for mod compatibility
+					}
+				}
 			}
 		}
 	}
