@@ -178,3 +178,5 @@
  NECROID_BOT_organ:0 "$NECROID_organ$"
  NECROID_BOT_mouth:0 "$NECROID_mouth$"
  NECROID_BOT_hand:0 "$NECROID_hand$"
+ COMPLEX_BOT:0 "Complex"
+ COMPLEX:0 "Complex"
