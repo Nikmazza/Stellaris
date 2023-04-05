@@ -33,9 +33,5 @@ civic_mutualistic_behavior = {
 
     }
 description = civic_tooltip_mutualistic_behavior_effects
-
-    random_weight = {
-        base = 0
-    }
    
 }

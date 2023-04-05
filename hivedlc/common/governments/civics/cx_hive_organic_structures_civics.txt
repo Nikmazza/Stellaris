@@ -7,7 +7,6 @@ civic_hive_organic = {
 	flags = { custom_start_screen }
 	advanced_start = yes
 	
-	random_weight = { base = 0 }
 	description = "civic_tooltip_organic_effects"
 	
 	# moved the modifieres as a static modifier to add compatibility for lithoids

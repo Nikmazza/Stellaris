@@ -14,6 +14,7 @@ create_replica = {
 			PLANT = { create_PLANT_replica = yes }
 			LITHOID = { create_LITHOID_replica = yes }
 			NECROID = { create_NECROID_replica = yes }
+			COMPLEX = { create_COMPLEX_replica = yes }
 			default = { 
 				owner_species = {
 					save_event_target_as = new_replica
@@ -441,6 +442,36 @@ create_NECROID_replica = {
 						"nec13" = { prev = { change_species_characteristics = { portrait = "nec13" } } }
 						"nec14" = { prev = { change_species_characteristics = { portrait = "nec14" } } }
 						"nec15" = { prev = { change_species_characteristics = { portrait = "nec15" } } }
+					}
+				}
+				save_event_target_as = new_replica
+			}
+		}
+	}
+}
+
+create_COMPLEX_replica = {
+	event_target:replicate = {
+		create_species = {
+			is_mod = no
+			name = this
+			namelist = this
+			plural = this
+			class = "COMPLEX_BOT"
+			portrait = "horrorworm"
+			traits = {
+				trait = trait_machine_unit
+			}
+			traits = this
+
+			effect = {
+				event_target:replicate = {
+					switch = {
+						trigger = species_portrait
+						"horroroworm" = { prev = { change_species_characteristics = { portrait = "horrorworm" } } }
+						"dlc_portraits_01" = { prev = { change_species_characteristics = { portrait = "dlc_portraits_01" } } }
+						"dlc_portraits_02" = { prev = { change_species_characteristics = { portrait = "dlc_portraits_02" } } }
+						"dlc_portraits_03" = { prev = { change_species_characteristics = { portrait = "dlc_portraits_03" } } }
 					}
 				}
 				save_event_target_as = new_replica
