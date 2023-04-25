@@ -64,6 +64,7 @@ citizenship_assimilation = {
 					OR = {
 						has_tradition = tr_genetics_creation	# genetic assimilation
 						has_tradition = tr_cybernetics_transubstantiation_synthesis # cybernetic assimilation
+						has_valid_civic = civic_mutualistic_behavior
 					}
 					ROOT = { is_robotic_species = no }
 				}
@@ -135,13 +136,32 @@ citizenship_assimilation = {
 						#has_ascension_perk = ap_overmind
 						#has_ascension_perk = ap_life_masters
 						has_ascension_perk = ap_omnipresence
-						has_ascension_perk = ap_evolutionary_mastery
+						has_active_tradition = tr_genetics_creation
 					}
 				}
 				NOR = {
 					has_trait = trait_hive_mind
 					has_trait = trait_mechanical
 					has_trait = trait_machine_unit
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				from = {
+					has_authority = auth_hive_mind
+					has_active_tradition = tr_cybernetics_transubstantiation_synthesis
+				}
+			}
+			custom_tooltip = { # non-devouring hive mind
+				fail_text = HIVE_SPECIES_MUST_BE_NON_HIVE
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					AND = {
+						has_trait = trait_hive_mind
+						has_trait = trait_cybernetic
+					}
 				}
 			}
 		}
@@ -189,6 +209,7 @@ citizenship_assimilation = {
 			}
 			custom_tooltip = { # species already has psionic trait
 				fail_text = TRANSCENDING_SPECIES_IS_ALREADY_PSIONIC
+				NOT = { has_trait = trait_psionic }
 			}
 			custom_tooltip = { # transcending species cannot be gestalt consciousness
 				fail_text = TRANSCENDING_SPECIES_CANT_BE_HIVE
