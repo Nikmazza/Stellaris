@@ -8,6 +8,10 @@ civic_hive_organic = {
 	advanced_start = yes
 	
 	description = "civic_tooltip_organic_effects"
+
+	modifier = {
+		councilor_gestalt_governor_exp_gain = @gestalt_civic_node_xp_rate
+	}
 	
 	# moved the modifieres as a static modifier to add compatibility for lithoids
 	swap_type = {

@@ -30,10 +30,7 @@ tech_mind_meld = {
 		factor = 5 #very rare tech
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
 		}
 	}
 }
@@ -70,10 +67,7 @@ tech_genetic_chimerism = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -101,10 +95,7 @@ tech_gene_manipulation = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
