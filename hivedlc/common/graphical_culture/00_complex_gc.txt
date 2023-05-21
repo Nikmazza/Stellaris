@@ -1,5 +1,9 @@
 complex_ship_gc = {
 	fallback = arthropoid_01
+
+	randomized = { always = no }
+	selectable = { always = no }
+	
 	ship_color = no
 	ship_lighting = {
 		cam_light_1_dir = { 0.4 0.0 0.0 }

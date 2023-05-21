@@ -215,39 +215,11 @@ country_event = {
 						#	has_trait = trait_psionic
 						#	is_same_value = event_target:psionic_species
 						#}
-						NOR = {
-							has_trait =	leader_trait_admiral_psionic
-							has_trait =	leader_trait_general_psionic
-							has_trait =	leader_trait_governor_psionic
-							has_trait =	leader_trait_scientist_psionic
-							has_trait =	leader_trait_ruler_psionic
+						NOT = {
+							has_trait =	leader_trait_psionic
 						}
 					}
-					if = {
-						limit = { leader_class = admiral }
-						add_trait = leader_trait_admiral_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = general }
-						add_trait = leader_trait_general_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = governor }
-						add_trait = leader_trait_governor_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = scientist }
-						add_trait = leader_trait_scientist_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = ruler }
-						add_trait = leader_trait_ruler_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
+					add_trait_no_notify = leader_trait_psionic
 				}
 				every_pool_leader = {
 					limit = {
@@ -256,39 +228,11 @@ country_event = {
 						#	has_trait = trait_psionic
 						#	is_same_value = event_target:psionic_species
 						#}
-						NOR = {
-							has_trait = leader_trait_admiral_psionic
-							has_trait = leader_trait_general_psionic
-							has_trait = leader_trait_governor_psionic
-							has_trait = leader_trait_scientist_psionic
-							has_trait = leader_trait_ruler_psionic
+						NOT = {
+							has_trait = leader_trait_psionic
 						}
 					}
-					if = {
-						limit = { leader_class = admiral }
-						add_trait = leader_trait_admiral_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = general }
-						add_trait = leader_trait_general_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = governor }
-						add_trait = leader_trait_governor_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = scientist }
-						add_trait = leader_trait_scientist_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
-					if = {
-						limit = { leader_class = ruler }
-						add_trait = leader_trait_ruler_psionic
-						add_ruler_trait = leader_trait_ruler_psionic
-					}
+					add_trait_no_notify = leader_trait_psionic
 				}
 			}
 		}

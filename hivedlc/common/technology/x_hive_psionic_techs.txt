@@ -37,16 +37,20 @@ tech_psionic_theory = {
 		}
 		modifier = {
 			factor = 2
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_maniacal"
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
-			factor = 8
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
+			factor = 2
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_psionic }
+				has_trait_in_council = { TRAIT = leader_trait_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_composer_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_instrument_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_whisperers_chosen }
 			}
 		}
 		modifier = {
@@ -83,10 +87,7 @@ tech_psionic_theory = {
 			AND = {
 				is_materialist = yes
 				NOR = {
-					research_leader = {
-						area = society
-						has_trait = "leader_trait_expertise_psionics"
-					}
+					has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
 					any_owned_pop = {
 						OR = {
 							pop_has_trait = trait_psionic
@@ -105,13 +106,6 @@ tech_psionic_theory = {
 			OR = {
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
 			}
 		}
 		modifier = {
@@ -145,34 +139,7 @@ tech_telepathy = {
 		modifier = {
 			factor = 0.50
 			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-			}
-		}
-		modifier = {
-			factor = 1.10
-			research_leader = {
-				area = society
-				has_level > 2
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
-			factor = 1.5
-			research_leader = {
-				area = society
-				has_level > 3
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
-			factor = 2
-			research_leader = {
-				area = society
-				has_level > 4
-				has_trait = "leader_trait_expertise_psionics"
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
 			}
 		}
 		modifier = {
@@ -197,9 +164,10 @@ tech_telepathy = {
 		}
 		modifier = {
 			factor = 4
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_maniacal"
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 	}
@@ -209,13 +177,6 @@ tech_telepathy = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 	}
 }
@@ -257,22 +218,14 @@ tech_psi_jump_drive_1 = {
 		modifier = {
 			factor = 0.1
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+
 			}
 		}
 		modifier = {
@@ -324,10 +277,7 @@ tech_precognition_interface = {
 		modifier = {
 			factor = 0.50
 			NOT = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
 			}
 		}
 		modifier = {
@@ -352,16 +302,10 @@ tech_precognition_interface = {
 		}
 		modifier = {
 			factor = 2
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_maniacal"
-			}
-		}
-		modifier = {
-			factor = 4
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 	}
@@ -371,13 +315,6 @@ tech_precognition_interface = {
 		modifier = {
 			factor = 2
 			is_militarist = yes
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 	}
 }

@@ -36,7 +36,7 @@ self_awareness = {
 	}
 
 	potential = {
-		has_valid_civic = civic_hive_autonomous_drones
+		has_valid_civic = civic_hive_upkeep_twister
 	}
 
 	ai_weight = {
