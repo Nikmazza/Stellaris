@@ -3,7 +3,8 @@ civic_hive_organic = {
 	potential = { authority = { value = auth_hive_mind } }
 	possible = {
 		authority = { value = auth_hive_mind }	
-	}	
+	}
+	modification = no
 	flags = { custom_start_screen }
 	advanced_start = yes
 	

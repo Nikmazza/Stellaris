@@ -101,17 +101,8 @@
  
  TRAIT_REMOTE_DRONE_EFFECT:0 "Habitability: §G+10%§!\nCannot generate §YLeaders§!"
  
- leader_trait_admiral_eonian: "Eonian"
- leader_trait_admiral_eonian_desc: "This leader has existed for eons, his experience allows him to outmaneuver many foes."
- 
- leader_trait_general_eonian: "$leader_trait_admiral_eonian$"
- leader_trait_general_eonian_desc: "This leader has existed for eons, victor of many battles."
- 
- leader_trait_governor_eonian: "$leader_trait_admiral_eonian$"
- leader_trait_governor_eonian_desc: "This leader has existed for eons and ruled many pops."
- 
- leader_trait_scientist_eonian: "$leader_trait_admiral_eonian$"
- leader_trait_scientist_eonian_desc: "This leader has existed for eons and knows a bit of about everything the universe has to offer."
+ leader_trait_eonian: "Eonian"
+ leader_trait_eonian_desc: "This leader has existed for eons, its experience allowing it to excel in its position far more than any other drone."
  
  
  overmind_lithoids: "Overlords of Lithoids"
