@@ -41,11 +41,26 @@ citizenship_full = {
 			OR = {
 				is_same_species = from
 				from = {
+					AND = {
+						has_valid_civic = civic_selective_kinship
+						is_same_species_class = root
+					}
+				}
+				from = {
 					NOR = {
 						has_ethic = ethic_xenophobe
 						has_ethic = ethic_fanatic_xenophobe
 					}
 				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = wrong_species_class
+			if = {
+				limit = {
+					from = { has_valid_civic = civic_selective_kinship }
+				}
+				is_same_species_class = from
 			}
 		}
 		custom_tooltip = {
@@ -92,6 +107,13 @@ citizenship_full_machine = {
 					has_trait = trait_machine_replica
 					has_trait = trait_mechanical
 					has_trait = trait_machine_unit
+					AND = {
+						FROM = {
+							has_ascension_perk = ap_mechromancy
+						}
+						has_trait = trait_cybernetic
+						has_trait = trait_zombie
+					}
 				}
 			}
 		}

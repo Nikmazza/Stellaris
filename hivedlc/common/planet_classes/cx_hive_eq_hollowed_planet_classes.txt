@@ -4,6 +4,8 @@ pc_hollow = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren
 
+	is_artificial_planet = yes
+
 	
 	picture = pc_hollow
 	

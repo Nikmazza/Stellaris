@@ -12,7 +12,10 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					has_authority = auth_machine_intelligence
-					has_civic = civic_machine_assimilator # Assimilator empire
+					OR = {
+						has_civic = civic_machine_assimilator # Assimilator empire
+						has_ascension_perk = ap_mechromancy
+					}
 				}
 			}
 		}

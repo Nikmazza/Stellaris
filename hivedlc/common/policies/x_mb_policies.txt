@@ -139,6 +139,9 @@ war_philosophy = {
 			{
 				key = resolution_rulesofwar_last_resort_doctrine
 			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
 		}
 
 		valid = {
@@ -357,6 +360,12 @@ orbital_bombardment = {
 			{
 				key = resolution_rulesofwar_independent_tribunals
 			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
 		}
 
 		policy_flags = {
@@ -388,6 +397,12 @@ orbital_bombardment = {
 		in_breach_of = {
 			{
 				key = resolution_rulesofwar_independent_tribunals
+			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
 			}
 		}
 
