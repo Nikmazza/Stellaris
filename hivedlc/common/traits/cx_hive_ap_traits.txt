@@ -452,7 +452,7 @@ trait_scales = {
 	improves_leaders = yes
 	modifier = {
 		planet_pops_organics_upkeep_mult = -0.25
-		leader_age = 120
+		leader_lifespan_add = 120
 	}
 	potential_crossbreeding_chance = 1.0
 

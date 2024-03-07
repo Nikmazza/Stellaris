@@ -106,6 +106,15 @@ citizenship_slavery = {
 				NOT = { has_military_service_type = { type = military_service_full country = from } }
 			}
 		}
+		custom_tooltip = {
+			fail_text = selective_kinship_must_citizen
+			if = {
+				limit = {
+					from = { has_valid_civic = civic_selective_kinship }
+				}
+				NOT = { is_same_species_class = from }
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 15

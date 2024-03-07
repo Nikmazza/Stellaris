@@ -43,6 +43,31 @@
 		military_station_large = {}	
 	}
 
+	ship_class_names = {
+		generic = {
+			"Mhaagg'zhosh"
+			"Kith'gnosz"
+			"C'thiggorc"
+			"Kacn'dhrirc"
+			"Xedrilbh"
+			"Yovhiorrixz"
+			"Etrylalbh"
+			"Yikhigr'kox"
+			"Iaukthiztirh"
+			"Yazhaoldo"
+			"Xognorh"
+			"Cnugrixz"
+			"Ghroz'vhulbh"
+			"D'iojh'lud"
+			"Zhect'ithan"
+			"Iud'aioxhulb"
+			"Ogaazod"
+			"Yonithrhuxr"
+			"Iavh'ajhuh"
+			"Aimluzturh"
+		}
+	}
+
 	fleet_names = {
 		random_names = {
 			"Eldritch Swarm" "Weird Slimes" "Screechers" 
