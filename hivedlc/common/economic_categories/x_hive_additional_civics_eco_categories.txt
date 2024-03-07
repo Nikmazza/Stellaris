@@ -7,6 +7,33 @@ planet_livestock = {
 		produces
 	}
 	modifier_category = pop
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_farmers
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_job = livestock	# This check is done so that livestock working zoo jobs don't inherit the modifier
+			is_organic_species = yes
+			is_lithoid = no
+		}
+		use_parent_icon = yes
+	}
+	triggered_produces_modifier = {
+		key = planet_miners
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_job = livestock	# This check is done so that livestock working zoo jobs don't inherit the modifier
+			is_organic_species = yes
+			is_lithoid = yes
+		}
+		use_parent_icon = yes
+	}
 }
 
 planet_farmers = {
